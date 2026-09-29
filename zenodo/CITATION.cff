@@ -7,6 +7,10 @@ title: >-
   during Spanish Parliamentary Control Sessions
 type: software
 authors:
+  - family-names: Andrés
+    given-names: César
+    orcid: "https://orcid.org/0009-0001-8968-3404"
+    email: cesar.andres@unir.net
   - family-names: Baena Rojas
     given-names: Jose Jaime
     orcid: "https://orcid.org/0000-0002-0915-4087"
@@ -15,10 +19,6 @@ authors:
     given-names: Daniel
     orcid: "https://orcid.org/0000-0001-9397-811X"
     email: daniel.pinto@unir.net
-  - family-names: Andrés
-    given-names: César
-    orcid: "https://orcid.org/0009-0001-8968-3404"
-    email: cesar.andres@unir.net
 repository-code: "https://github.com/cesar-andress/spanish_control_session_equivocation"
 license: MIT
 keywords:

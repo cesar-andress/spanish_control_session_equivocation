@@ -6,9 +6,9 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
+  { name = "César Andrés", email = "cesar.andres@unir.net" },
   { name = "Jose Jaime Baena Rojas", email = "josejaime.baena@unir.net" },
   { name = "Daniel Pinto Pajares", email = "daniel.pinto@unir.net" },
-  { name = "César Andrés", email = "cesar.andres@unir.net" },
 ]
 dependencies = [
   "lxml>=5.0",

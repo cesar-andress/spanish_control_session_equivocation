@@ -139,3 +139,11 @@ Format per entry:
 - **reason:** Do not overclaim Congreso redistribution rights.
 - **effect on protocol:** Zenodo data release plan remains mixed FULL TEXT
   (ParlaMint) / IDENTIFIER-BASED (Congreso) until updated.
+
+## 2026-09-29 — Author order
+
+- **decision:** Byline order is César Andrés, Jose Jaime Baena Rojas, Daniel Pinto Pajares.
+- **status:** accepted
+- **evidence:** Explicit user instruction
+- **reason:** Correct authorship sequence for manuscript and package metadata.
+- **effect on protocol:** Updated `paper/main.tex`, `CITATION.cff`, `pyproject.toml`, `LICENSE`.
