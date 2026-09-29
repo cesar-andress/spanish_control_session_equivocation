@@ -1,0 +1,79 @@
+# Private / never publish
+_internal/
+**/ai_prompts/
+**/*prompt*.txt
+**/*prompt*.md
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+*_token*
+*_secret*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.uv/
+
+# Notebooks / caches
+.ipynb_checkpoints/
+*.parquet.crc
+
+# Excel / OS / editor
+~$*
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# LaTeX build artefacts (paper/)
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.log
+paper/**/*.out
+paper/**/*.synctex.gz
+paper/**/*.toc
+paper/**/*.lof
+paper/**/*.lot
+paper/main.pdf
+
+# Zenodo local caches (raw corpora stay out of git)
+zenodo/data/raw_pinned/*.xml
+zenodo/data/raw_pinned/*.tei
+zenodo/data/raw_pinned/*.zip
+zenodo/data/raw_pinned/*.tar*
+zenodo/data/raw_pinned/**/*
+!zenodo/data/raw_pinned/.gitkeep
+!zenodo/data/raw_pinned/README.md
+
+# Cursor / agent config (never in public release)
+.cursor/
+.claude/
+.agents/
+.agent/
+CLAUDE.md

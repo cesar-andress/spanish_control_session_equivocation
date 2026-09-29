@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Optional pre-commit hook body. Install with:
+#   ln -sf ../../zenodo/scripts/git-pre-commit .git/hooks/pre-commit
+# (from repo root after making this file executable)
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+ZENODO="$ROOT/zenodo"
+
+# Block staging of private area
+if git diff --cached --name-only | grep -E '(^|/)_internal/|(^|/)\.cursor/|ai_prompts/' >/dev/null; then
+  echo "pre-commit: refusing to commit _internal/, .cursor/, or ai_prompts paths" >&2
+  exit 1
+fi
+
+# Block absolute personal home paths in staged public-ish files
+FORBIDDEN_HOME="/home/"'cesar'"/"
+if git diff --cached -U0 | grep -E '^\+' | grep -F "$FORBIDDEN_HOME" >/dev/null; then
+  echo "pre-commit: staged diff introduces a forbidden absolute home path" >&2
+  exit 1
+fi
+
+PRIV_MARK='BEGIN PRIVATE'" KEY"
+if git diff --cached -U0 | grep -E '^\+' | grep -Ei 'api[_-]?key[[:space:]]*[=:]' >/dev/null; then
+  echo "pre-commit: staged diff looks like an API key assignment" >&2
+  exit 1
+fi
+if git diff --cached -U0 | grep -E '^\+' | grep -F "$PRIV_MARK" >/dev/null; then
+  echo "pre-commit: staged diff looks like a private key block" >&2
+  exit 1
+fi
+
+if [[ -d "$ZENODO" ]]; then
+  if command -v uv >/dev/null 2>&1; then
+    (cd "$ZENODO" && uv run python scripts/hygiene_scan.py)
+  else
+    (cd "$ZENODO" && python3 scripts/hygiene_scan.py)
+  fi
+fi

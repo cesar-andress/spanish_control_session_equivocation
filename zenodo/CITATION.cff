@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: >-
+  Draft citation for a pre-release research software and data package.
+  No DOI has been assigned yet. Do not treat this file as a published release.
+title: >-
+  Answering Allies and Adversaries: Equivocation in Prime-Ministerial Replies
+  during Spanish Parliamentary Control Sessions
+type: software
+authors:
+  - family-names: Baena Rojas
+    given-names: Jose Jaime
+    orcid: "https://orcid.org/0000-0002-0915-4087"
+    email: josejaime.baena@unir.net
+  - family-names: Pinto Pajares
+    given-names: Daniel
+    orcid: "https://orcid.org/0000-0001-9397-811X"
+    email: daniel.pinto@unir.net
+  - family-names: Andrés
+    given-names: César
+    orcid: "https://orcid.org/0009-0001-8968-3404"
+    email: cesar.andres@unir.net
+repository-code: "https://github.com/cesar-andress/spanish_control_session_equivocation"
+license: MIT
+keywords:
+  - parliamentary discourse
+  - equivocation
+  - reply rate
+  - Spanish Congress
+  - annotation
+  - pre-release
+# intentionally omitted until a real release exists:
+# doi:
+# version:
+# date-released:

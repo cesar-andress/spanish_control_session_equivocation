@@ -1,0 +1,31 @@
+# zenodo/.gitignore — public package extras
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.env
+.env.*
+~$*
+*.tmp
+.DS_Store
+
+# Never allow private-area leakage if someone copies it here by mistake
+_internal/
+.cursor/
+.claude/
+ai_prompts/
+*prompt*.md
+*prompt*.txt
+
+# Large raw corpora (keep manifests only)
+data/raw_pinned/**
+!data/raw_pinned/.gitkeep
+!data/raw_pinned/README.md
