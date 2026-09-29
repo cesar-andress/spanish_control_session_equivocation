@@ -47,14 +47,14 @@ test: ## Run pytest suite
 hygiene: ## Public-tree hygiene scan
 	@$(PYTHON) scripts/hygiene_scan.py
 
-data: ## Phase 2 stub
-	@echo "$(PHASE2_MSG)"; exit 1
+data: ## Acquire pinned ParlaMint-ES + Congreso records and build pool
+	@$(PYTHON) -m scse.cli data
 
-pool: ## Phase 2 stub
-	@echo "$(PHASE2_MSG)"; exit 1
+pool: ## Deterministically (re)build eligible pool from pinned inputs
+	@$(PYTHON) -m scse.cli pool
 
-power: ## Phase 2 stub
-	@echo "$(PHASE2_MSG)"; exit 1
+power: ## Phase 2 stub (N decision after linkage QA)
+	@echo "$(PHASE_LATER_MSG) (power / N decision awaits linkage QA)"; exit 1
 
 calibrate: ## Phase 4 stub
 	@echo "$(PHASE_LATER_MSG) (calibration)"; exit 1

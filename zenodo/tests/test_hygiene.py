@@ -74,13 +74,7 @@ def test_hygiene_script_passes():
     assert result.returncode == 0, result.stderr
 
 
-def test_phase_stubs_fail_safely():
-    result = subprocess.run(
-        ["make", "data"],
-        cwd=str(ZENODO_ROOT),
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    assert result.returncode != 0
-    assert "Phase 2" in (result.stdout + result.stderr)
+def test_make_data_and_pool_targets_exist():
+    makefile = (ZENODO_ROOT / "Makefile").read_text(encoding="utf-8")
+    assert "scse.cli data" in makefile
+    assert "scse.cli pool" in makefile

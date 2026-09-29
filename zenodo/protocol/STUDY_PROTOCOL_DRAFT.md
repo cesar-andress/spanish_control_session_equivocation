@@ -30,19 +30,17 @@ control sessions, answered in person by the Prime Minister, with recoverable
 registered question text and complete transcription of the questioner's opening
 turn and the Prime Minister's first response.
 
-**Phase 0 verified coverage constraint.** The prospective transcript source
-ParlaMint-ES (ParlaMint 5.0) documents Congreso plenary coverage through
-**2023-02-23**. The eligible window cannot exceed that end date unless a
-non-ParlaMint transcript source is adopted later.
+**Accepted NARROW scope (Phase 2).** Primary population = XIV legislature only;
+parliamentary control-session questions to the Presidente del Gobierno; Prime
+Minister provides the relevant first response in person; answer date inside
+verified ParlaMint-ES 5.0 coverage with operational upper bound **2023-02-23**.
+XII post-censure is not in the primary pool.
 
-**Phase 0 preferred narrowing (not yet frozen).** Primary population =
-XIV legislature control-session questions to the PM with answer dates in
-ParlaMint-ES (from the start of XIV through 2023-02-23), using the January 2020
-investiture roll-call for alignment. XII post-censure (2018-06 onward) remains
-an optional extension, not the default primary scope.
+Phase-0 feasibility-probe exchanges and Phase-2 linkage-QA rows are retained in
+the master catalogue with `exclude_from_sampling = true` and are excluded from
+all development, calibration, and main samples.
 
-Exact day-level bounds, exclusions (including prior-paper sitting dates), and
-final alignment coding remain unresolved until Phase 2 pool construction.
+Political alignment (`formation_vote_alignment`) is **not** assigned in Phase 2.
 
 ---
 
@@ -119,6 +117,45 @@ the codebook hash.
 
 ---
 
+## Phase 2 verified source and eligibility facts (2026-09-29)
+
+Status remains **DRAFT — NOT PREREGISTERED**. These facts update Phase 0 pins
+after acquisition. They do **not** freeze alignment, N, seeds, codebook, or the
+primary hypothesis decision rule.
+
+- **Corpus:** ParlaMint 5.0 / ParlaMint-ES; handle `http://hdl.handle.net/11356/2004`;
+  archive `ParlaMint-ES.tgz`; MD5 `2ba1216f3fcf1300ee74f50efe42ec6a`;
+  SHA-256 `b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68`;
+  licence CC BY 4.0. Bulk cache: `_internal/source_cache/parlamint/`.
+- **Temporal upper bound:** answer dates ≤ **2023-02-23**; XIV start 2019-12-03.
+- **Congreso source:** initiative detail pages for type `180/######` via
+  https://www.congreso.es/es/busqueda-de-iniciativas (HTML GET, cached).
+- **Congreso reuse:** aviso legal
+  https://www.congreso.es/es/cem/aviso-legal (*Reutilización de información*);
+  public packaging remains **IDENTIFIER-BASED** for Congreso strings
+  (`../docs/licensing.md`).
+- **Exchange structure:** separately stored `registered_question`, `q1_text`,
+  `r1_text`, and optional `q2_text`/`r2_text` (provenance only). Primary coding
+  target remains registered + Q1 + R1.
+- **Eligibility:** XIV; PM oral-question section / PM FORMULA; R1 speaker
+  `who = #PedroSánchezPérezCastejón`; non-empty registered question, Q1, R1;
+  `link_status` in `{exact, high_confidence}`.
+- **Linkage:** sitting date + questioner name against Congreso initiative
+  records for that day's TEI/gap expedientes; TEI note expediente used only when
+  name-confirmed (TEI notes are sometimes misaligned). No LLM / embedding
+  linkage.
+- **Answerer criterion:** first response utterance `who` equals ParlaMint person
+  id for Pedro Sánchez Pérez-Castejón; ministerial substitutes are out of pool.
+- **Exclusions from sampling:** Phase-0 probe expedientes; Phase-2 linkage-QA
+  rows (hash-ranked, not a scientific seed); SPDB previous-paper sitting dates
+  when any candidate falls on those dates (Phase 2 observed **zero** overlap).
+- **Canonical pool:** `_internal/data_private/eligible_pool_full.parquet`
+  (private full text). Public projection:
+  `data/derived/eligible_pool_metadata_preannotation.csv` (identifier-only).
+- **Seeds:** `development`, `calibration`, and `main_sample` remain **null**.
+
+---
+
 ## Phase 0 verified factual constraints (2026-09-29)
 
 These items are documentation-verified for planning. They are **not** a
@@ -136,25 +173,22 @@ protocol freeze.
   `_internal/link_audit_private/PHASE0_LINKAGE_PROBE.csv`, private).
 - **Interaction unit:** Q_registered + Q1 + R1 extractable from Diario de
   Sesiones; réplica/dúplica present but out of primary coding unit.
-- **Congreso redistribution terms:** not fully pinned; default public release
-  for Congreso strings is identifier-based until reuse notice is recorded
-  (`../docs/licensing.md`).
+- **Congreso redistribution terms:** aviso legal reuse conditions recorded in
+  Phase 2; public packaging still identifier-based (`../docs/licensing.md`).
 
 ---
 
 ## Currently unresolved decisions
 
-- Exact ParlaMint-ES file checksum (SHA-256) after Phase 2 download
-- Exact Congreso open-data endpoints / harvest method for all `180/` PM questions
-- Congreso reuse/licence notice URL for full-text deposit permission
 - Whether XII post-censure is included as secondary scope
 - Operational `formation_vote_alignment` coding rules and `alignment_table.yaml`
-- Realised eligible pool size and stratum sizes
 - Final sample size N
 - Exact Bull-derived codebook definitions and Spanish examples
 - Calibration performance gates (numeric thresholds to confirm at freeze)
 - Final statistical decision rule (including any equivalence margin)
 - Named scientific seed values (`calibration`, `main_sample`, etc.)
+- Human confirmation of Phase-2 linkage-QA packet (≥95% target)
+- Final Congreso full-text Zenodo packaging under aviso-legal conditions
 
 ---
 

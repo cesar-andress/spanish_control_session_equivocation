@@ -147,3 +147,58 @@ Format per entry:
 - **evidence:** Explicit user instruction
 - **reason:** Correct authorship sequence for manuscript and package metadata.
 - **effect on protocol:** Updated `paper/main.tex`, `CITATION.cff`, `pyproject.toml`, `LICENSE`.
+
+## 2026-09-29 — Phase 2: NARROW scope accepted
+
+- **decision:** Accept Phase-0 NARROW recommendation as the prospective primary
+  population for subsequent phases: Spanish Congreso; XIV only; control-session
+  questions to the Presidente del Gobierno; PM in-person R1; answer dates within
+  ParlaMint-ES 5.0 through 2023-02-23; Phase-0 probes excluded from all samples.
+- **status:** accepted
+- **evidence:** Phase-2 task instruction; Phase-0 feasibility report
+- **reason:** Coverage and alignment confounding make open-ended premiership
+  scope infeasible under the pinned corpus.
+- **effect on protocol:** Population section updated; XII left optional/out.
+
+## 2026-09-29 — Phase 2: ParlaMint-ES 5.0 checksum pin
+
+- **decision:** Pin ParlaMint-ES archive SHA-256
+  `b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68`
+  (MD5 matches CLARIN.SI published `2ba1216f3fcf1300ee74f50efe42ec6a`).
+- **status:** accepted
+- **evidence:** Local archive verification; `docs/licensing.md`;
+  `manifests/source_acquisition.json`
+- **reason:** Reproducible corpus identity.
+- **effect on protocol:** Source pin complete for transcripts.
+
+## 2026-09-29 — Phase 2: Congreso source and reuse
+
+- **decision:** Acquire type `180/` initiative detail HTML from Congreso búsqueda
+  de iniciativas; record reuse conditions from
+  https://www.congreso.es/es/cem/aviso-legal; keep public release
+  **IDENTIFIER-BASED** for Congreso strings until packaging review.
+- **status:** accepted interim
+- **evidence:** Aviso legal text; `docs/licensing.md`
+- **reason:** Reuse is conditioned, not a CC licence URI; do not overclaim.
+- **effect on protocol:** Private full pool + public metadata projection.
+
+## 2026-09-29 — Phase 2: Linkage algorithm
+
+- **decision:** Link PM exchanges to Congreso records by sitting date + questioner
+  name over that day's TEI/gap expedientes; accept TEI note expediente only when
+  name-confirmed; statuses `exact` / `high_confidence` / `ambiguous` / `unlinked`.
+  No LLM or embedding linkage.
+- **status:** accepted for pool construction; human QA pending
+- **evidence:** `src/scse/link_questions.py`; Phase-2 pool report
+- **reason:** TEI expediente notes are sometimes misaligned across adjacent turns.
+- **effect on protocol:** Eligible pool requires exact or high_confidence links.
+
+## 2026-09-29 — Phase 2: Sampling exclusions
+
+- **decision:** Exclude Phase-0 probe expedientes and Phase-2 linkage-QA rows
+  (`exclude_from_sampling`); check SPDB previous-paper sitting dates (zero
+  overlap observed in Phase-2 candidates).
+- **status:** accepted
+- **evidence:** `PHASE0_LINKAGE_PROBE.csv`; `PHASE2_LINKAGE_QA.xlsx`; pool flags
+- **reason:** Prevent contamination of future samples by inspected cases.
+- **effect on protocol:** Sampling frame = eligible minus these exclusions.
