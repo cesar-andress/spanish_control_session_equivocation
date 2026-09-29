@@ -26,13 +26,23 @@ This is an observational contrast. It is not a causal claim.
 ## Population (concept)
 
 Oral questions addressed to the Presidente del Gobierno in Congress plenary
-control sessions during the Sánchez premiership, within the coverage of the
-pinned ParlaMint-ES release (exact release pending), answered in person by the
-Prime Minister, with recoverable registered question text and complete
-transcription of the questioner's opening turn and the Prime Minister's first
-response.
+control sessions, answered in person by the Prime Minister, with recoverable
+registered question text and complete transcription of the questioner's opening
+turn and the Prime Minister's first response.
 
-Exact date bounds, exclusions, and source pins are unresolved (see below).
+**Phase 0 verified coverage constraint.** The prospective transcript source
+ParlaMint-ES (ParlaMint 5.0) documents Congreso plenary coverage through
+**2023-02-23**. The eligible window cannot exceed that end date unless a
+non-ParlaMint transcript source is adopted later.
+
+**Phase 0 preferred narrowing (not yet frozen).** Primary population =
+XIV legislature control-session questions to the PM with answer dates in
+ParlaMint-ES (from the start of XIV through 2023-02-23), using the January 2020
+investiture roll-call for alignment. XII post-censure (2018-06 onward) remains
+an optional extension, not the default primary scope.
+
+Exact day-level bounds, exclusions (including prior-paper sitting dates), and
+final alignment coding remain unresolved until Phase 2 pool construction.
 
 ---
 
@@ -109,19 +119,41 @@ the codebook hash.
 
 ---
 
+## Phase 0 verified factual constraints (2026-09-29)
+
+These items are documentation-verified for planning. They are **not** a
+protocol freeze.
+
+- **Prospective corpus:** ParlaMint 5.0 / ParlaMint-ES; handle
+  `http://hdl.handle.net/11356/2004`; licence **CC BY 4.0**.
+- **ParlaMint-ES temporal coverage (docs):** Congreso plenary approximately
+  2015-01 to **2023-02-23**.
+- **Registered questions:** Congreso iniciativas type **Pregunta oral en Pleno**
+  (`180/######`); registered wording available as initiative title; addressee
+  must be filtered (PM vs ministers).
+- **Linkage:** high-confidence rule-based using expediente + date + questioner +
+  DS reference + ParlaMint session/speaker IDs (Phase-0 probe
+  `_internal/link_audit_private/PHASE0_LINKAGE_PROBE.csv`, private).
+- **Interaction unit:** Q_registered + Q1 + R1 extractable from Diario de
+  Sesiones; réplica/dúplica present but out of primary coding unit.
+- **Congreso redistribution terms:** not fully pinned; default public release
+  for Congreso strings is identifier-based until reuse notice is recorded
+  (`../docs/licensing.md`).
+
+---
+
 ## Currently unresolved decisions
 
-- Exact ParlaMint-ES release (URL, version, checksum, licence)
-- Exact Congreso oral-question source / API and reuse terms
-- Eligible Sánchez date range and hard exclusions (including prior-paper sitting
-  dates once verified)
-- Operational definition of opposition / non-opposition and `alignment_table.yaml`
+- Exact ParlaMint-ES file checksum (SHA-256) after Phase 2 download
+- Exact Congreso open-data endpoints / harvest method for all `180/` PM questions
+- Congreso reuse/licence notice URL for full-text deposit permission
+- Whether XII post-censure is included as secondary scope
+- Operational `formation_vote_alignment` coding rules and `alignment_table.yaml`
 - Realised eligible pool size and stratum sizes
 - Final sample size N
 - Exact Bull-derived codebook definitions and Spanish examples
 - Calibration performance gates (numeric thresholds to confirm at freeze)
 - Final statistical decision rule (including any equivalence margin)
-- Licence / redistribution terms for derived data
 - Named scientific seed values (`calibration`, `main_sample`, etc.)
 
 ---
@@ -129,6 +161,7 @@ the codebook hash.
 ## Related documents
 
 - `DECISIONS.md` — append-only decision log
+- `SOURCE_REGISTRY_DRAFT.yaml` — source pins (draft)
 - `seeds.yaml` — named seeds (all pending until freeze)
 - `../docs/licensing.md` — licensing audit status
 - `../manifests/release_manifest.schema.json` — release provenance schema

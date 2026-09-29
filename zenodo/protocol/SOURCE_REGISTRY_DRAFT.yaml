@@ -1,0 +1,86 @@
+# SOURCE_REGISTRY_DRAFT.yaml
+# DRAFT — NOT FROZEN. Phase 0 reconnaissance only.
+# access_date values are ISO dates of documentation inspection.
+
+version: 0
+status: draft_not_frozen
+updated: "2026-09-29"
+
+sources:
+  - name: ParlaMint 5.0 (ParlaMint-ES)
+    authority: CLARIN ERIC / CLARIN.SI
+    URL: "http://hdl.handle.net/11356/2004"
+    access_date: "2026-09-29"
+    version_or_date: "5.0 (deposit date issued 2025-07-08)"
+    coverage: "Congreso de los Diputados plenary debates; documented span 2015-01 to 2023-02-23 for ParlaMint-ES"
+    format: "TEI XML (+ plain text / TSV metadata in distribution)"
+    identifier_scheme: "ParlaMint utterance and session IDs (e.g. ParlaMint-ES_YYYY-MM-DD-CDYYMMDD.uN)"
+    licence: "CC BY 4.0"
+    redistribution_status: "allowed_with_attribution"
+    citation: "Erjavec et al.; CLARIN.SI handle 11356/2004"
+    notes: "Do not download full corpus in Phase 0. Pin SHA-256 in Phase 2."
+
+  - name: ParlaMint.ana 5.0 (optional linguistic layer)
+    authority: CLARIN.SI
+    URL: "http://hdl.handle.net/11356/2005"
+    access_date: "2026-09-29"
+    version_or_date: "5.0"
+    coverage: null
+    format: "TEI with linguistic annotation"
+    identifier_scheme: "ParlaMint IDs"
+    licence: null
+    redistribution_status: "pending_confirm_on_handle"
+    citation: null
+    notes: "Confirm licence on handle before depending on .ana files."
+
+  - name: Congreso iniciativas — Pregunta oral en Pleno
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/busqueda-de-iniciativas"
+    access_date: "2026-09-29"
+    version_or_date: null
+    coverage: "Oral questions in Pleno; expediente series 180/######; multi-legislature"
+    format: "HTML initiative records; open-data portal also advertises XML/JSON/CSV for some initiative collections"
+    identifier_scheme: "Número de expediente 180/###### + legislature"
+    licence: null
+    redistribution_status: "unresolved_pending_reuse_notice"
+    citation: "Congreso de los Diputados initiative record"
+    notes: "Registered question wording appears as initiative title. Addressee must be filtered (PM vs ministers)."
+
+  - name: Congreso Diario de Sesiones (Pleno)
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/public_oficiales/"
+    access_date: "2026-09-29"
+    version_or_date: null
+    coverage: "Official session transcripts; PDF/HTML"
+    format: "PDF (DSCD-L-PL-N) and portal HTML"
+    identifier_scheme: "DSCD-{leg}-PL-{n}; page numbers; expediente cross-reference"
+    licence: null
+    redistribution_status: "unresolved_pending_reuse_notice"
+    citation: "Diario de Sesiones del Congreso de los Diputados"
+    notes: "Used for linkage feasibility probes (e.g. DSCD-14-PL-22, DSCD-14-PL-13). Not a research sample."
+
+  - name: Congreso open data portal
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/datos-abiertos"
+    access_date: "2026-09-29"
+    version_or_date: null
+    coverage: "Selected open datasets including iniciativas, intervenciones, votaciones, diputados (portal sections)"
+    format: "CSV / JSON / XML downloads advertised"
+    identifier_scheme: null
+    licence: null
+    redistribution_status: "unresolved_pending_reuse_notice"
+    citation: "Congreso de los Diputados — Datos abiertos"
+    notes: "Automated HTTP fetch often returns 403; browser/portal access required. Map exact pregunta-oral endpoints in Phase 2."
+
+  - name: Congreso investiture / confidence votes (alignment sources)
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/cem/sesiones-de-investidura"
+    access_date: "2026-09-29"
+    version_or_date: "XIV investiture 7 Jan 2020 (DSCD-14-PL-4)"
+    coverage: "Official roll-call results for investiture; censure votes via DS for 2018 to be pinned in Phase 2"
+    format: "Diario de Sesiones PDF; press/official summaries"
+    identifier_scheme: "expediente 080/… for investiture; named roll-call"
+    licence: null
+    redistribution_status: "unresolved_pending_reuse_notice"
+    citation: "Diario de Sesiones; Sesiones de investidura pages"
+    notes: "Alignment table not built in Phase 0."
