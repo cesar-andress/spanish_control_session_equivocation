@@ -12,6 +12,12 @@ Do not sharpen this into a causal claim. Operational codebook definitions are no
 
 **Phase.** Phase 0 complete: **NARROW** (conditional GO). No research corpus acquired; no sample; no annotation; no results.
 
+## Authors (byline order)
+
+1. César Andrés (ORCID 0009-0001-8968-3404)
+2. Jose Jaime Baena Rojas (ORCID 0000-0002-0915-4087)
+3. Daniel Pinto Pajares (ORCID 0000-0001-9397-811X)
+
 ## Phase-0 narrowing (required before Phase 2)
 
 - Prospective transcripts: ParlaMint 5.0 / ParlaMint-ES (handle 11356/2004), CC BY 4.0; coverage ends **2023-02-23**.
