@@ -46,5 +46,17 @@
     "main_sample": null
   },
   "outcome_columns_present": [],
-  "core_sha256": "a0a664352a752f57b1fd4190f359385e772926afbc9b618f1c217a4756fa87c7"
+  "core_sha256": "a0a664352a752f57b1fd4190f359385e772926afbc9b618f1c217a4756fa87c7",
+  "human_linkage_validation": {
+    "reviewed": true,
+    "n_reviewed": 30,
+    "yes": 30,
+    "no": 0,
+    "uncertain": 0,
+    "review_date": "2026-10-01",
+    "report": "_internal/reports/LINKAGE_QA_HUMAN_VALIDATION_REPORT.md",
+    "processed_packet": "_internal/link_audit_private/PHASE2_LINKAGE_QA_HUMAN_VALIDATED.xlsx",
+    "reply_status_judgement_performed": false
+  },
+  "human_linkage_validation_recorded_at": "2026-10-01T21:19:11.413611+00:00"
 }

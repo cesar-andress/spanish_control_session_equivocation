@@ -202,3 +202,17 @@ Format per entry:
 - **evidence:** `PHASE0_LINKAGE_PROBE.csv`; `PHASE2_LINKAGE_QA.xlsx`; pool flags
 - **reason:** Prevent contamination of future samples by inspected cases.
 - **effect on protocol:** Sampling frame = eligible minus these exclusions.
+
+## 2026-10-01 — Linkage QA accepted
+
+- **decision:** Linkage QA accepted.
+- **status:** accepted
+- **evidence:** 30 human-reviewed cases, all confirmed (YES=30, NO=0,
+  UNCERTAIN=0). Report:
+  `_internal/reports/LINKAGE_QA_HUMAN_VALIDATION_REPORT.md`; processed packet:
+  `_internal/link_audit_private/PHASE2_LINKAGE_QA_HUMAN_VALIDATED.xlsx`.
+- **reason:** Human verification of linkage correctness met the ≥95% target
+  (100%). No reply-status judgement was performed.
+- **effect on protocol:** Proceed to political-alignment feasibility
+  (`formation_vote_alignment`). Sampling seeds remain null; no scientific
+  sample draw; no reply coding.
