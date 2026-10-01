@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/scse/annotation_row.schema.json",
+  "title": "SCSE annotation row provenance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "unit_id",
+    "annotator_id",
+    "codebook_version",
+    "codebook_hash",
+    "packet_version",
+    "coded_on",
+    "reply_status",
+    "condition"
+  ],
+  "properties": {
+    "unit_id": { "type": "string", "minLength": 1 },
+    "annotator_id": { "type": "string", "minLength": 1 },
+    "codebook_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "codebook_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "packet_version": { "type": "string", "minLength": 1 },
+    "coded_on": { "type": "string", "format": "date" },
+    "condition": {
+      "type": "string",
+      "enum": ["development", "calibration_r1", "calibration_r2", "main"]
+    },
+    "reply_status": {
+      "type": "string",
+      "enum": ["explicit_reply", "intermediate_reply", "non_reply"]
+    },
+    "borderline": { "type": ["boolean", "null"] },
+    "confidence": {
+      "type": ["string", "null"],
+      "enum": ["low", "medium", "high", null]
+    },
+    "notes": { "type": ["string", "null"] },
+    "returned_at": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

@@ -79,6 +79,13 @@ def validate_pool_dataframe(df: pd.DataFrame) -> None:
     if not qa.empty:
         errors.append("linkage_QA rows not marked exclude_from_sampling")
 
+    dev = df[
+        df["sampling_exclusion_reason"].eq("development_codebook")
+        & ~df["exclude_from_sampling"].fillna(False)
+    ]
+    if not dev.empty:
+        errors.append("development_codebook rows not marked exclude_from_sampling")
+
     if errors:
         raise PoolValidationError("; ".join(errors[:20]) + (f" (+{len(errors)-20} more)" if len(errors) > 20 else ""))
 

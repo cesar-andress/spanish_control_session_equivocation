@@ -269,6 +269,11 @@ def build_pool(*, sleep_s: float = 0.75) -> dict:
             # already excluded for another reason; keep prior, note QA also
             pass
 
+    # Codebook development units (if already selected) stay out of future samples
+    from scse.refresh_development_exclusions import apply_development_exclusions
+
+    df = apply_development_exclusions(df)
+
     validate_pool_dataframe(df)
 
     private_path = DATA_PRIVATE / "eligible_pool_full.parquet"

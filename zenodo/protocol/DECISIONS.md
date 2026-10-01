@@ -264,3 +264,23 @@ Format per entry:
   Not chosen to favour any reply outcome (none exist yet).
 - **effect on protocol:** Primary endpoint draft updated to non_opposed minus
   opposed; lightweight questioner-level robustness planned; freeze still later.
+
+## 2026-10-01 — Reply_status codebook development (DRAFT v0.1)
+
+- **decision:** Adopt draft three-level `reply_status` instrument (explicit /
+  intermediate / non-reply) measuring responsiveness to the registered
+  question; create development set n=15 for examples only; design two-round
+  calibration (20+20) without drawing units or freezing seeds; keep codebook
+  **DRAFT — NOT FROZEN**.
+- **status:** accepted for development; not frozen
+- **evidence:** `reply_status_codebook_v0.1.md`;
+  `_internal/literature/REPLY_STATUS_FRAMEWORK.md`;
+  `_internal/reports/REPLY_STATUS_CODEBOOK_DEVELOPMENT_REPORT.md`;
+  `_internal/data_private/development/DEVELOPMENT_SET_MANIFEST.json`;
+  `CALIBRATION_DESIGN.md`
+- **reason:** Need an operational annotation framework before calibration/
+  reliability; Bull (1994) three-way structure adapted to Spanish control-
+  session units without main-sample coding or outcome calculation.
+- **effect on protocol:** Development units marked `exclude_from_sampling`
+  (`development_codebook`); sampling frame reduced; primary contrast
+  unchanged; no main annotation; seeds remain null.

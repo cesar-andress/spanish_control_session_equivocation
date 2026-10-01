@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/scse/annotator_packet_row.schema.json",
+  "title": "SCSE blinded annotator packet row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["unit_id", "registered_question", "Q1", "R1"],
+  "properties": {
+    "unit_id": { "type": "string", "minLength": 1 },
+    "registered_question": { "type": "string", "minLength": 1 },
+    "Q1": { "type": "string", "minLength": 1 },
+    "R1": { "type": "string", "minLength": 1 },
+    "reply_status": {
+      "type": ["string", "null"],
+      "enum": ["explicit_reply", "intermediate_reply", "non_reply", null]
+    },
+    "borderline": { "type": ["boolean", "null"] },
+    "confidence": {
+      "type": ["string", "null"],
+      "enum": ["low", "medium", "high", null]
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "description": "Packets MUST NOT include party, parliamentary_group, formation_vote_alignment, primary_alignment, or questioner identifiers."
+}

@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-09-29T14:23:13.795918+00:00",
-  "pipeline_commit": "bd9224477c9a10daaa2cc059da8debe79a235956",
+  "created_at": "2026-10-01T21:32:25.913378+00:00",
+  "pipeline_commit": "424327b0c4d9703c7991d907496c4fed15fea9b6",
   "eligibility_rule_version": "phase2-xiv-v1",
   "parlamint_release": "5.0",
   "parlamint_sha256": "b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68",
@@ -27,18 +27,19 @@
     ]
   ],
   "eligible_count": 100,
-  "sampling_frame_count": 67,
+  "sampling_frame_count": 52,
   "sessions_eligible": 48,
   "questioners_eligible": 19,
   "groups_eligible": 7,
   "phase0_excluded": 3,
   "spdb_overlap_rows": 0,
   "linkage_qa_n": 30,
+  "development_codebook_n": 15,
   "private_pool_path": "_internal/data_private/eligible_pool_full.parquet",
-  "private_pool_sha256": "25b1af61c48d25611aceaa333c89db5edd738abb51d9ad7a288f729e06beb5fa",
+  "private_pool_sha256": "607ef90f09df3d301a136d3e3bd78c951a706ac8d2dc33701c73b77ffbe5e1a4",
   "public_pool_path": "zenodo/data/derived/eligible_pool_metadata_preannotation.csv",
-  "public_pool_sha256": "dc3adc7e7c20973fb867cdc2a8ebd9d6cf8a642e5488a2c4e73693113827cc3a",
-  "exclusions_sha256": "5db72bb7fdc7009f5f6021cb5298392ddfffa9ce9cec33964b6d53858a35c5dc",
+  "public_pool_sha256": "0832f8f8dd4b72944783c014d7414d7357649621de7535cdb430b45562d93ade",
+  "exclusions_sha256": "717eaa600b14ecd5a5dac0ca721ffa4c04d6f51804790c6a0fb666db522d97ed",
   "qa_packet_path": "_internal/link_audit_private/PHASE2_LINKAGE_QA.xlsx",
   "seeds": {
     "development": null,
@@ -46,7 +47,8 @@
     "main_sample": null
   },
   "outcome_columns_present": [],
-  "core_sha256": "a0a664352a752f57b1fd4190f359385e772926afbc9b618f1c217a4756fa87c7",
+  "reply_status_codebook_status": "draft_v0.1_not_frozen",
+  "refresh_reason": "phase4_development_exclusions",
   "human_linkage_validation": {
     "reviewed": true,
     "n_reviewed": 30,
@@ -58,5 +60,6 @@
     "processed_packet": "_internal/link_audit_private/PHASE2_LINKAGE_QA_HUMAN_VALIDATED.xlsx",
     "reply_status_judgement_performed": false
   },
-  "human_linkage_validation_recorded_at": "2026-10-01T21:19:11.413611+00:00"
+  "human_linkage_validation_recorded_at": "2026-10-01T21:19:11.413611+00:00",
+  "core_sha256": "8dbb4045603d33e380fa6faf912c6124a8f0d365b82b95a0e6123aaedc51b493"
 }

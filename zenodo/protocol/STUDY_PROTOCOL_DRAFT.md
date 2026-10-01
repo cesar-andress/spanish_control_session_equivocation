@@ -69,11 +69,13 @@ reply / non-reply tradition:
 - intermediate reply
 - non-reply
 
-Exact operational definitions are **not frozen** and must not be invented in
-the scaffold phase. A Spanish-adapted codebook is planned for Phase 3.
+Exact operational definitions are **not frozen**. Draft Spanish-adapted
+instrument: `reply_status_codebook_v0.1.md` (**DRAFT — NOT FROZEN**); literature
+basis in `_internal/literature/REPLY_STATUS_FRAMEWORK.md`.
 
-Additional planned fields (not yet operationalised): question form;
-equivocation type for non-explicit responses; borderline flag; free-text note.
+Optional diagnostics in the draft (not primary outcomes): `borderline`;
+`confidence`; `notes`. Optional future secondary (not in v0.1 outcome path):
+equivocation subtype for non-explicit responses.
 
 ---
 
@@ -160,11 +162,34 @@ primary hypothesis decision rule.
   id for Pedro Sánchez Pérez-Castejón; ministerial substitutes are out of pool.
 - **Exclusions from sampling:** Phase-0 probe expedientes; Phase-2 linkage-QA
   rows (hash-ranked, not a scientific seed); SPDB previous-paper sitting dates
-  when any candidate falls on those dates (Phase 2 observed **zero** overlap).
+  when any candidate falls on those dates (Phase 2 observed **zero** overlap);
+  Phase-4 codebook **development** units (n=15; `development_codebook`;
+  deterministic `SHA-256("development|" + exchange_id)` selection — **not** a
+  scientific seed and **not** for reliability).
 - **Canonical pool:** `_internal/data_private/eligible_pool_full.parquet`
   (private full text). Public projection:
   `data/derived/eligible_pool_metadata_preannotation.csv` (identifier-only).
 - **Seeds:** `development`, `calibration`, and `main_sample` remain **null**.
+
+---
+
+## Phase 4 reply_status codebook development (2026-10-01)
+
+**Status: DRAFT — NOT FROZEN.** No main annotation; no reply rates; no
+hypothesis test.
+
+- **Instrument:** `reply_status_codebook_v0.1.md` — three-level
+  `reply_status` (explicit / intermediate / non-reply) measuring
+  **responsiveness to the registered question**, not truth or politics.
+- **Literature basis:** `_internal/literature/REPLY_STATUS_FRAMEWORK.md`
+  (Bull 1994; Bull & Mayer 1993; PMQs applications; Spanish genre context).
+- **Development set:** n=15 blinded packet under
+  `_internal/data_private/development/`; excluded from future samples.
+- **Calibration design:** two rounds of 20 (independent coding → discussion →
+  revision), then freeze; seeds still null — see `CALIBRATION_DESIGN.md`.
+- **Packet schema:** blinded columns only (`unit_id`, `registered_question`,
+  `Q1`, `R1`); provenance schema in `../schemas/annotation_row.schema.json`.
+- **Report:** `_internal/reports/REPLY_STATUS_CODEBOOK_DEVELOPMENT_REPORT.md`
 
 ---
 
@@ -219,6 +244,7 @@ protocol freeze.
   freeze
 - Final sample size N
 - Exact Bull-derived codebook definitions and Spanish examples
+  (draft v0.1 exists; freeze after calibration)
 - Calibration performance gates (numeric thresholds to confirm at freeze)
 - Final statistical decision rule (including any equivalence margin)
 - Named scientific seed values (`calibration`, `main_sample`, etc.)
@@ -231,5 +257,9 @@ protocol freeze.
 - `DECISIONS.md` — append-only decision log
 - `SOURCE_REGISTRY_DRAFT.yaml` — source pins (draft)
 - `seeds.yaml` — named seeds (all pending until freeze)
+- `reply_status_codebook_v0.1.md` — draft coding instrument (not frozen)
+- `CALIBRATION_DESIGN.md` — two-round calibration plan (units not drawn)
 - `../docs/licensing.md` — licensing audit status
 - `../manifests/release_manifest.schema.json` — release provenance schema
+- `../schemas/annotation_row.schema.json` — future label provenance
+- `../schemas/annotator_packet_row.schema.json` — blinded packet row schema
