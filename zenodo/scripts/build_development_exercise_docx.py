@@ -135,7 +135,7 @@ def add_boxed_category(doc, title: str, meaning: str, examples: list[str], note:
 
     p3 = cell.add_paragraph()
     p3.paragraph_format.space_after = Pt(1)
-    run3 = p3.add_run("Examples:")
+    run3 = p3.add_run("Ejemplos:")
     set_run_font(run3, size=11, bold=True)
 
     for ex in examples:
@@ -155,7 +155,7 @@ def add_boxed_category(doc, title: str, meaning: str, examples: list[str], note:
     add_para(doc, "", size=6, space_after=6)
 
 
-def add_comment_box(doc, height_cm: float = 4.0, *, label: str | None = "Comments"):
+def add_comment_box(doc, height_cm: float = 4.0, *, label: str | None = "Observaciones"):
     if label:
         add_label(doc, label)
     table = doc.add_table(rows=1, cols=1)
@@ -178,7 +178,7 @@ def clear_core_props(doc: Document) -> None:
     props = doc.core_properties
     props.author = ""
     props.last_modified_by = ""
-    props.title = "Pilot Annotation Exercise: Reply Status"
+    props.title = "Ejercicio inicial de revisión de criterios: tipo de respuesta"
     props.subject = ""
     props.keywords = ""
     props.category = ""
@@ -191,17 +191,25 @@ def add_instructions(doc: Document) -> None:
 
     add_para(
         doc,
-        "Pilot Annotation Exercise:",
-        size=22,
+        "Ejercicio inicial de revisión de criterios",
+        size=20,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
         space_after=4,
     )
     add_para(
         doc,
-        "Reply Status in Spanish Parliamentary Control Sessions",
-        size=16,
+        "Tipo de respuesta en las sesiones de control parlamentario",
+        size=15,
         bold=True,
+        align=WD_ALIGN_PARAGRAPH.CENTER,
+        space_after=6,
+    )
+    add_para(
+        doc,
+        "Congreso de los Diputados · intervenciones del presidente del Gobierno",
+        size=11,
+        italic=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
         space_after=18,
     )
@@ -209,11 +217,12 @@ def add_instructions(doc: Document) -> None:
     add_para(
         doc,
         (
-            "The purpose of this exercise is to test whether preliminary annotation "
-            "rules allow experts to classify parliamentary responses consistently. "
-            "This is not the final annotation stage and no individual answer will be "
-            "considered correct or incorrect. The objective is to identify ambiguous "
-            "cases and improve the guidelines."
+            "El objetivo de este ejercicio es comprobar si unos criterios "
+            "preliminares de anotación permiten a expertos clasificar de forma "
+            "coherente las respuestas parlamentarias. No se trata de la etapa "
+            "final de anotación y ninguna respuesta individual se considerará "
+            "correcta o incorrecta. La finalidad es identificar casos ambiguos "
+            "y mejorar la guía de criterios."
         ),
         size=12,
         space_after=12,
@@ -221,31 +230,32 @@ def add_instructions(doc: Document) -> None:
     add_para(
         doc,
         (
-            "Please work independently. Disagreement between experts is expected and "
-            "useful. After the fifteen cases, complete the short feedback page at the "
-            "end of this booklet."
+            "Trabaje de forma independiente. El desacuerdo entre expertos es "
+            "esperado y útil. Al terminar los quince casos, complete la página "
+            "final de observaciones."
         ),
         size=12,
         space_after=10,
     )
-    add_para(doc, "Number of cases: 15", size=12, bold=True, space_after=4)
+    add_para(doc, "Número de casos: 15", size=12, bold=True, space_after=4)
     add_para(
         doc,
-        "Estimated time: about 60–90 minutes, depending on case length.",
+        "Tiempo estimado: entre 60 y 90 minutos, según la extensión de los textos.",
         size=12,
         space_after=12,
     )
 
     doc.add_page_break()
 
-    add_heading_like(doc, "Instructions", size=18, space_before=0)
+    add_heading_like(doc, "Instrucciones", size=18, space_before=0)
 
-    add_heading_like(doc, "What you are judging", size=14)
+    add_heading_like(doc, "Qué debe valorar", size=14)
     add_para(
         doc,
         (
-            "The annotator must decide whether the Prime Minister’s first response "
-            "answers the question asked by the parliamentarian."
+            "La persona anotadora debe decidir si la primera respuesta del "
+            "presidente del Gobierno contesta a la pregunta formulada por el "
+            "diputado o la diputada."
         ),
         size=12,
         space_after=8,
@@ -253,16 +263,16 @@ def add_instructions(doc: Document) -> None:
     add_para(
         doc,
         (
-            "Each case presents three texts: the registered written question, the "
-            "oral question as spoken in the chamber, and the Prime Minister’s first "
-            "response. The evaluation concerns the relation:"
+            "Cada caso presenta tres textos: la pregunta escrita registrada, la "
+            "pregunta oral pronunciada en el hemiciclo y la primera respuesta "
+            "del presidente del Gobierno. La evaluación se centra en la relación:"
         ),
         size=12,
         space_after=6,
     )
     add_para(
         doc,
-        "QUESTION  →  FIRST RESPONSE",
+        "PREGUNTA  →  PRIMERA RESPUESTA",
         size=12,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
@@ -271,22 +281,22 @@ def add_instructions(doc: Document) -> None:
     add_para(
         doc,
         (
-            "Use the registered question as institutional context when the spoken "
-            "turn is elliptical or refers back to it. The main object of judgement "
-            "is whether the first response answers the oral question."
+            "Utilice la pregunta registrada como contexto institucional cuando "
+            "el turno oral sea elíptico o remita a ella. El objeto principal de "
+            "juicio es si la primera respuesta contesta a la pregunta oral."
         ),
         size=12,
         space_after=10,
     )
 
-    add_heading_like(doc, "What you are not judging", size=14)
-    add_para(doc, "The evaluation does NOT concern:", size=12, space_after=4)
+    add_heading_like(doc, "Qué no debe valorar", size=14)
+    add_para(doc, "La evaluación no se refiere a:", size=12, space_after=4)
     not_items = [
-        "whether the answer is politically convincing;",
-        "whether the answer is factually true;",
-        "whether you agree with the response;",
-        "whether the question is fair;",
-        "whether the government policy is good or bad.",
+        "si la respuesta resulta políticamente convincente;",
+        "si la respuesta es fácticamente verdadera;",
+        "si usted está de acuerdo con lo dicho;",
+        "si la pregunta es justa o sesgada;",
+        "si la política del Gobierno es buena o mala.",
     ]
     for item in not_items:
         p = doc.add_paragraph(style="List Bullet")
@@ -295,57 +305,57 @@ def add_instructions(doc: Document) -> None:
 
     add_para(doc, "", size=8, space_after=6)
     doc.add_page_break()
-    add_heading_like(doc, "The three categories", size=14, space_before=0)
+    add_heading_like(doc, "Las tres categorías (tipo de respuesta)", size=14, space_before=0)
 
     add_boxed_category(
         doc,
-        "EXPLICIT REPLY",
-        "The response directly addresses the main issue raised in the oral question.",
+        "RESPUESTA EXPLÍCITA",
+        "La respuesta aborda de forma directa la cuestión principal planteada en la pregunta oral.",
         [
-            "provides the requested information;",
-            "confirms or denies the proposition;",
-            "rejects a premise but still addresses it.",
+            "aporta la información solicitada;",
+            "confirma o niega la proposición;",
+            "rechaza una premisa, pero sigue abordándola.",
         ],
         note=(
-            "Important: a response does not need to agree with the question to count "
-            "as an explicit reply."
+            "Importante: una respuesta no necesita coincidir con el punto de vista "
+            "del preguntante para considerarse respuesta explícita."
         ),
     )
     add_boxed_category(
         doc,
-        "INTERMEDIATE REPLY",
-        "The response engages with the question but only partially or indirectly.",
+        "RESPUESTA PARCIAL O INTERMEDIA",
+        "La respuesta se ocupa de la pregunta, pero solo de forma parcial o indirecta.",
         [
-            "answers one part of a multi-part question;",
-            "provides related information but does not fully address the main point;",
-            "gives a response where the connection requires interpretation.",
+            "contesta a una parte de una pregunta con varios puntos;",
+            "aporta información relacionada, sin abordar del todo el núcleo de la pregunta;",
+            "ofrece una respuesta cuya conexión con la pregunta exige interpretación.",
         ],
     )
     add_boxed_category(
         doc,
-        "NON-REPLY",
-        "The response does not substantially address the question asked.",
+        "AUSENCIA DE RESPUESTA",
+        "La respuesta no aborda de manera sustancial la pregunta formulada.",
         [
-            "changes to an unrelated topic;",
-            "discusses general achievements without addressing the question;",
-            "attacks the questioner without answering the issue.",
+            "cambia a un tema no relacionado;",
+            "habla de logros generales sin atender a la pregunta;",
+            "ataca a quien pregunta sin responder a la cuestión.",
         ],
     )
 
     doc.add_page_break()
-    add_heading_like(doc, "How to decide", size=16, space_before=0)
+    add_heading_like(doc, "Cómo decidir", size=16, space_before=0)
     add_para(
         doc,
-        "Use this short procedure for every case:",
+        "Siga este procedimiento breve en cada caso:",
         size=12,
         space_after=8,
     )
     steps = [
-        ("Step 1.", "Identify the main issue in the oral question."),
-        ("Step 2.", "Ask whether the first response addresses that issue."),
-        ("Step 3.", "If clearly yes: Explicit reply."),
-        ("Step 4.", "If partly or indirectly: Intermediate reply."),
-        ("Step 5.", "If no meaningful answer: Non-reply."),
+        ("Paso 1.", "Identifique la cuestión principal de la pregunta oral."),
+        ("Paso 2.", "Pregúntese si la primera respuesta aborda esa cuestión."),
+        ("Paso 3.", "Si la respuesta es claramente sí: respuesta explícita."),
+        ("Paso 4.", "Si lo hace solo en parte o de forma indirecta: respuesta parcial o intermedia."),
+        ("Paso 5.", "Si no hay una contestación significativa: ausencia de respuesta."),
     ]
     for title, body in steps:
         p = doc.add_paragraph()
@@ -356,12 +366,12 @@ def add_instructions(doc: Document) -> None:
         set_run_font(r2, size=12)
 
     add_para(doc, "", size=8, space_after=6)
-    add_heading_like(doc, "Further guidance", size=14)
+    add_heading_like(doc, "Orientaciones adicionales", size=14)
     bullets = [
-        "Criticism of the questioner may appear together with an answer; if the issue is still addressed, that can be an explicit reply.",
-        "If a case feels close to a category boundary, mark it as borderline and explain why in the comments.",
-        "Judge only the first response printed in the case, not later turns.",
-        "Disagreement between experts is informative for improving the guidelines.",
+        "Puede haber crítica a quien pregunta junto con una contestación; si la cuestión queda abordada, puede tratarse de una respuesta explícita.",
+        "Si el caso se sitúa cerca del límite entre categorías, márquelo como caso dudoso y explique el motivo en las observaciones.",
+        "Valore únicamente la primera respuesta impresa en el caso, no turnos posteriores.",
+        "El desacuerdo entre expertos es informativo para mejorar la guía de criterios.",
     ]
     for b in bullets:
         p = doc.add_paragraph(style="List Bullet")
@@ -369,13 +379,14 @@ def add_instructions(doc: Document) -> None:
         set_run_font(p.add_run(b), size=12)
 
     add_para(doc, "", size=8, space_after=6)
-    add_heading_like(doc, "How to fill each case", size=14)
+    add_heading_like(doc, "Cómo completar cada caso", size=14)
     add_para(
         doc,
         (
-            "Read the three texts. Then, on the judgement page for that case, tick "
-            "exactly one category, tick whether the case felt borderline, and use "
-            "the comments box whenever the decision was difficult."
+            "Lea los tres textos. A continuación, en la página de decisión de ese "
+            "caso, marque exactamente una categoría, indique si el caso le resultó "
+            "dudoso y use el recuadro de observaciones cuando la decisión haya sido "
+            "difícil."
         ),
         size=12,
         space_after=8,
@@ -384,57 +395,58 @@ def add_instructions(doc: Document) -> None:
 
 def add_case(doc: Document, case_no: int, row) -> None:
     doc.add_page_break()
-    add_heading_like(doc, f"CASE {case_no}", size=18, space_before=0)
+    add_heading_like(doc, f"CASO {case_no}", size=18, space_before=0)
 
-    add_label(doc, "REGISTERED QUESTION")
+    add_label(doc, "PREGUNTA REGISTRADA")
     add_body_block(doc, row["registered_question"])
 
-    add_label(doc, "ORAL QUESTION (Q1)")
+    add_label(doc, "PREGUNTA ORAL")
     add_body_block(doc, row["Q1"])
 
-    add_label(doc, "FIRST RESPONSE OF THE PRIME MINISTER (R1)")
+    add_label(doc, "PRIMERA RESPUESTA DEL PRESIDENTE DEL GOBIERNO")
     add_body_block(doc, row["R1"])
 
     doc.add_page_break()
-    add_heading_like(doc, f"CASE {case_no} — YOUR DECISION", size=16, space_before=0)
+    add_heading_like(doc, f"CASO {case_no} — SU DECISIÓN", size=16, space_before=0)
     add_para(
         doc,
-        "Choose one category. Then say whether this case felt borderline.",
+        "Elija una sola categoría. Indique después si el caso le resultó dudoso.",
         size=11,
         italic=True,
         space_after=10,
     )
 
-    add_label(doc, "YOUR DECISION")
-    add_checkbox_line(doc, "Explicit reply")
-    add_checkbox_line(doc, "Intermediate reply")
-    add_checkbox_line(doc, "Non-reply")
+    add_label(doc, "TIPO DE RESPUESTA")
+    add_checkbox_line(doc, "Respuesta explícita")
+    add_checkbox_line(doc, "Respuesta parcial o intermedia")
+    add_checkbox_line(doc, "Ausencia de respuesta")
 
-    add_label(doc, "BORDERLINE CASE")
-    add_checkbox_line(doc, "Yes")
+    add_label(doc, "CASO DUDOSO")
+    add_checkbox_line(doc, "Sí")
     add_checkbox_line(doc, "No")
 
-    add_comment_box(doc, height_cm=8.0, label="COMMENTS")
+    add_comment_box(doc, height_cm=8.0, label="OBSERVACIONES")
 
 
 def add_feedback(doc: Document) -> None:
     doc.add_page_break()
-    add_heading_like(doc, "Feedback on the guidelines", size=18, space_before=0)
+    add_heading_like(doc, "Observaciones sobre la guía de criterios", size=18, space_before=0)
     add_para(
         doc,
         (
-            "Please answer briefly after completing the fifteen cases. This feedback "
-            "helps improve the coding guide. It is not a score for your decisions."
+            "Responda brevemente al terminar los quince casos. Estas observaciones "
+            "sirven para mejorar la guía de criterios de anotación. No constituyen "
+            "una puntuación de sus decisiones."
         ),
         size=12,
         space_after=12,
     )
     questions = [
-        "1. Was the category decision clear overall?",
-        "2. What rule, if any, felt missing?",
-        "3. What wording in the instructions caused uncertainty?",
-        "4. Would another expert in your field likely make the same decisions? Why or why not?",
-        "5. Optional: which case numbers were hardest, and why?",
+        "1. ¿Le resultó clara, en conjunto, la decisión sobre las categorías?",
+        "2. ¿Qué criterio, si alguno, echa en falta?",
+        "3. ¿Qué formulación de las instrucciones le generó incertidumbre?",
+        "4. ¿Cree que otro experto de su ámbito tomaría, en lo esencial, las mismas decisiones? ¿Por qué?",
+        "5. Opcional: ¿qué números de caso le resultaron más difíciles y por qué?",
     ]
     for q in questions:
         add_para(doc, q, size=12, bold=True, space_after=6, space_before=8)
@@ -443,7 +455,7 @@ def add_feedback(doc: Document) -> None:
     add_para(doc, "", size=8, space_after=8)
     add_para(
         doc,
-        "Thank you for your time and careful judgement.",
+        "Gracias por su tiempo y por su juicio cuidadoso.",
         size=12,
         italic=True,
         space_after=6,
