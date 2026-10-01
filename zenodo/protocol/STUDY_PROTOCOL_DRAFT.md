@@ -261,6 +261,10 @@ test.
   (`development_set_manifest.yaml`; XIII preferred, XII supplement);
   XIV in-pool development set **superseded** and sampling exclusions restored;
   expected-disagreement note prepared; calibration rounds still **undrawn**.
+- **Phase 4.2:** human development packets for annotators A/B
+  (`_internal/development/`; schema `development_packet_schema.md`;
+  instructions `_internal/reports/DEVELOPMENT_EXERCISE_INSTRUCTIONS.md`).
+  Intelligibility exercise only — **not** reliability / gold / main study.
 - **Development/calibration:** out-of-pool only; **do not** burn the XIV n=100.
   See `CALIBRATION_DESIGN.md`.
 - **Packet schema:** blinded columns; question-side + reply fields in

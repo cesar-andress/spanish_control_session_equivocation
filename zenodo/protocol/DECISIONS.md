@@ -326,3 +326,17 @@ Format per entry:
   without burning the XIV eligible census.
 - **effect on protocol:** sampling_frame restores former development exclusions;
   instrument path points to v0.2; no XIV reply coding; no reliability yet.
+
+## 2026-10-01 — Phase 4.2 human development package
+
+- **decision:** Prepare blinded out-of-pool development workbooks for annotators
+  A and B (n=15) with coding + codebook feedback sheets; document schema and
+  instructions; record packet hashes. Exercise is for codebook intelligibility
+  only — not calibration, reliability, gold, or main-study use.
+- **status:** accepted for development workflow; codebook remains DRAFT
+- **evidence:** `development_packet_schema.md`;
+  `_internal/development/DEVELOPMENT_PACKAGE_PROVENANCE.json`;
+  `_internal/reports/DEVELOPMENT_EXERCISE_INSTRUCTIONS.md`
+- **reason:** Need structured human feedback on v0.2 before drawing calibration.
+- **effect on protocol:** No XIV units used; no agreement metrics; freeze still
+  deferred.

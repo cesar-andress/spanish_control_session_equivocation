@@ -47,3 +47,16 @@ notes:
 - XIII alone has few PM FORMULA exchanges in ParlaMint; XII fills to n.
 - Some TEI rows lack registered title; packet marks placeholder for practice.
 - Do not mix these units into future XIV reliability or main samples.
+human_development_package:
+  phase: '4.2'
+  created_on: '2026-10-01'
+  private_dir: _internal/development/
+  packets:
+  - _internal/development/development_annotator_A.xlsx
+  - _internal/development/development_annotator_B.xlsx
+  packet_hashes:
+    development_annotator_A.xlsx: d04eb871a69c9775ee67e7fe3a21f0963295421fcfcac6a21a943f6eb3c1ab55
+    development_annotator_B.xlsx: 9d2a6f283d49ecd146c86744a0a9dfbf1664a24481537a0c98f92ab14a2b3ec2
+    development_annotator_A_coding.csv: 4dd3c58f8383a2990187f6c508d2a979e6b9168a41778dfe8505aa78456545c3
+    development_annotator_B_coding.csv: 4dd3c58f8383a2990187f6c508d2a979e6b9168a41778dfe8505aa78456545c3
+  codebook_version: v0.2
