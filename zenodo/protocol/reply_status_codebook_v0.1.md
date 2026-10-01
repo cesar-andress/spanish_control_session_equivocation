@@ -5,6 +5,13 @@
 **Date:** 2026-10-01  
 **Hash:** compute at freeze (`sha256` of this file); not frozen yet.
 
+**Phase 4A note (2026-10-01).** Protocol refinement changes the evaluated
+target to the **oral turn (Q1)**, anchored by the registered question, and adds
+planned fields `question_target_type`, `question_form`, and
+`question_confrontational`. Sections below that still say “registered-only
+target” are **superseded for planning**; revise to **v0.2** before calibration.
+See `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md`.
+
 Primary literature anchors (verified Phase 0): Bull (1994); Bull & Mayer (1993);
 PMQs applications (e.g. Bull & Strawson 2020). Spanish genre context: Fuentes
 Rodríguez (2011/2012); Santos López (2010). See
@@ -27,7 +34,7 @@ It does **not** measure:
 
 A response may strongly disagree with the questioner and still be an **explicit
 reply**. A fluent, persuasive speech may be a **non-reply** if it never answers
-the registered request.
+the oral information request.
 
 ---
 
@@ -41,10 +48,13 @@ Each unit consists of three fields shown to annotators:
 
 Réplica / dúplica are **out of scope** for this code.
 
-**Anchoring rule.** Code responsiveness primarily to the **registered question**.
-Use Q1 only to resolve reference (who/what “this” means) or to see how the ask
-was delivered. If Q1 expands far beyond the registered text, still judge whether
-R1 answers the **registered** information request.
+**Target rule (Phase 4A; to be fully operationalised in v0.2).** Code
+responsiveness of `R1` to the **oral question turn (`Q1`)**, using the
+registered question as **anchor** (institutional slot / framing). Record
+`question_target_type` when registered and oral diverge (`match`,
+`oral_expansion`, `multiple_question`, `oral_substitution`). Multi-question
+turns: answering only one distinct ask is at most `intermediate_reply` unless
+remaining asks are restatements of the same slot.
 
 ---
 
@@ -205,3 +215,4 @@ Proposed reliability metrics at freeze (thresholds TBD, not chosen for results):
 | Version | Date | Notes |
 |---------|------|-------|
 | 0.1.0 | 2026-10-01 | Initial draft for development; not frozen |
+| 0.1.0+4A | 2026-10-01 | Phase 4A note: Q1 target supersedes registered-only rule; full rewrite deferred to v0.2 |

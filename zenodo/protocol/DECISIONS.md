@@ -284,3 +284,26 @@ Format per entry:
 - **effect on protocol:** Development units marked `exclude_from_sampling`
   (`development_codebook`); sampling frame reduced; primary contrast
   unchanged; no main annotation; seeds remain null.
+
+## 2026-10-01 — Phase 4A protocol refinement after hostile design review
+
+- **decision:** Accept GO-WITH-MODIFICATIONS design updates without starting
+  annotation: (1) reframe RQ as descriptive variation in first-response
+  explicitness by formation-vote baseline; (2) keep
+  `formation_vote_alignment` / opposed vs non_opposed with neutral labels;
+  (3) evaluate `reply_status` against **Q1** anchored by registered text and
+  add draft `question_target_type`; (4) plan question-side covariates
+  `question_form` and `question_confrontational` before R1; (5) move
+  development/calibration **out of** the XIV n=100 (prefer prior-legislature
+  PM control); (6) keep dual independent coding, freeze-before-main, and add
+  explicit-vs-not sensitivity; (7) document questioner concentration /
+  leave-one-out; (8) list neutral title options without finalizing.
+- **status:** accepted for planning; protocol remains DRAFT — NOT PREREGISTERED
+- **evidence:** `_internal/reports/CLAUDE_DESIGN_REVIEW_2026-10-01.md`;
+  `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md`; updated
+  `STUDY_PROTOCOL_DRAFT.md`; updated `CALIBRATION_DESIGN.md`
+- **reason:** Close true design blockers identified by external review before
+  any further instrument burn of the XIV pool.
+- **effect on protocol:** Phase-4 registered-only target and in-pool
+  development strategy superseded; codebook v0.2 required before calibration;
+  no main packets/sample/outcomes; title under review.

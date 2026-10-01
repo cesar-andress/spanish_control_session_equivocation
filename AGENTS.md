@@ -2,15 +2,19 @@
 
 ## Paper identity
 
-**Working title.** Answering Allies and Adversaries: Equivocation in Prime-Ministerial Replies during Spanish Parliamentary Control Sessions
+**Working title (under review; not finalized).** Answering Allies and Adversaries: Equivocation in Prime-Ministerial Replies during Spanish Parliamentary Control Sessions
 
-**Primary question (observational).** In Spanish Congress control sessions, does the Prime Minister give explicit replies to pre-registered oral questions at different rates depending on the political alignment of the questioner's parliamentary group?
+Neutral title options: `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md` (prefer scoped wording without allies/adversaries).
 
-Do not sharpen this into a causal claim. Operational codebook definitions are not frozen.
+**Primary question (observational, descriptive — Phase 4A).** In XIV Spanish Congress control sessions, how does the rate of explicit first responses to oral control questions vary by a fixed formation-vote baseline (`primary_alignment`: opposed vs non_opposed), and how does that descriptive pattern relate to independently coded question-side features?
 
-**Analytic variable name (neutral):** `formation_vote_alignment` (not “allies/adversaries”).
+Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/hostile as analytic labels. Operational codebook definitions are not frozen.
 
-**Phase.** Phase 0 complete: **NARROW** (conditional GO). No research corpus acquired; no sample; no annotation; no results.
+**Analytic variable name (neutral):** `formation_vote_alignment` (institutional baseline indicator; not “allies/adversaries”).
+
+**Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
+
+**Phase.** Phase 4A complete: protocol refinement after external design review. No main annotation; no scientific sample draw; codebook remains DRAFT.
 
 ## Authors (byline order)
 
@@ -34,6 +38,11 @@ Phase-0 reports:
 - `_internal/reports/NOVELTY_FREEZE_REPORT.md`
 - `_internal/reports/PHASE0_NOVELTY_AND_FEASIBILITY.md`
 
+Phase 4A:
+
+- `_internal/reports/CLAUDE_DESIGN_REVIEW_2026-10-01.md`
+- `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md`
+
 ## Hard constraints
 
 - No LLM labelling or coding assistance.
@@ -41,12 +50,13 @@ Phase-0 reports:
 - Do not reanalyse the previous paper's N=100 pilot.
 - Do not claim primacy / “first”.
 - Do not push `_internal/` or manuscript drafts to the public remote.
-- Do not start Phase 2 until the narrowing above is explicitly accepted.
+- Do not burn the XIV eligible pool on development/calibration (use out-of-pool sources).
+- Do not start main annotation until codebook v0.2 + out-of-pool calibration plan are ready.
 
 ## Integrity sequence
 
-development → calibration → protocol freeze → main annotation → reliability → adjudication → analysis
+out-of-pool development → out-of-pool calibration → protocol freeze → main annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Accept NARROW scope → Phase 2 data acquisition + pool (separate prompt). No sampling seeds yet.
+Restore superseded in-pool development exclusions if still marked; acquire out-of-pool (XIII PM) development corpus plan → revise codebook to v0.2 (Q1 target + question-side fields) → attrition table. No sampling seeds yet.
