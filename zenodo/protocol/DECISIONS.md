@@ -229,3 +229,21 @@ Format per entry:
 - **reason:** Avoid implying spreadsheet-cell annotation that did not occur.
 - **effect on protocol:** No change to the PASS outcome or next gate; provenance
   wording only.
+
+## 2026-10-01 — Formation-vote alignment feasibility (draft rule)
+
+- **decision:** Adopt draft operational rule for `formation_vote_alignment`:
+  individual MP named vote on the XIV second investiture vote (2020-01-07,
+  DSCD-14-PL-4 / expediente 080/000001); map sí→supported, no→opposed,
+  abstención→abstained. Unit = MP, not parliamentary group. Status remains
+  **DRAFT — NOT FROZEN**. Feasibility recommendation: **GO** (HIGH confound risk).
+- **status:** accepted for planning; not protocol-frozen
+- **evidence:** Named roll-call in DSCD-14-PL-4; all 19 eligible questioners
+  classified; `_internal/reports/ALIGNMENT_FEASIBILITY_REPORT.md`;
+  `protocol/alignment_table.yaml`
+- **reason:** Grupo Plural / Mixto votes split; group-level coding is not
+  reproducible for those seats. Official named list removes subjectivity for
+  the current pool.
+- **effect on protocol:** Alignment table draft available; freeze deferred to
+  protocol freeze. No reply coding / sampling. Primary contrast among
+  supported/opposed/abstained still open.

@@ -181,13 +181,15 @@ protocol freeze.
 ## Currently unresolved decisions
 
 - Whether XII post-censure is included as secondary scope
-- Operational `formation_vote_alignment` coding rules and `alignment_table.yaml`
+- **Freeze** of `formation_vote_alignment` (draft MP investiture rule exists;
+  see `alignment_table.yaml`, status `draft_not_frozen`)
+- Whether the primary confirmatory contrast uses supported vs opposed only, or
+  retains abstained as a third stratum
 - Final sample size N
 - Exact Bull-derived codebook definitions and Spanish examples
 - Calibration performance gates (numeric thresholds to confirm at freeze)
 - Final statistical decision rule (including any equivalence margin)
 - Named scientific seed values (`calibration`, `main_sample`, etc.)
-- Human confirmation of Phase-2 linkage-QA packet (≥95% target)
 - Final Congreso full-text Zenodo packaging under aviso-legal conditions
 
 ---

@@ -64,3 +64,17 @@ sources:
     redistribution_status: "not_used_as_primary_180_source"
     citation: "Congreso de los Diputados — Datos abiertos"
     notes: "Phase 2 primary path is initiative HTML detail pages."
+
+  - name: Congreso investiture roll-call (XIV)
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/cem/sesiones-de-investidura"
+    access_date: "2026-10-01"
+    version_or_date: "XIV second investiture vote 2020-01-07 (DSCD-14-PL-4)"
+    coverage: "Named sí/no/abstención roll-call for formation_vote_alignment draft"
+    format: "Diario de Sesiones PDF"
+    identifier_scheme: "expediente 080/000001; DSCD-14-PL-4"
+    licence: "Reuse with conditions (aviso legal)"
+    redistribution_status: "identifier_based_until_packaging_review"
+    citation: "DSCD-14-PL-4; Sesiones de investidura"
+    primary_pdf: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    notes: "Phase-3 draft alignment uses individual MP named votes from this PDF."

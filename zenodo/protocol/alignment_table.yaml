@@ -1,0 +1,231 @@
+# alignment_table.yaml
+# DRAFT — NOT FROZEN
+#
+# Variable: formation_vote_alignment
+# Categories: supported | opposed | abstained | unknown
+#
+# Operational rule (draft):
+#   Classify each eligible questioner by their individual named vote on the
+#   XIV legislature second investiture vote (2020-01-07) that invested
+#   Pedro Sánchez Pérez-Castejón (expediente 080/000001).
+#   Mapping: sí → supported; no → opposed; abstención → abstained.
+#   Unit: individual MP (not parliamentary group).
+#   Scope pin: time-invariant relative to that vote event (later affiliation
+#   changes do not reclassify the formation vote).
+#
+# Forbidden analytic labels (do not encode): allies/adversaries or friendly/hostile.
+
+version: 0
+status: draft_not_frozen
+updated: "2026-10-01"
+legislature: XIV
+vote_event:
+  id: "080/000001"
+  label: "Investiture of Pedro Sánchez Pérez-Castejón — second vote"
+  date: "2020-01-07"
+  chamber_document: "DSCD-14-PL-4"
+  source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+  official_summary_url: "https://www.congreso.es/es/cem/sesiones-de-investidura"
+  official_press_url: "https://www.congreso.es/es/notas-de-prensa?_notasprensa_mvcPath=detalle&_notasprensa_notaId=34369&p_p_id=notasprensa&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+  aggregate_result:
+    votes_cast: 350
+    yes: 167
+    no: 165
+    abstentions: 18
+  classification_unit: individual_mp_named_roll_call
+  category_map:
+    sí: supported
+    no: opposed
+    abstención: abstained
+
+# Entries for every questioner_id observed in the Phase-2 eligible pool (n=19).
+entries:
+  - person_or_group: "#AitorEstebanBravo"
+    display_name: "Esteban Bravo, Aitor"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: sí
+    alignment_category: supported
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Parlamentario Vasco (EAJ-PNV) at investiture; pool sometimes lacks group code."
+
+  - person_or_group: "#JoanBaldovíRoda"
+    display_name: "Baldoví Roda, Joan"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: sí
+    alignment_category: supported
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural (Compromís)."
+
+  - person_or_group: "#ÍñigoErrejónGalván"
+    display_name: "Errejón Galván, Íñigo"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: sí
+    alignment_category: supported
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural (Más País)."
+
+  - person_or_group: "#NéstorRegoCandamil"
+    display_name: "Rego Candamil, Néstor"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: sí
+    alignment_category: supported
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural (BNG)."
+
+  - person_or_group: "#GabrielRufiánRomero"
+    display_name: "Rufián Romero, Gabriel"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: abstención
+    alignment_category: abstained
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Republicano (ERC)."
+
+  - person_or_group: "#MertxeAizpuruaArzallus"
+    display_name: "Aizpurua Arzallus, Mertxe"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: abstención
+    alignment_category: abstained
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "EH Bildu."
+
+  - person_or_group: "#OskarMatuteGarcíaDeJalón"
+    display_name: "Matute García de Jalón, Oskar"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: abstención
+    alignment_category: abstained
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "EH Bildu."
+
+  - person_or_group: "#PabloCasadoBlanco"
+    display_name: "Casado Blanco, Pablo"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GP."
+
+  - person_or_group: "#ConcepciónGamarraRuizClavijo"
+    display_name: "Gamarra Ruiz-Clavijo, Concepción"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GP; later PP spokesperson in pool window; vote remains investiture no."
+
+  - person_or_group: "#SantiagoAbascalConde"
+    display_name: "Abascal Conde, Santiago"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GVOX."
+
+  - person_or_group: "#InésArrimadasGarcía"
+    display_name: "Arrimadas García, Inés"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GCs."
+
+  - person_or_group: "#EdmundoBalFrancés"
+    display_name: "Bal Francés, Edmundo"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GCs."
+
+  - person_or_group: "#GuillermoDíazGómez"
+    display_name: "Díaz Gómez, Guillermo"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "GCs."
+
+  - person_or_group: "#LauraBorràsCastanyer"
+    display_name: "Borràs Castanyer, Laura"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural (Junts); not Mixto."
+
+  - person_or_group: "#MíriamNoguerasiCamero"
+    display_name: "Nogueras i Camero, Míriam"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural (Junts)."
+
+  - person_or_group: "#AnaMaríaOramasGonzálezMoro"
+    display_name: "Oramas González-Moro, Ana María"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Plural / later Mixto coding in pool; individual no."
+
+  - person_or_group: "#CarlosGarcíaAdanero"
+    display_name: "García Adanero, Carlos"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Mixto (UPN) at investiture."
+
+  - person_or_group: "#SergioSayasLópez"
+    display_name: "Sayas López, Sergio"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "UPN; later affiliation politics outside investiture vote; category pinned to investiture no."
+
+  - person_or_group: "#MireiaVehíCantenys"
+    display_name: "Vehí Cantenys, Mireia"
+    legislature: XIV
+    vote_event: "080/000001"
+    vote_position: no
+    alignment_category: opposed
+    source_url: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    verification_status: verified_named_roll_call
+    notes: "Grupo Mixto (CUP) at investiture."
