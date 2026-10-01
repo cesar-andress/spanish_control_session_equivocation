@@ -216,3 +216,16 @@ Format per entry:
 - **effect on protocol:** Proceed to political-alignment feasibility
   (`formation_vote_alignment`). Sampling seeds remain null; no scientific
   sample draw; no reply coding.
+
+## 2026-10-01 — Linkage QA modality clarification
+
+- **decision:** Record that linkage QA was performed by oral/verbal human
+  confirmation of the 30 packet exchanges, not by physically annotating the
+  Excel cells.
+- **status:** accepted (provenance clarification)
+- **evidence:** Project-lead confirmation 2026-10-01; original
+  `PHASE2_LINKAGE_QA.xlsx` remains blank in `human_link_correct`; processed
+  copies hold the aggregate YES=30 result.
+- **reason:** Avoid implying spreadsheet-cell annotation that did not occur.
+- **effect on protocol:** No change to the PASS outcome or next gate; provenance
+  wording only.
