@@ -247,3 +247,20 @@ Format per entry:
 - **effect on protocol:** Alignment table draft available; freeze deferred to
   protocol freeze. No reply coding / sampling. Primary contrast among
   supported/opposed/abstained still open.
+
+## 2026-10-01 — Confirmatory contrast design (opposed vs non_opposed)
+
+- **decision:** Draft primary confirmatory contrast = `primary_alignment`
+  **opposed** vs **non_opposed**, where `non_opposed` = raw
+  `formation_vote_alignment` ∈ {supported, abstained}. Retain supported /
+  opposed / abstained for descriptive reporting. Do not use a three-level
+  primary confirmatory endpoint. Status remains DRAFT — NOT PREREGISTERED /
+  not frozen.
+- **status:** accepted for planning
+- **evidence:** Eligible-pool stratum sizes (opposed 64 / supported 18 /
+  abstained 18); `_internal/reports/CONFIRMATORY_CONTRAST_DESIGN.md`
+- **reason:** Balances institutional clarity of an opposition contrast, avoids
+  unstable dual n≈18 primary strata, and preserves trichotomy in description.
+  Not chosen to favour any reply outcome (none exist yet).
+- **effect on protocol:** Primary endpoint draft updated to non_opposed minus
+  opposed; lightweight questioner-level robustness planned; freeze still later.

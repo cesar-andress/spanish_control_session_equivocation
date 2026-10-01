@@ -38,6 +38,16 @@ vote_event:
     no: opposed
     abstención: abstained
 
+primary_contrast_draft:
+  status: draft_not_frozen
+  variable: primary_alignment
+  levels: [opposed, non_opposed]
+  rule: |
+    opposed if vote_position == no;
+    non_opposed if vote_position in {sí, abstención}
+    (i.e. raw formation_vote_alignment in {supported, abstained}).
+  report: _internal/reports/CONFIRMATORY_CONTRAST_DESIGN.md
+
 # Entries for every questioner_id observed in the Phase-2 eligible pool (n=19).
 entries:
   - person_or_group: "#AitorEstebanBravo"

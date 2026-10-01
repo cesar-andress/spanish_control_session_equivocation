@@ -40,7 +40,11 @@ Phase-0 feasibility-probe exchanges and Phase-2 linkage-QA rows are retained in
 the master catalogue with `exclude_from_sampling = true` and are excluded from
 all development, calibration, and main samples.
 
-Political alignment (`formation_vote_alignment`) is **not** assigned in Phase 2.
+Political alignment (`formation_vote_alignment`) uses a draft individual-MP
+investiture rule (Phase 3). The draft **primary confirmatory contrast**
+(Phase 3.5) is `primary_alignment`: **opposed** vs **non_opposed** (supported +
+abstained). Raw categories supported / opposed / abstained are retained for
+description. Nothing is protocol-frozen or preregistered yet.
 
 ---
 
@@ -99,12 +103,20 @@ Adjudication occurs only after reliability metrics are computed and committed.
 
 ## Intended primary endpoint
 
-Risk difference in explicit-reply rate between pre-defined alignment strata
-(non-opposition minus opposition), on adjudicated labels for the frozen main
-sample, with a questioner-cluster bootstrap confidence interval.
+Risk difference in explicit-reply rate for the draft confirmatory contrast
+`primary_alignment`: **non_opposed minus opposed**, on adjudicated labels for
+the frozen main sample, with a questioner-cluster bootstrap confidence
+interval.
 
-Exact decision rule, equivalence margin, and N are not frozen (see unresolved
-items).
+Definitions (draft, not frozen):
+
+- `opposed` = individual MP investiture vote **no** (2020-01-07, DSCD-14-PL-4);
+- `non_opposed` = investiture vote **sí** or **abstención** (raw categories
+  `supported` and `abstained`).
+
+Raw `formation_vote_alignment` ∈ {supported, opposed, abstained} remains the
+descriptive variable. Exact decision rule, equivalence margin, and N are not
+frozen (see unresolved items).
 
 ---
 
@@ -178,13 +190,33 @@ protocol freeze.
 
 ---
 
+## Phase 3.5 confirmatory contrast design (2026-10-01)
+
+**Status remains DRAFT — NOT PREREGISTERED.**
+
+- **Primary confirmatory contrast:** `primary_alignment` =
+  **opposed** vs **non_opposed**.
+- **Construction:** from raw individual-MP investiture categories;
+  `non_opposed` = supported ∪ abstained.
+- **Rationale:** single interpretable opposition contrast; avoids two thin
+  n≈18 primary strata; keeps sí vs abstención visible descriptively; aligns
+  with a single confirmatory risk difference.
+- **Secondary / descriptive:** report exchange and questioner counts (and later
+  rates, only after annotation) by raw supported / opposed / abstained.
+- **Planned lightweight robustness (at analysis, not yet frozen):**
+  questioner-level displays; optional leave-one-dominant-questioner-out
+  sensitivity; optional secondary contrast opposed vs supported only.
+- **Detail:** `_internal/reports/CONFIRMATORY_CONTRAST_DESIGN.md`
+
+---
+
 ## Currently unresolved decisions
 
 - Whether XII post-censure is included as secondary scope
-- **Freeze** of `formation_vote_alignment` (draft MP investiture rule exists;
-  see `alignment_table.yaml`, status `draft_not_frozen`)
-- Whether the primary confirmatory contrast uses supported vs opposed only, or
-  retains abstained as a third stratum
+- **Freeze** of `formation_vote_alignment` / `primary_alignment` mapping
+  (`alignment_table.yaml` still `draft_not_frozen`)
+- Whether opposed-vs-supported-only is a pre-specified secondary contrast at
+  freeze
 - Final sample size N
 - Exact Bull-derived codebook definitions and Spanish examples
 - Calibration performance gates (numeric thresholds to confirm at freeze)
