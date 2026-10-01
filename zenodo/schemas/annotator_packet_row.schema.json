@@ -10,15 +10,23 @@
     "registered_question": { "type": "string", "minLength": 1 },
     "Q1": { "type": "string", "minLength": 1 },
     "R1": { "type": "string", "minLength": 1 },
+    "question_target_type": {
+      "type": ["string", "null"],
+      "enum": ["match", "oral_expansion", "multiple_question", "oral_substitution", null]
+    },
+    "question_form": {
+      "type": ["string", "null"],
+      "enum": ["yes_no", "wh", "evaluative", null]
+    },
+    "question_confrontational": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null]
+    },
     "reply_status": {
       "type": ["string", "null"],
       "enum": ["explicit_reply", "intermediate_reply", "non_reply", null]
     },
     "borderline": { "type": ["boolean", "null"] },
-    "confidence": {
-      "type": ["string", "null"],
-      "enum": ["low", "medium", "high", null]
-    },
     "notes": { "type": ["string", "null"] }
   },
   "description": "Packets MUST NOT include party, parliamentary_group, formation_vote_alignment, primary_alignment, or questioner identifiers."

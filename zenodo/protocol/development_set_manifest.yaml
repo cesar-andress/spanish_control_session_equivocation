@@ -1,0 +1,49 @@
+status: draft_development_set
+phase: '4.1'
+created_on: '2026-10-01'
+source: ParlaMint-ES 5.0 TEI (PM oral-question FORMULA exchanges)
+legislature:
+  preferred: XIII
+  supplement: XII_post_censure
+  counts:
+    XIII: 3
+    XII: 12
+selection_rule: Prefer XIII PM FORMULA exchanges; fill to n=15 from XII post-censure;
+  order by sha256('development_oop|'+unit_id)
+hash: dfe92472a8916eba1d4ca69c9ab56b39d97223afa11524395fbeb612719e52ed
+n_units: 15
+exclusion_from_main_sampling: true
+not_for_reliability_evaluation: true
+unit_ids:
+- dev_94c479d43b2df7ec
+- dev_affb72078a10614c
+- dev_a458a272b2c2a8b6
+- dev_2d022d9c6f7e9d45
+- dev_8cb636a45fca242a
+- dev_85e6a5b707885fe4
+- dev_705bd6dfd843b995
+- dev_3022560cd28abb6f
+- dev_85bb4cf473bbefee
+- dev_d714d631baa780c0
+- dev_b1c5a449cd21a6fa
+- dev_36b002c772ec6e62
+- dev_aa60c52418bc3e00
+- dev_11dacb4cf28846f6
+- dev_050af6d3a7a80e41
+private_artifacts:
+  audit: _internal/data_private/development/out_of_pool/DEVELOPMENT_SET_AUDIT.csv
+  blinded_packet_csv: _internal/data_private/development/out_of_pool/DEVELOPMENT_PACKET_BLINDED.csv
+  blinded_packet_xlsx: _internal/data_private/development/out_of_pool/DEVELOPMENT_PACKET_BLINDED.xlsx
+  manifest_json: _internal/data_private/development/out_of_pool/DEVELOPMENT_SET_MANIFEST.json
+date_windows:
+  XIII:
+  - '2019-05-21'
+  - '2019-12-02'
+  XII_supplement:
+  - '2018-06-02'
+  - '2019-05-20'
+notes:
+- Outside XIV eligible population.
+- XIII alone has few PM FORMULA exchanges in ParlaMint; XII fills to n.
+- Some TEI rows lack registered title; packet marks placeholder for practice.
+- Do not mix these units into future XIV reliability or main samples.

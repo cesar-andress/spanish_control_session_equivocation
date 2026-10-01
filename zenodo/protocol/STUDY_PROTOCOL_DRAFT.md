@@ -106,13 +106,12 @@ reply / non-reply tradition:
 - intermediate reply
 - non-reply
 
-Exact operational definitions are **not frozen**. Draft instrument:
-`reply_status_codebook_v0.1.md` (**DRAFT — NOT FROZEN**; Phase 4A requires a
-v0.2 revision for the Q1-target rule). Literature basis:
+Exact operational definitions are **not frozen**. Current draft instrument:
+`reply_status_codebook_v0.2.md` (**DRAFT — NOT FROZEN**). Literature basis:
 `_internal/literature/REPLY_STATUS_FRAMEWORK.md`.
 
-Optional diagnostics (not primary outcomes): `borderline`; `confidence`;
-`notes`.
+Draft fields: `question_target_type`; `question_form`;
+`question_confrontational`; optional `borderline` / `notes`.
 
 ### Question-side codes (covariates; coded before R1)
 
@@ -232,8 +231,9 @@ primary estimand decision rule.
 - **Exclusions from XIV scientific samples:** Phase-0 probe expedientes; Phase-2
   linkage-QA rows (hash-ranked, not a scientific seed); SPDB previous-paper
   sitting dates when any candidate falls on those dates (Phase 2 observed
-  **zero** overlap). Phase-4 in-pool development exclusions are **superseded**
-  by Phase 4A (restore planned; see refinement report).
+  **zero** overlap). Phase-4 in-pool development exclusions were **superseded**
+  in Phase 4.1 (restored to frame); development/calibration use out-of-pool
+  units only (`development_set_manifest.yaml`).
 - **Attrition (summary; full table pending):** raw PM-control extractions 139;
   eligible 100; link_status on raw: exact 46, high_confidence 54, unlinked 37,
   ambiguous 2. A detailed population → linked → eligible flow is required before
@@ -245,22 +245,26 @@ primary estimand decision rule.
 
 ---
 
-## Phase 4 / 4A codebook and design status (2026-10-01)
+## Phase 4 / 4A / 4.1 codebook and design status (2026-10-01)
 
 **Status: DRAFT — NOT FROZEN.** No main annotation; no reply rates; no hypothesis
 test.
 
-- **Phase 4:** draft `reply_status_codebook_v0.1.md` (registered-anchored; to be
-  revised for Q1 target).
+- **Phase 4:** draft `reply_status_codebook_v0.1.md` (registered-anchored;
+  superseded on target rule).
 - **Phase 4A:** target = oral turn anchored by registered; question-side fields;
   out-of-pool development/calibration plan; descriptive framing; title under
   review. Report:
   `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md`.
-- **Development/calibration:** prefer previous-legislature (XIII) PM control
-  sessions in ParlaMint; **do not** burn the XIV n=100. See
-  `CALIBRATION_DESIGN.md`.
-- **Packet schema:** blinded columns only (`unit_id`, `registered_question`,
-  `Q1`, `R1`); provenance schema in `../schemas/annotation_row.schema.json`.
+- **Phase 4.1:** `reply_status_codebook_v0.2.md` (Q1 target + question-side
+  definitions + hard cases); out-of-pool development set n=15
+  (`development_set_manifest.yaml`; XIII preferred, XII supplement);
+  XIV in-pool development set **superseded** and sampling exclusions restored;
+  expected-disagreement note prepared; calibration rounds still **undrawn**.
+- **Development/calibration:** out-of-pool only; **do not** burn the XIV n=100.
+  See `CALIBRATION_DESIGN.md`.
+- **Packet schema:** blinded columns; question-side + reply fields in
+  `../schemas/`.
 
 ---
 
@@ -316,15 +320,14 @@ protocol freeze.
   freeze
 - Whether the XIV analysis uses the full eligible census vs a sample (review
   preferred census)
-- Exact Bull-derived codebook definitions and Spanish examples (v0.2 after
-  out-of-pool development)
-- Operational definitions for `question_form` /
-  `question_confrontational` / `question_target_type`
+- Exact Bull-derived codebook definitions and Spanish examples (v0.2 draft
+  exists; freeze after out-of-pool calibration)
+- Operational definitions polish for `question_form` /
+  `question_confrontational` / `question_target_type` after development coding
 - Calibration performance gates (numeric thresholds to confirm at freeze)
 - Final statistical decision rule (including any equivalence margin)
-- Named scientific seed values for out-of-pool development/calibration
+- Named scientific seed values for out-of-pool calibration
 - Full attrition table (population → linked → eligible)
-- Restore of superseded Phase-4 in-pool development exclusions
 - Final Congreso full-text Zenodo packaging under aviso-legal conditions
 
 ---
@@ -334,9 +337,11 @@ protocol freeze.
 - `DECISIONS.md` — append-only decision log
 - `SOURCE_REGISTRY_DRAFT.yaml` — source pins (draft)
 - `seeds.yaml` — named seeds (all pending until freeze)
-- `reply_status_codebook_v0.1.md` — draft coding instrument (not frozen)
-- `CALIBRATION_DESIGN.md` — calibration plan (out-of-pool under Phase 4A)
+- `reply_status_codebook_v0.2.md` — current draft coding instrument (not frozen)
+- `development_set_manifest.yaml` — out-of-pool development set
+- `CALIBRATION_DESIGN.md` — calibration plan (units not drawn)
 - `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md` — Phase 4A
+- `_internal/reports/EXPECTED_REPLY_STATUS_DISAGREEMENTS.md` — Phase 4.1
 - `_internal/reports/CLAUDE_DESIGN_REVIEW_2026-10-01.md` — external review archive
 - `../docs/licensing.md` — licensing audit status
 - `../manifests/release_manifest.schema.json` — release provenance schema

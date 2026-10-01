@@ -307,3 +307,22 @@ Format per entry:
 - **effect on protocol:** Phase-4 registered-only target and in-pool
   development strategy superseded; codebook v0.2 required before calibration;
   no main packets/sample/outcomes; title under review.
+
+## 2026-10-01 — Phase 4.1 out-of-pool development set + codebook v0.2
+
+- **decision:** Supersede XIV in-pool development_codebook (n=15) with reason
+  “Development material must not overlap with main population”; restore those
+  XIV units to the sampling frame; build out-of-pool development set (n=15)
+  from ParlaMint PM FORMULA exchanges (XIII preferred; XII post-censure
+  supplement); deposit `development_set_manifest.yaml`; publish draft
+  `reply_status_codebook_v0.2.md` (Q1 target, question-side fields, hard
+  cases). Calibration units remain undrawn; codebook not frozen.
+- **status:** accepted for development; DRAFT — NOT PREREGISTERED / not frozen
+- **evidence:** `development_set_manifest.yaml`;
+  `reply_status_codebook_v0.2.md`; `CALIBRATION_DESIGN.md`;
+  `_internal/reports/EXPECTED_REPLY_STATUS_DISAGREEMENTS.md`;
+  `_internal/data_private/development/out_of_pool/`
+- **reason:** Close the out-of-pool development blocker before calibration
+  without burning the XIV eligible census.
+- **effect on protocol:** sampling_frame restores former development exclusions;
+  instrument path points to v0.2; no XIV reply coding; no reliability yet.

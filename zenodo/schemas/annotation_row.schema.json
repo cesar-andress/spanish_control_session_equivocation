@@ -29,6 +29,18 @@
       "type": "string",
       "enum": ["explicit_reply", "intermediate_reply", "non_reply"]
     },
+    "question_target_type": {
+      "type": ["string", "null"],
+      "enum": ["match", "oral_expansion", "multiple_question", "oral_substitution", null]
+    },
+    "question_form": {
+      "type": ["string", "null"],
+      "enum": ["yes_no", "wh", "evaluative", null]
+    },
+    "question_confrontational": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null]
+    },
     "borderline": { "type": ["boolean", "null"] },
     "confidence": {
       "type": ["string", "null"],

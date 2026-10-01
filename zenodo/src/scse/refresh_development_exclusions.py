@@ -21,10 +21,19 @@ DEV_MANIFEST = DEV_DIR / "DEVELOPMENT_SET_MANIFEST.json"
 
 
 def development_unit_ids() -> list[str]:
+    """Return XIV exchange_ids to exclude for development, if any.
+
+    Phase 4.1+: out-of-pool development uses ``dev_*`` ids that are not in the
+    XIV pool. Superseded in-pool manifests must not re-exclude XIV units.
+    """
     if not DEV_MANIFEST.is_file():
         return []
     data = json.loads(DEV_MANIFEST.read_text(encoding="utf-8"))
-    return list(data.get("unit_ids") or [])
+    if str(data.get("status") or "").lower() == "superseded":
+        return []
+    # Only XIV exchange_ids are relevant to the eligible pool
+    ids = [i for i in (data.get("unit_ids") or []) if str(i).startswith("ex_")]
+    return ids
 
 
 def apply_development_exclusions(df: pd.DataFrame) -> pd.DataFrame:

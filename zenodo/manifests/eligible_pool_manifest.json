@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-10-01T21:32:25.913378+00:00",
-  "pipeline_commit": "424327b0c4d9703c7991d907496c4fed15fea9b6",
+  "created_at": "2026-10-01T21:40:46.916140+00:00",
+  "pipeline_commit": "c087f41a1d3fd728f5bc099acc3f0ed963e7f406",
   "eligibility_rule_version": "phase2-xiv-v1",
   "parlamint_release": "5.0",
   "parlamint_sha256": "b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68",
@@ -27,19 +27,19 @@
     ]
   ],
   "eligible_count": 100,
-  "sampling_frame_count": 52,
+  "sampling_frame_count": 67,
   "sessions_eligible": 48,
   "questioners_eligible": 19,
   "groups_eligible": 7,
   "phase0_excluded": 3,
   "spdb_overlap_rows": 0,
   "linkage_qa_n": 30,
-  "development_codebook_n": 15,
+  "development_codebook_n": 0,
   "private_pool_path": "_internal/data_private/eligible_pool_full.parquet",
-  "private_pool_sha256": "607ef90f09df3d301a136d3e3bd78c951a706ac8d2dc33701c73b77ffbe5e1a4",
+  "private_pool_sha256": "25b1af61c48d25611aceaa333c89db5edd738abb51d9ad7a288f729e06beb5fa",
   "public_pool_path": "zenodo/data/derived/eligible_pool_metadata_preannotation.csv",
-  "public_pool_sha256": "0832f8f8dd4b72944783c014d7414d7357649621de7535cdb430b45562d93ade",
-  "exclusions_sha256": "717eaa600b14ecd5a5dac0ca721ffa4c04d6f51804790c6a0fb666db522d97ed",
+  "public_pool_sha256": "dc3adc7e7c20973fb867cdc2a8ebd9d6cf8a642e5488a2c4e73693113827cc3a",
+  "exclusions_sha256": "5db72bb7fdc7009f5f6021cb5298392ddfffa9ce9cec33964b6d53858a35c5dc",
   "qa_packet_path": "_internal/link_audit_private/PHASE2_LINKAGE_QA.xlsx",
   "seeds": {
     "development": null,
@@ -61,5 +61,5 @@
     "reply_status_judgement_performed": false
   },
   "human_linkage_validation_recorded_at": "2026-10-01T21:19:11.413611+00:00",
-  "core_sha256": "8dbb4045603d33e380fa6faf912c6124a8f0d365b82b95a0e6123aaedc51b493"
+  "core_sha256": "a842b4b0fc709470680cbd54cf74e765bfbf38b44f5a8922f3cfb1bc247e889d"
 }
