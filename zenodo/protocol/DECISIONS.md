@@ -340,3 +340,19 @@ Format per entry:
 - **reason:** Need structured human feedback on v0.2 before drawing calibration.
 - **effect on protocol:** No XIV units used; no agreement metrics; freeze still
   deferred.
+
+## 2026-10-02 — Development exercise solutions received (Daniel, Jose Jaime)
+
+- **decision:** Record returned development booklets from Daniel Pinto Pajares
+  and Jose Jaime Baena Rojas as **development solutions** for codebook
+  refinement only (not gold, not calibration, not reliability, not main
+  annotation). Persist structured JSON/CSV comparison under
+  `_internal/development/solutions/` and report
+  `_internal/reports/DEVELOPMENT_EXERCISE_SOLUTIONS.md`.
+- **status:** accepted as development evidence
+- **evidence:** raw DOCX returns archived; 15/15 labels each; pairwise
+  reply-status agreement 10/15 on this exercise only
+- **reason:** Need expert trial labels and free-text feedback before revising
+  criteria / starting calibration.
+- **effect on protocol:** Informs possible v0.3 wording; does not freeze
+  codebook; does not authorize main XIV coding.
