@@ -356,3 +356,18 @@ Format per entry:
   criteria / starting calibration.
 - **effect on protocol:** Informs possible v0.3 wording; does not freeze
   codebook; does not authorize main XIV coding.
+
+## 2026-10-02 — Phase 4.3 disagreement discussion document
+
+- **decision:** Produce a Spanish joint-discussion booklet covering only the
+  five development disagreements (cases 1, 6, 7, 12, 13). Experts supply
+  linguistic reasoning; no adjudicated consensus category; no reliability
+  coefficient; codebook v0.2 unchanged until that discussion returns.
+- **status:** accepted as development workflow
+- **evidence:** `_internal/development/REVISION_DE_DESACUERDOS_DESARROLLO.docx`;
+  builder `zenodo/scripts/build_disagreement_review_docx.py`;
+  `_internal/development/PHASE43_DISAGREEMENT_REVIEW_PROVENANCE.json`
+- **reason:** Locate missing decision rules (especially partial vs absence, and
+  case 13 target identification) before any v0.3 wording.
+- **effect on protocol:** No freeze; no XIV coding; the 15 development cases
+  remain outside calibration and main evaluation.
