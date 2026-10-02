@@ -1,7 +1,7 @@
-"""Cuaderno de discusión de los cinco desacuerdos del ejercicio inicial.
+"""Segunda entrega del ejercicio: discusión de los cinco casos dudosos.
 
-No revisa la guía de criterios. No produce una categoría de consenso.
-Documento visible en español académico de España.
+Misma voz y tipografía que Reply_Status_Development_Exercise.docx.
+No revisa aún la guía de criterios. No produce una categoría de referencia.
 """
 
 from __future__ import annotations
@@ -16,8 +16,17 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = ROOT / "_internal" / "data_private" / "development" / "out_of_pool" / "DEVELOPMENT_PACKET_BLINDED.csv"
-OUT_DOCX = ROOT / "_internal" / "development" / "REVISION_DE_DESACUERDOS_DESARROLLO.docx"
+SRC = (
+    ROOT
+    / "_internal"
+    / "data_private"
+    / "development"
+    / "out_of_pool"
+    / "DEVELOPMENT_PACKET_BLINDED.csv"
+)
+OUT_DIR = ROOT / "_internal" / "development"
+OUT_DOCX = OUT_DIR / "REVISION_DE_DESACUERDOS_DESARROLLO.docx"
+OUT_DOCX_V2 = OUT_DIR / "REVISION_DE_DESACUERDOS_DESARROLLO_v2.docx"
 
 DISAGREEMENT_CASES = (1, 6, 7, 12, 13)
 INCLUDE_REGISTERED = {1, 12, 13}
@@ -76,7 +85,6 @@ def add_para(
     run = p.add_run(text)
     set_run_font(run, size=size, bold=bold, italic=italic)
     return p
-
 
 
 def add_heading_like(doc, text, size=16, space_before=10, page_break_before=False):
@@ -140,7 +148,26 @@ def prevent_row_split(row) -> None:
     trPr.append(cant_split)
 
 
-def add_keep_table(doc, paragraphs: list[tuple[str, dict]]) -> None:
+def add_comment_box(doc, height_cm: float = 2.8, *, label: str | None = None):
+    if label:
+        add_label(doc, label)
+    table = doc.add_table(rows=1, cols=1)
+    prevent_row_split(table.rows[0])
+    cell = table.cell(0, 0)
+    set_cell_border(cell, val="single", sz="12", color="888888")
+    set_row_height(table.rows[0], height_cm)
+    cell.text = ""
+    p = cell.paragraphs[0]
+    p.paragraph_format.space_before = Pt(6)
+    set_run_font(p.add_run(" "), size=12)
+    for _ in range(3):
+        p2 = cell.add_paragraph()
+        p2.paragraph_format.space_after = Pt(8)
+        set_run_font(p2.add_run(" "), size=12)
+    add_para(doc, "", size=6, space_after=4)
+
+
+def add_keep_block(doc, paragraphs: list[tuple[str, dict]]) -> None:
     table = doc.add_table(rows=1, cols=1)
     prevent_row_split(table.rows[0])
     cell = table.cell(0, 0)
@@ -161,30 +188,11 @@ def add_keep_table(doc, paragraphs: list[tuple[str, dict]]) -> None:
     add_para(doc, "", size=6, space_after=4)
 
 
-def add_comment_box(doc, height_cm: float = 3.2, *, label: str | None = None):
-    if label:
-        add_label(doc, label)
-    table = doc.add_table(rows=1, cols=1)
-    prevent_row_split(table.rows[0])
-    cell = table.cell(0, 0)
-    set_cell_border(cell, val="single", sz="12", color="888888")
-    set_row_height(table.rows[0], height_cm)
-    cell.text = ""
-    p = cell.paragraphs[0]
-    p.paragraph_format.space_before = Pt(8)
-    set_run_font(p.add_run(" "), size=12)
-    for _ in range(3):
-        p2 = cell.add_paragraph()
-        p2.paragraph_format.space_after = Pt(8)
-        set_run_font(p2.add_run(" "), size=12)
-    add_para(doc, "", size=6, space_after=4)
-
-
 def clear_core_props(doc: Document) -> None:
     props = doc.core_properties
     props.author = ""
     props.last_modified_by = ""
-    props.title = "Revisión conjunta de casos dudosos"
+    props.title = "Revisión de casos dudosos: tipo de respuesta"
     props.subject = ""
     props.keywords = ""
     props.category = ""
@@ -192,32 +200,31 @@ def clear_core_props(doc: Document) -> None:
 
 
 def add_front_matter(doc: Document) -> None:
-    add_para(doc, "", size=12, space_after=18)
+    doc.add_paragraph()
+
     add_para(
         doc,
-        "REVISIÓN CONJUNTA DE CASOS DUDOSOS",
+        "Revisión de casos dudosos",
         size=20,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
-        space_after=6,
+        space_after=4,
     )
     add_para(
         doc,
         "Tipo de respuesta en las sesiones de control parlamentario",
-        size=13,
-        italic=True,
+        size=15,
+        bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
         space_after=18,
     )
+
     add_para(
         doc,
         (
-            "En el primer ejercicio, ambos análisis coincidieron en diez de los "
-            "quince casos. El propósito de este documento es examinar los cinco "
-            "casos en los que las valoraciones iniciales difirieron. No se trata "
-            "de decidir quién tenía razón. Se trata de identificar qué distinción "
-            "o qué criterio de decisión conviene expresar con más claridad antes "
-            "de la siguiente fase."
+            "En el primer ejercicio coincidisteis en diez de los quince casos. "
+            "Nos interesan especialmente los cinco restantes, porque son los que "
+            "nos permiten ver dónde las reglas necesitan más precisión."
         ),
         size=12,
         space_after=12,
@@ -225,12 +232,9 @@ def add_front_matter(doc: Document) -> None:
     add_para(
         doc,
         (
-            "La mayor parte de los desacuerdos se sitúa en la frontera entre una "
-            "respuesta parcial o intermedia y una ausencia de respuesta. Conviene "
-            "prestar atención, por tanto, a si basta con hablar del mismo asunto "
-            "para que exista una respuesta, o si la intervención debe aportar "
-            "información que resuelva al menos una parte de la cuestión planteada. "
-            "Esa distinción no está zanjada: es precisamente lo que hay que discutir."
+            "La idea en esta revisión no es decidir quién acertó, sino entender "
+            "qué os llevó a interpretar cada caso de forma distinta y qué "
+            "criterio deberíamos aclarar antes de continuar."
         ),
         size=12,
         space_after=12,
@@ -238,64 +242,39 @@ def add_front_matter(doc: Document) -> None:
     add_para(
         doc,
         (
-            "Las valoraciones iniciales se formularon de manera independiente. "
-            "Esta lectura conjunta se abre solo después de haber recibido ambas "
-            "devoluciones. El documento sirve para revisar los criterios; no "
-            "establece una interpretación definitiva ni un patrón de referencia."
+            "El punto que parece más delicado es distinguir entre una respuesta "
+            "que aborda solo una parte de la cuestión y una intervención que, "
+            "aunque hable del mismo tema, no llega realmente a responderla. "
+            "Eso es precisamente lo que conviene discutir; aún no está cerrado."
+        ),
+        size=12,
+        space_after=12,
+    )
+    add_para(
+        doc,
+        (
+            "Para cada caso veréis de nuevo los textos y vuestras valoraciones "
+            "iniciales. Comentad libremente; al final hay unas pocas cuestiones "
+            "generales que también ayudarán a afinar la guía."
         ),
         size=12,
         space_after=10,
     )
 
 
-def add_discussion_questions(doc: Document, *, extra_q13: bool = False) -> None:
-    add_heading_like(doc, "Preguntas para la discusión", size=14, space_before=8)
-    questions = [
-        "1. ¿Cuál considera que es la cuestión principal que debe responderse?",
-        (
-            "2. ¿Qué fragmento concreto de la respuesta considera relevante "
-            "para decidir si se responde o no a esa cuestión?"
-        ),
-        (
-            "3. ¿La respuesta aporta información que resuelve total o parcialmente "
-            "la cuestión, o se limita a hablar de un asunto relacionado?"
-        ),
-        (
-            "4. ¿Qué criterio debería añadirse o aclararse en la guía para que "
-            "este caso resulte más fácil de clasificar?"
-        ),
-    ]
-    if extra_q13:
-        questions.append(
-            "5. ¿Estabais identificando la misma cuestión principal al realizar "
-            "la primera valoración?"
-        )
-        questions.append(
-            "6. Después de discutirlo, ¿consideráis que hace falta modificar "
-            "alguna regla?"
-        )
-    else:
-        questions.append(
-            "5. Después de discutirlo, ¿consideráis que hace falta modificar "
-            "alguna regla?"
-        )
+def add_prompt(doc, text: str, *, height_cm: float = 2.7) -> None:
+    add_para(doc, text, size=12, bold=True, space_after=4, space_before=6)
+    add_comment_box(doc, height_cm=height_cm, label=None)
 
-    for q in questions[:-1]:
-        add_para(doc, q, size=12, bold=True, space_after=4, space_before=6)
-        add_comment_box(doc, height_cm=3.0)
 
-    add_keep_table(
+def add_optional_agreement(doc) -> None:
+    add_keep_block(
         doc,
         [
-            (questions[-1], {"after": 8, "size": 12, "bold": True, "before": 6}),
-            ("☐  Sí", {"after": 4}),
-            ("☐  No", {"after": 10}),
             (
-                "Interpretación acordada para orientar la guía (opcional). "
-                "Si la registráis, servirá solo para precisar los criterios. "
-                "No constituye una interpretación de referencia ni una decisión "
-                "definitiva sobre el caso.",
-                {"after": 8, "size": 11, "italic": True, "before": 6},
+                "Si después de comentarlo llegáis a una interpretación común, "
+                "podéis marcarla aquí. No es obligatorio.",
+                {"after": 8, "size": 12, "italic": True, "before": 6},
             ),
             ("☐  Respuesta explícita", {"after": 4}),
             ("☐  Respuesta parcial o intermedia", {"after": 4}),
@@ -304,84 +283,127 @@ def add_discussion_questions(doc: Document, *, extra_q13: bool = False) -> None:
     )
 
 
+def add_case_discussion(doc: Document, *, extra_q13: bool = False) -> None:
+    add_heading_like(doc, "Para comentar", size=14, space_before=8)
+
+    add_prompt(doc, "¿Cuál es, para vosotros, la cuestión principal?")
+    add_prompt(
+        doc,
+        "¿Qué parte concreta de la respuesta os lleva a vuestra interpretación?",
+    )
+    add_prompt(
+        doc,
+        (
+            "¿Está respondiendo, aunque sea parcialmente, o simplemente "
+            "hablando del mismo tema?"
+        ),
+    )
+    add_prompt(
+        doc,
+        (
+            "¿Qué habría que aclarar en las reglas para que este caso fuese "
+            "más fácil de resolver?"
+        ),
+        height_cm=2.5,
+    )
+
+    if extra_q13:
+        add_prompt(
+            doc,
+            (
+                "¿Estabais interpretando de la misma manera cuál era la "
+                "pregunta principal?"
+            ),
+            height_cm=2.5,
+        )
+
+    add_optional_agreement(doc)
+
+
 def add_case(doc: Document, case_no: int, row) -> None:
     add_heading_like(
         doc, f"CASO {case_no}", size=18, space_before=0, page_break_before=True
     )
 
     if case_no in INCLUDE_REGISTERED:
-        add_label(doc, "Pregunta registrada")
+        add_label(doc, "Pregunta registrada:")
         add_body_block(doc, row["registered_question"])
         add_para(
             doc,
             (
-                "Se incluye la pregunta registrada porque el turno oral no basta "
-                "por sí solo para identificar la cuestión, o porque la respuesta "
-                "parece referirse a ella."
+                "Se incluye la pregunta registrada porque el turno oral no "
+                "basta por sí solo, o porque la respuesta parece referirse a ella."
             ),
-            size=10,
+            size=11,
             italic=True,
             space_after=8,
         )
 
-    add_label(doc, "Pregunta formulada")
+    add_label(doc, "Pregunta formulada por el diputado:")
     add_body_block(doc, row["Q1"])
 
-    add_label(doc, "Primera respuesta del Presidente del Gobierno")
+    add_label(doc, "Respuesta inicial del Presidente del Gobierno:")
     add_body_block(doc, row["R1"])
 
-    add_heading_like(doc, "Valoraciones iniciales", size=14, space_before=8)
+    add_heading_like(doc, "Vuestras valoraciones iniciales", size=14, space_before=8)
     add_para(doc, f"Daniel: {DANIEL[case_no]}.", size=12, space_after=4)
-    add_para(doc, f"Jose Jaime: {JOSE[case_no]}.", size=12, space_after=10)
+    add_para(doc, f"Jose Jaime: {JOSE[case_no]}.", size=12, space_after=8)
 
-    add_discussion_questions(doc, extra_q13=(case_no == 13))
+    add_case_discussion(doc, extra_q13=(case_no == 13))
 
 
 def add_general_discussion(doc: Document) -> None:
     add_heading_like(
         doc,
-        "CRITERIOS QUE DEBEMOS ACLARAR",
-        size=18,
+        "Cosas que conviene dejar claras antes de la siguiente ronda",
+        size=16,
         space_before=0,
         page_break_before=True,
     )
     add_para(
         doc,
         (
-            "Después de revisar los cinco casos, anoten las precisiones que "
-            "consideren necesarias. No hace falta formular aún una regla cerrada; "
-            "basta con señalar dónde falla la guía actual."
+            "Cuando hayáis visto los cinco casos, anotar aquí lo que os "
+            "parezca más útil. No hace falta formular una regla cerrada; "
+            "basta con señalar dónde la guía actual se queda corta."
         ),
         size=12,
         space_after=12,
     )
+
     prompts = [
         (
-            "A. ¿Cuándo una respuesta general sobre el mismo tema constituye "
-            "realmente una respuesta?"
+            "¿Cuándo hablar del mismo tema es suficiente para considerar "
+            "que existe una respuesta?"
         ),
         (
-            "B. ¿Cuándo una respuesta relacionada con la pregunta debe "
-            "considerarse parcial y cuándo debe considerarse ausencia de respuesta?"
+            "¿Dónde está, para vosotros, la frontera entre respuesta parcial "
+            "y ausencia de respuesta?"
         ),
         (
-            "C. Si la respuesta rechaza una premisa de la pregunta, ¿en qué "
-            "circunstancias eso constituye una respuesta explícita?"
+            "¿Cómo tratar una respuesta que rechaza la premisa de la pregunta?"
         ),
         (
-            "D. En una intervención con varias preguntas, ¿qué debe ocurrir "
-            "para considerar que existe una respuesta explícita?"
+            "¿Cómo tratar las preguntas que plantean varias cuestiones a la vez?"
         ),
         (
-            "E. ¿Hay algún elemento del contexto político que pueda estar "
-            "influyendo en la interpretación lingüística? ¿Cómo podemos reducir "
-            "ese efecto sin alterar el texto?"
+            "¿Creéis que el contexto político puede estar influyendo en la "
+            "interpretación? Si es así, ¿cómo reducir ese efecto sin tocar "
+            "los textos?"
         ),
-        "F. ¿Qué ejemplos adicionales debería contener la guía?",
+        "¿Qué ejemplos sería útil añadir a la guía?",
     ]
     for prompt in prompts:
-        add_para(doc, prompt, size=12, bold=True, space_after=4, space_before=8)
-        add_comment_box(doc, height_cm=3.6)
+        add_prompt(doc, prompt, height_cm=3.0)
+
+    add_para(doc, "", size=8, space_after=8)
+    add_para(
+        doc,
+        "Gracias por el tiempo y por la lectura conjunta.",
+        size=12,
+        italic=True,
+        space_after=6,
+    )
 
 
 def build() -> Path:
@@ -404,9 +426,10 @@ def build() -> Path:
         add_case(doc, case_no, by_id[uid])
     add_general_discussion(doc)
 
-    OUT_DOCX.parent.mkdir(parents=True, exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     doc.save(OUT_DOCX)
-    return OUT_DOCX
+    doc.save(OUT_DOCX_V2)
+    return OUT_DOCX_V2
 
 
 if __name__ == "__main__":
