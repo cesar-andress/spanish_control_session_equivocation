@@ -14,7 +14,7 @@ Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/
 
 **Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
 
-**Phase.** Phase 4.3: joint discussion document of the five development disagreements is ready. No main annotation; no scientific sample draw; codebook remains DRAFT (v0.2 unchanged).
+**Phase.** Phase 4.3: joint discussion of the five development disagreements has been returned and recorded. No main annotation; no scientific sample draw; codebook remains DRAFT (v0.2 unchanged until optional v0.3).
 
 
 
@@ -61,4 +61,4 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Experts complete the Phase 4.3 disagreement discussion → optional codebook v0.3 from their reasoning → calibration seed freeze → Calibration Round 1. No XIV main coding yet.
+Optional codebook v0.3 from Phase 4.3 discussion reasoning → calibration seed freeze → Calibration Round 1. No XIV main coding yet.

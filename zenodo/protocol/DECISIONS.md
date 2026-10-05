@@ -371,3 +371,22 @@ Format per entry:
   case 13 target identification) before any v0.3 wording.
 - **effect on protocol:** No freeze; no XIV coding; the 15 development cases
   remain outside calibration and main evaluation.
+
+## 2026-10-05 — Phase 4.3 disagreement discussion returned
+
+- **decision:** Archive and structure the joint discussion return for cases 1, 6,
+  7, 12, 13 as development evidence for a possible codebook v0.3. Preserve
+  original independent solution files; do not treat optional agreed categories
+  as gold or adjudicated labels; leave `reply_status_codebook_v0.2.md`
+  unchanged in this step.
+- **status:** accepted as development evidence
+- **evidence:**
+  `_internal/development/solutions/raw_returns/daniel_jose_REVISION_DE_DESACUERDOS_DESARROLLO_v2_return.docx`;
+  `_internal/development/solutions/phase43_disagreement_discussion_return.json`;
+  `_internal/reports/PHASE43_DISAGREEMENT_DISCUSSION_RETURN.md`
+- **reason:** Expert linguistic reasoning is required before revising decision
+  rules (target identification, concreteness of generic nouns, packet display
+  of registered questions).
+- **effect on protocol:** Informs optional v0.3; does not freeze codebook; does
+  not authorize main XIV coding. Case 7 remains unmarked; cases 12–13 partly
+  attributed to missing registered question in the first booklet.

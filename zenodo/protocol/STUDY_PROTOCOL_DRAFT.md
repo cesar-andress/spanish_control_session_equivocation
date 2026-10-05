@@ -263,7 +263,8 @@ test.
   expected-disagreement note prepared; calibration rounds still **undrawn**.
 - **Phase 4.2:** human development packets for annotators A/B
 - **Phase 4.3:** joint discussion of five development disagreements (cases 1, 6,
-  7, 12, 13); codebook v0.2 unchanged until expert reasoning returns
+  7, 12, 13) returned 2026-10-05; codebook v0.2 still unchanged pending
+  optional v0.3
   (`_internal/development/`; schema `development_packet_schema.md`;
   instructions `_internal/reports/DEVELOPMENT_EXERCISE_INSTRUCTIONS.md`).
   Intelligibility exercise only — **not** reliability / gold / main study.
