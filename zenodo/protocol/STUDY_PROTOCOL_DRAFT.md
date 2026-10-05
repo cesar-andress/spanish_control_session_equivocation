@@ -107,7 +107,7 @@ reply / non-reply tradition:
 - non-reply
 
 Exact operational definitions are **not frozen**. Current draft instrument:
-`reply_status_codebook_v0.2.md` (**DRAFT — NOT FROZEN**). Literature basis:
+`reply_status_codebook_v0.3.md` (**DRAFT — NOT FROZEN**). Literature basis:
 `_internal/literature/REPLY_STATUS_FRAMEWORK.md`.
 
 Draft fields: `question_target_type`; `question_form`;
@@ -245,7 +245,7 @@ primary estimand decision rule.
 
 ---
 
-## Phase 4 / 4A / 4.1 codebook and design status (2026-10-01)
+## Phase 4 / 4A / 4.1–4.4 codebook and design status (2026-10-05)
 
 **Status: DRAFT — NOT FROZEN.** No main annotation; no reply rates; no hypothesis
 test.
@@ -263,15 +263,16 @@ test.
   expected-disagreement note prepared; calibration rounds still **undrawn**.
 - **Phase 4.2:** human development packets for annotators A/B
 - **Phase 4.3:** joint discussion of five development disagreements (cases 1, 6,
-  7, 12, 13) returned 2026-10-05; codebook v0.2 still unchanged pending
-  optional v0.3
-  (`_internal/development/`; schema `development_packet_schema.md`;
-  instructions `_internal/reports/DEVELOPMENT_EXERCISE_INSTRUCTIONS.md`).
-  Intelligibility exercise only — **not** reliability / gold / main study.
+  7, 12, 13) returned 2026-10-05
+- **Phase 4.4:** `reply_status_codebook_v0.3.md` (DRAFT) incorporating
+  topic-vs-demand, generic-reference, mandatory three-text display,
+  multi-demand and cautious premise-rejection rules; Case 7 preserved as
+  unresolved boundary outside calibration; v0.2 file preserved unchanged;
+  packet validation requires registered + Q1 + R1; calibration still **undrawn**
 - **Development/calibration:** out-of-pool only; **do not** burn the XIV n=100.
   See `CALIBRATION_DESIGN.md`.
 - **Packet schema:** blinded columns; question-side + reply fields in
-  `../schemas/`.
+  `../schemas/`; `scse.packet_validation` enforces three text fields.
 
 ---
 
@@ -344,7 +345,9 @@ protocol freeze.
 - `DECISIONS.md` — append-only decision log
 - `SOURCE_REGISTRY_DRAFT.yaml` — source pins (draft)
 - `seeds.yaml` — named seeds (all pending until freeze)
-- `reply_status_codebook_v0.2.md` — current draft coding instrument (not frozen)
+- `reply_status_codebook_v0.3.md` — current draft coding instrument (not frozen)
+- `reply_status_codebook_v0.2.md` — preserved prior draft
+- `reply_status_codebook_v0.2_to_v0.3_changes.md` — change log
 - `development_set_manifest.yaml` — out-of-pool development set
 - `CALIBRATION_DESIGN.md` — calibration plan (units not drawn)
 - `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md` — Phase 4A

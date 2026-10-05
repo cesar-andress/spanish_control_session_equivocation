@@ -14,7 +14,7 @@ Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/
 
 **Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
 
-**Phase.** Phase 4.3: joint discussion of the five development disagreements has been returned and recorded. No main annotation; no scientific sample draw; codebook remains DRAFT (v0.2 unchanged until optional v0.3).
+**Phase.** Phase 4.4: `reply_status_codebook_v0.3.md` drafted (NOT FROZEN). Case 7 remains an unresolved development boundary. No main annotation; no scientific sample draw; calibration undrawn.
 
 
 
@@ -53,7 +53,7 @@ Phase 4A:
 - Do not claim primacy / “first”.
 - Do not push `_internal/` or manuscript drafts to the public remote.
 - Do not burn the XIV eligible pool on development/calibration (use out-of-pool sources).
-- Do not start main annotation until codebook v0.2 + out-of-pool calibration plan are ready.
+- Do not start main annotation until codebook v0.3 + out-of-pool calibration plan are ready.
 
 ## Integrity sequence
 
@@ -61,4 +61,4 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Optional codebook v0.3 from Phase 4.3 discussion reasoning → calibration seed freeze → Calibration Round 1. No XIV main coding yet.
+Prepare Calibration Round 1 under codebook v0.3 (still draft; mandatory registered+Q1+R1 display) → independent coding → discussion. No XIV main coding yet. Do not freeze until after calibration.

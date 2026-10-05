@@ -1,9 +1,9 @@
 # Calibration design (reply_status) — DRAFT
 
 **Status:** design only. Seeds unset. Units **not** drawn yet.  
-**Updated:** 2026-10-01 (Phase 4.1 — out-of-pool development set built; calibration
-still undrawn)  
-**Related:** `reply_status_codebook_v0.2.md` (DRAFT — NOT FROZEN);
+**Updated:** 2026-10-05 (Phase 4.4 — codebook v0.3 draft; calibration still undrawn)  
+**Related:** `reply_status_codebook_v0.3.md` (DRAFT — NOT FROZEN);
+`reply_status_codebook_v0.2.md` (preserved);
 `development_set_manifest.yaml`
 
 This document prepares the two-round calibration workflow. It does **not**
@@ -65,10 +65,12 @@ Same out-of-pool population family (XIII first, XII supplement as needed).
 
 1. Draw 20 units from out-of-pool corpus excluding development IDs, using a
    frozen calibration seed (still unset).
-2. Blinded packets (`unit_id`, `registered_question`, `Q1`, `R1` only).
-3. Two annotators code **independently** with codebook v0.2 (or successor draft).
+2. Blinded packets must **display** `registered_question`, `Q1`, `R1` in that
+   order (codebook v0.3 packet rule; validate with `scse.packet_validation`).
+3. Two annotators code **independently** with codebook v0.3 (DRAFT).
 4. Provisional agreement for discussion only.
-5. Discuss; revise guidelines if needed.
+5. Discuss; revise guidelines if needed. Case 7 of the development set remains
+   outside calibration.
 
 ## Round 2 (n=20 fresh, out-of-pool, not drawn)
 

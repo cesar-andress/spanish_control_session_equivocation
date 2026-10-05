@@ -390,3 +390,22 @@ Format per entry:
 - **effect on protocol:** Informs optional v0.3; does not freeze codebook; does
   not authorize main XIV coding. Case 7 remains unmarked; cases 12–13 partly
   attributed to missing registered question in the first booklet.
+
+## 2026-10-05 — Phase 4.4 reply_status codebook v0.3 (DRAFT)
+
+- **decision:** Create `reply_status_codebook_v0.3.md` from development lessons
+  (topic vs communicative demand; generic-reference discourse rule; mandatory
+  registered+Q1+R1 display; multi-demand and quantitative/qualitative worked
+  rules; cautious premise rejection; Case 7 as known unresolved boundary;
+  political-bias safeguards). Preserve v0.2 unchanged. Add packet validation
+  requiring the three text fields. Do **not** freeze, draw calibration, assign
+  seeds, or produce XIV reply outcomes.
+- **status:** accepted as DRAFT instrument; NOT FROZEN
+- **evidence:** `reply_status_codebook_v0.3.md`;
+  `reply_status_codebook_v0.2_to_v0.3_changes.md`;
+  `src/scse/packet_validation.py`;
+  `_internal/reports/CODEBOOK_V03_READINESS_AUDIT.md`
+- **reason:** Experts’ Phase 4.3 reasoning identified missing decision rules
+  before calibration without justifying overfitting or fake consensus on Case 7.
+- **effect on protocol:** Working instrument path → v0.3 draft; calibration
+  design still undrawn; development Case 7 excluded from calibration/main.
