@@ -1,0 +1,56 @@
+status: calibration_round1_drawn
+phase: 5A
+created_on: '2026-10-05'
+n_units: 20
+seed: 2071684612
+seed_source_string: spanish_control_session_equivocation|calibration_round1|reply_status_v0.3
+seed_sha256: a3a6b249342e017061114dda1dc2746bba34bf7c139a6c523f82783296b7d969
+seed_conversion_rule: int(sha256(source_string).hexdigest()[:16], 16) % (2**31 - 1)
+exclusion_from_main_sampling: true
+not_for_main_analysis: true
+reuse_round2_forbidden: true
+unit_ids:
+- cal1_bbb27015da4fe89b
+- cal1_51e3fdc68466d995
+- cal1_9195a119eb10e422
+- cal1_ab3430d6998b21bf
+- cal1_b4fe325cba79da9c
+- cal1_1d979027498edb57
+- cal1_98ce85cfef6411c6
+- cal1_6d66f4b86b86eff3
+- cal1_0ddb642289df06d2
+- cal1_53fcf8b35dea4f62
+- cal1_8e6826bbac552481
+- cal1_b2637711c111dd77
+- cal1_b2b7ed08172234b4
+- cal1_ad7d460e73caf322
+- cal1_566fa600c40a0d26
+- cal1_8849f5fc8e136aa3
+- cal1_319bd7f18785dbbc
+- cal1_cdb30a3a6ab9a723
+- cal1_0ddd701a922ce833
+- cal1_dd4e7572f94a9778
+codebook_version: 0.3.0
+private_dir: _internal/data_private/calibration/round1/
+human_dir: _internal/calibration_round1/
+source_windows:
+- legislature: X
+  start: '2015-01-01'
+  end: '2015-12-31'
+- legislature: XI
+  start: '2016-01-13'
+  end: '2016-05-02'
+- legislature: XII_pre
+  start: '2016-07-19'
+  end: '2018-06-01'
+- legislature: XII_post
+  start: '2018-06-02'
+  end: '2019-05-20'
+- legislature: XIII
+  start: '2019-05-21'
+  end: '2019-12-02'
+notes:
+- Outside XIV eligible population.
+- No overlap with the 15 development cases (utterance-id check).
+- Registered + oral + first response required and displayed.
+- Independent coding only until both packets returned.

@@ -1,12 +1,16 @@
 # Guía de criterios: tipo de respuesta v0.3
 
-**Estado: BORRADOR — NO CONGELADO**  
+**Estado: VERSIÓN DE CALIBRACIÓN — BORRADOR (no congelado para el estudio principal)**  
 **Versión:** `0.3.0`  
 **Fecha:** 2026-10-05  
-**Hash:** calcular al congelar (`sha256` de este archivo); aún no congelado.
+**Hash:** registrar al emitir los paquetes de calibración; congelación del estudio principal pendiente tras las rondas de calibración.
 
-Sustituye a v0.2 como instrumento de trabajo para calibración futura.  
+Instrumento de trabajo para la **Ronda 1 de calibración**.  
 v0.2 se conserva intacta en `reply_status_codebook_v0.2.md`.
+
+No se pide a las personas expertas una nueva revisión conceptual previa: los
+cambios incorporan el razonamiento ya escrito en el ejercicio de desarrollo y
+en la discusión de desacuerdos.
 
 Anclas bibliográficas (verificadas en Fase 0): Bull (1994); Bull & Mayer (1993);
 aplicaciones a PMQs. Contexto de género discursivo en español: Fuentes Rodríguez;

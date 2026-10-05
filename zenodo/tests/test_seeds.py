@@ -14,11 +14,13 @@ def test_unit_test_seed_is_deterministic():
     assert a == b == 42
 
 
-def test_scientific_seeds_not_frozen_yet():
+def test_scientific_main_seeds_not_frozen_yet():
     with pytest.raises(SeedNotFrozenError):
         get_seed("main_sample")
     with pytest.raises(SeedNotFrozenError):
-        get_seed("calibration")
+        get_seed("bootstrap")
+    # Calibration Round-1 seed is set in Phase 5A
+    assert get_seed("calibration") == 2071684612
 
 
 def test_sampling_helper_deterministic_for_fixed_seed():

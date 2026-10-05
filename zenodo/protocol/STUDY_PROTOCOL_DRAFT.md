@@ -264,15 +264,14 @@ test.
 - **Phase 4.2:** human development packets for annotators A/B
 - **Phase 4.3:** joint discussion of five development disagreements (cases 1, 6,
   7, 12, 13) returned 2026-10-05
-- **Phase 4.4:** `reply_status_codebook_v0.3.md` (DRAFT) incorporating
-  topic-vs-demand, generic-reference, mandatory three-text display,
-  multi-demand and cautious premise-rejection rules; Case 7 preserved as
-  unresolved boundary outside calibration; v0.2 file preserved unchanged;
-  packet validation requires registered + Q1 + R1; calibration still **undrawn**
+- **Phase 4.4:** `reply_status_codebook_v0.3.md` (calibration version; topic-vs-demand;
+  generic-reference; mandatory three-text display; Case 7 boundary preserved;
+  v0.2 unchanged)
+- **Phase 5A:** Calibration Round 1 drawn (n=20 OOP; seed derived and recorded;
+  human packets issued); coding returns pending; Round 2 undrawn; main seeds null
 - **Development/calibration:** out-of-pool only; **do not** burn the XIV n=100.
   See `CALIBRATION_DESIGN.md`.
-- **Packet schema:** blinded columns; question-side + reply fields in
-  `../schemas/`; `scse.packet_validation` enforces three text fields.
+- **Packet schema:** blinded columns; `scse.packet_validation` enforces three text fields.
 
 ---
 

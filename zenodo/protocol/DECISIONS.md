@@ -409,3 +409,20 @@ Format per entry:
   before calibration without justifying overfitting or fake consensus on Case 7.
 - **effect on protocol:** Working instrument path → v0.3 draft; calibration
   design still undrawn; development Case 7 excluded from calibration/main.
+
+## 2026-10-05 — Phase 5A Calibration Round 1 prepared
+
+- **decision:** Without asking professors for another conceptual review, mark
+  codebook v0.3 as the calibration version (still not frozen for the main
+  study), derive Round-1 seed from the documented SHA-256 string, draw 20
+  fresh out-of-pool PM FORMULA units (no development/XIV overlap), and issue
+  two independent Spanish Word packets.
+- **status:** accepted for Calibration Round 1 coding
+- **evidence:** `calibration_round1_manifest.yaml`; `seeds.yaml` (calibration
+  seed only); `_internal/calibration_round1/`;
+  `src/scse/build_calibration_round1.py`; `scse.calibration_metrics` (prepared,
+  not run)
+- **reason:** Development reasoning already captured; need fresh independent
+  coding evidence before any freeze.
+- **effect on protocol:** Calibration Round 1 may begin; no discussion until
+  both returns; no main XIV outcomes; Round 2 and main seeds remain unset.

@@ -14,7 +14,7 @@ Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/
 
 **Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
 
-**Phase.** Phase 4.4: `reply_status_codebook_v0.3.md` drafted (NOT FROZEN). Case 7 remains an unresolved development boundary. No main annotation; no scientific sample draw; calibration undrawn.
+**Phase.** Phase 5A: Calibration Round 1 packets prepared under codebook v0.3 (calibration version, not frozen for main study). No main annotation; no XIV outcomes.
 
 
 
@@ -61,4 +61,4 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Prepare Calibration Round 1 under codebook v0.3 (still draft; mandatory registered+Q1+R1 display) → independent coding → discussion. No XIV main coding yet. Do not freeze until after calibration.
+Daniel and Jose Jaime complete Calibration Round 1 independently (no discussion until both returns) → compute agreement before discussion → optional guide tweak → Round 2. No XIV main coding yet.

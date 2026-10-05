@@ -38,7 +38,7 @@ def test_codebook_v02_preserved_unchanged():
 def test_codebook_v03_exists_draft_not_frozen():
     path = PROTOCOL_DIR / "reply_status_codebook_v0.3.md"
     text = path.read_text(encoding="utf-8")
-    assert "BORRADOR — NO CONGELADO" in text or "DRAFT — NOT FROZEN" in text
+    assert "VERSIÓN DE CALIBRACIÓN" in text or "CALIBRACIÓN" in text
     assert "0.3.0" in text
     assert "Pregunta registrada" in text
     assert "hablar del mismo tema" in text.lower() or "mismo tema" in text
@@ -142,12 +142,12 @@ def test_blinded_oop_packet_passes_v03_validation():
     validate_packet_frame(packet)
 
 
-def test_calibration_still_undrawn_after_v03():
+def test_calibration_round1_drawn_after_v03():
     text = (PROTOCOL_DIR / "CALIBRATION_DESIGN.md").read_text(encoding="utf-8")
-    assert "not drawn" in text.lower() or "Units **not** drawn" in text
+    assert "Round 1" in text or "DRAWN" in text
     seeds = yaml.safe_load((PROTOCOL_DIR / "seeds.yaml").read_text(encoding="utf-8"))
     s = seeds.get("seeds", seeds)
-    assert s.get("calibration") is None
+    assert s.get("calibration") == 2071684612
     assert s.get("main_sample") is None
 
 

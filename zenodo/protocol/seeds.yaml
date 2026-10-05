@@ -1,18 +1,10 @@
-# Named scientific seeds
-#
-# All values remain null until the corresponding phase freezes them.
-# Do not invent main_sample or calibration seeds during scaffolding.
-#
-# Scripts must call scse.seeds.get_seed(name) rather than hard-coding integers.
-
 version: 0
-status: pending_freeze
+status: calibration_round1_seed_set
 seeds:
   development: null
   link_audit: null
-  calibration: null
+  calibration: 2071684612
   main_sample: null
   bootstrap: null
-notes: >
-  unit_test seed (42) exists only inside scse.seeds for non-scientific
-  determinism checks and must never be used for main sampling.
+notes: calibration seed = Round 1 only (derived from 'spanish_control_session_equivocation|calibration_round1|reply_status_v0.3').
+  main_sample and bootstrap remain null. unit_test seed (42) is non-scientific.

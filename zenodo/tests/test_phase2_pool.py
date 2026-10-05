@@ -111,15 +111,16 @@ def test_public_safe_projection_omits_text():
     assert "expediente" in PUBLIC_SAFE_COLUMNS
 
 
-def test_seeds_remain_null():
+def test_seeds_main_remain_null_calibration_round1_set():
     from scse.paths import PROTOCOL_DIR
     import yaml
 
     data = yaml.safe_load((PROTOCOL_DIR / "seeds.yaml").read_text(encoding="utf-8"))
     seeds = data.get("seeds", data)
     assert seeds.get("development") is None
-    assert seeds.get("calibration") is None
+    assert seeds.get("calibration") == 2071684612
     assert seeds.get("main_sample") is None
+    assert seeds.get("bootstrap") is None
 
 
 def test_pool_determinism_if_present():

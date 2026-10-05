@@ -77,13 +77,13 @@ def test_xiv_pool_not_holding_development_exclusions():
     assert (df["sampling_exclusion_reason"] == "linkage_QA").sum() == 30
 
 
-def test_calibration_design_undrawn():
+def test_calibration_design_round1_status():
     text = (PROTOCOL_DIR / "CALIBRATION_DESIGN.md").read_text(encoding="utf-8")
-    assert "not drawn" in text.lower() or "Units **not** drawn" in text
     assert "20" in text
     seeds = yaml.safe_load((PROTOCOL_DIR / "seeds.yaml").read_text(encoding="utf-8"))
     s = seeds.get("seeds", seeds)
-    assert s.get("calibration") is None
+    # Phase 5A: Round-1 seed set; main still null
+    assert s.get("calibration") == 2071684612
     assert s.get("main_sample") is None
 
 
