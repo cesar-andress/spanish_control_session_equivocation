@@ -174,13 +174,37 @@ observaciones.
 | Valor | Definición |
 |-------|------------|
 | `no` | La pregunta no carga una presuposición conflictiva ni un ataque personalizado como núcleo |
-| `yes` | La pregunta incorpora presuposición cargada, acusación o ataque personalizado |
+| `yes` | La pregunta incorpora rasgos discursivos observables: acusación o atribución explícita de ilícito o fallo; presuposición fuertemente adversativa; atribución negativa directa de responsabilidad; o formulación que obliga a aceptar o rechazar una premisa que amenaza la imagen |
+
+El desacuerdo político por sí solo **no** basta. La identidad de partido, la
+ideología y `formation_vote_alignment` **no** se usan para asignar este
+campo.
 
 Rasgo grueso para estratificación descriptiva posterior. **No** es un juicio
 moral y **no** debe cambiar el tipo de respuesta.
 
 Una pregunta confrontativa puede recibir respuesta explícita.  
 Una pregunta neutra puede recibir ausencia de respuesta.
+
+### 4.3 `question_topic` (borrador)
+
+Taxonomía pequeña y neutra (auditoría / estratificación; no determina el tipo
+de respuesta):
+
+| Valor | Ámbito |
+|-------|--------|
+| `economy_employment` | economía, empleo, fiscalidad, precios, vivienda de mercado, fondos |
+| `social_public_services` | sanidad, educación, igualdad, servicios sociales |
+| `territorial_institutional` | organización territorial, CCAA, competencias, financiación territorial y disputas institucionales conexas |
+| `foreign_security` | exterior, defensa, fronteras, seguridad internacional |
+| `governance_institutional_integrity` | integridad institucional, control parlamentario, corrupción, poderes del Estado |
+| `other` | residual |
+
+No se crea una categoría denominada independencia / independentismo /
+nacionalismo catalán o vasco. Ese contenido, cuando aparece, se agrupa de
+forma neutra en `territorial_institutional` u `other` según el encargo.
+
+`question_topic` **no** determina `reply_status`.
 
 ---
 
@@ -438,6 +462,10 @@ Obligatorios en filas de estudio:
 - `question_target_type`
 - `question_form`
 - `question_confrontational`
+
+Borrador adicional (auditoría / sensibilidad; no determina el resultado):
+
+- `question_topic`
 
 Diagnósticos opcionales:
 

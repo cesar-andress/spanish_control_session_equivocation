@@ -111,7 +111,9 @@ Exact operational definitions are **not frozen**. Current draft instrument:
 `_internal/literature/REPLY_STATUS_FRAMEWORK.md`.
 
 Draft fields: `question_target_type`; `question_form`;
-`question_confrontational`; optional `borderline` / `notes`.
+`question_confrontational` (linguistic face-threat cues, not partisan);
+draft `question_topic` (small neutral taxonomy for audit/sensitivity);
+optional `borderline` / `notes`.
 
 ### Question-side codes (covariates; coded before R1)
 
@@ -267,8 +269,13 @@ test.
 - **Phase 4.4:** `reply_status_codebook_v0.3.md` (calibration version; topic-vs-demand;
   generic-reference; mandatory three-text display; Case 7 boundary preserved;
   v0.2 unchanged)
-- **Phase 5A:** Calibration Round 1 drawn (n=20 OOP; seed derived and recorded;
-  human packets issued); coding returns pending; Round 2 undrawn; main seeds null
+- **Phase 5A:** Calibration Round 1 drawn (n=20 OOP; seed derived; diversity-aware
+  redraw after question-side audit; human packets issued); coding returns
+  pending; Round 2 undrawn; main seeds null
+- **Question-side audit:** draft `question_topic` + linguistic
+  `question_confrontational`; XIV eligible pool audited on registered+Q1 only;
+  topic×alignment confound risk MEDIUM; main pool not rebalanced
+  (`_internal/reports/QUESTION_SIDE_TOPIC_AND_DIVERSITY_AUDIT.md`)
 - **Development/calibration:** out-of-pool only; **do not** burn the XIV n=100.
   See `CALIBRATION_DESIGN.md`.
 - **Packet schema:** blinded columns; `scse.packet_validation` enforces three text fields.

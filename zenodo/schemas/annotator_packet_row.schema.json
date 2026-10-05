@@ -38,6 +38,19 @@
       "type": ["string", "null"],
       "enum": ["yes", "no", null]
     },
+    "question_topic": {
+      "type": ["string", "null"],
+      "enum": [
+        "economy_employment",
+        "social_public_services",
+        "territorial_institutional",
+        "foreign_security",
+        "governance_institutional_integrity",
+        "other",
+        null
+      ],
+      "description": "Draft question-side topic for audit/sensitivity; must not determine reply_status."
+    },
     "reply_status": {
       "type": ["string", "null"],
       "enum": ["explicit_reply", "intermediate_reply", "non_reply", null]

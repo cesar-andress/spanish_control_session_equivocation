@@ -37,8 +37,13 @@ packets are returned. Do **not** freeze the main-study codebook yet.
 | Development overlap | **0** (utterance-id check) |
 | XIV overlap | **0** |
 | Registered+Q1+R1 | required and displayed |
+| Diversity rule | ≥2 `question_topic` and ≥2 `question_form` in the 20 (coded from registered+Q1 only; fixed before reply labels) |
 | Human packets | `_internal/calibration_round1/` |
 | Codebook | v0.3.0 |
+
+Question-side audit of the XIV eligible pool (no R1 outcomes):
+`_internal/reports/QUESTION_SIDE_TOPIC_AND_DIVERSITY_AUDIT.md`.
+Topic×alignment confound risk: **MEDIUM**. Main XIV pool not altered.
 
 Remaining eligible OOP IDs reserved for Round 2+:
 `_internal/data_private/calibration/round1/CALIBRATION_REMAINING_POOL_IDS.json`

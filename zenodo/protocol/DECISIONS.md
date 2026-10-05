@@ -426,3 +426,22 @@ Format per entry:
   coding evidence before any freeze.
 - **effect on protocol:** Calibration Round 1 may begin; no discussion until
   both returns; no main XIV outcomes; Round 2 and main seeds remain unset.
+
+## 2026-10-05 — Question-side topic audit + calibration diversity rule
+
+- **decision:** Add draft `question_topic` (six-way neutral taxonomy) and
+  tighten linguistic `question_confrontational`. Audit the XIV eligible pool on
+  registered+Q1 only (no R1 / no reply rates). Do **not** rebalance or remove
+  XIV units for topic. Classify topic×`primary_alignment` confound risk as
+  MEDIUM. Fix a Calibration Round 1 diversity rule (≥2 topics and ≥2 forms)
+  before any reply labels and redraw the 20 OOP units under that rule with the
+  same documented seed.
+- **status:** accepted
+- **evidence:** `_internal/reports/QUESTION_SIDE_TOPIC_AND_DIVERSITY_AUDIT.md`;
+  `scse.question_side`; `scse.question_side_audit`;
+  `calibration_round1_manifest.yaml` diversity fields
+- **reason:** Avoid conflating formation-vote alignment with question content;
+  expose calibrators to linguistically varied asks without engineering
+  agreement.
+- **effect on protocol:** Main pool intact; Round 1 packets regenerated;
+  sensitivity analyses may later use topic/confrontational strata.

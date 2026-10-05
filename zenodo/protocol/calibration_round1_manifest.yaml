@@ -54,3 +54,15 @@ notes:
 - No overlap with the 15 development cases (utterance-id check).
 - Registered + oral + first response required and displayed.
 - Independent coding only until both packets returned.
+- Diversity-aware redraw after question-side audit; no reply labels observed.
+diversity_rule: two_pass_topic_form_min2
+diversity_topics_in_sample:
+- economy_employment
+- foreign_security
+- other
+- social_public_services
+- territorial_institutional
+diversity_forms_in_sample:
+- evaluative
+- wh
+- yes_no
