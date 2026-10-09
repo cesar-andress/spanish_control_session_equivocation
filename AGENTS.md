@@ -14,7 +14,7 @@ Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/
 
 **Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
 
-**Phase.** Phase 5A: Calibration Round 1 packets prepared under codebook v0.3 (calibration version, not frozen for main study). No main annotation; no XIV outcomes.
+**Phase.** Phase 5A: Calibration Round 1 independent returns ingested under codebook v0.3 (calibration version, not frozen for main study). Agreement on 18/20 complete pairs recorded before discussion. No main annotation; no XIV outcomes.
 
 
 
@@ -61,4 +61,4 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Daniel and Jose Jaime complete Calibration Round 1 independently (no discussion until both returns) → compute agreement before discussion → optional guide tweak → Round 2. No XIV main coding yet.
+Clarify Jose Jaime Round-1 cases 5 and 10 (single reply_status mark each) → recompute agreement on n=20 → discuss usable disagreements (currently cases 6 and 7) → optional guide tweak → Round 2. No XIV main coding yet.

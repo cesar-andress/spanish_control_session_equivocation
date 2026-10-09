@@ -445,3 +445,23 @@ Format per entry:
   agreement.
 - **effect on protocol:** Main pool intact; Round 1 packets regenerated;
   sensitivity analyses may later use topic/confrontational strata.
+
+## 2026-10-09 — Phase 5A Calibration Round 1 returns ingested
+
+- **decision:** Archive the independent Round-1 Word returns from Daniel Pinto
+  Pajares and Jose Jaime Baena Rojas; extract reply_status / dudoso /
+  observaciones without imputing labels; compute exploratory agreement on the
+  18 complete pairs **before** discussion; leave Jose Jaime cases 5 (no mark)
+  and 10 (all three options marked) unusable until clarified.
+- **status:** accepted as calibration diagnostics (not gold; not freeze)
+- **evidence:** `_internal/calibration_round1/returns/`;
+  `_internal/data_private/calibration/round1/CALIBRATION_ROUND1_CODES.csv`;
+  `_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md`;
+  `zenodo/scripts/ingest_calibration_round1_returns.py`;
+  `scse.calibration_metrics`
+- **reason:** Integrity sequence requires agreement before discussion; two
+  incomplete marks must not be silently repaired.
+- **effect on protocol:** Round-1 draw/seed unchanged; codebook v0.3 still not
+  frozen; next step is clarification of cases 5 and 10, then disagreement
+  discussion (usable disagreements: cases 6 and 7); Round 2 still undrawn;
+  no XIV main coding.

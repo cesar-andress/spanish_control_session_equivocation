@@ -1,12 +1,14 @@
-# Calibration design (reply_status) — Round 1 DRAWN
+# Calibration design (reply_status) — Round 1 RETURNS INGESTED
 
-**Status:** Calibration Round 1 units drawn; coding not yet returned.  
-**Updated:** 2026-10-05 (Phase 5A)  
+**Status:** Calibration Round 1 independent returns archived; agreement computed
+on 18/20 complete pairs before discussion.  
+**Updated:** 2026-10-09 (Phase 5A)  
 **Related:** `reply_status_codebook_v0.3.md` (CALIBRATION VERSION — not frozen for
-main study); `calibration_round1_manifest.yaml`; `seeds.yaml`
+main study); `calibration_round1_manifest.yaml`; `seeds.yaml`;
+`_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md`
 
-Round 1 is ready for independent human coding. Do **not** discuss until both
-packets are returned. Do **not** freeze the main-study codebook yet.
+Do **not** freeze the main-study codebook yet. Clarify Jose Jaime cases 5 and 10
+before disagreement discussion.
 
 ---
 
@@ -39,7 +41,22 @@ packets are returned. Do **not** freeze the main-study codebook yet.
 | Registered+Q1+R1 | required and displayed |
 | Diversity rule | ≥2 `question_topic` and ≥2 `question_form` in the 20 (coded from registered+Q1 only; fixed before reply labels) |
 | Human packets | `_internal/calibration_round1/` |
+| Returned packets | `_internal/calibration_round1/returns/` |
+| Codes / returns JSON | `_internal/data_private/calibration/round1/CALIBRATION_ROUND1_CODES.csv` |
+| Agreement report | `_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md` |
 | Codebook | v0.3.0 |
+
+### Round 1 agreement (before discussion)
+
+| Field | Value |
+|-------|-------|
+| Complete pairs | 18 / 20 |
+| Unusable Jose Jaime marks | cases 5 (none), 10 (all three) |
+| Agree (complete) | 16 / 18 |
+| Raw agreement | 0.889 |
+| Cohen’s κ (3-way) | 0.815 |
+| Krippendorff’s α | 0.815 |
+| Usable disagreements | cases 6, 7 |
 
 Question-side audit of the XIV eligible pool (no R1 outcomes):
 `_internal/reports/QUESTION_SIDE_TOPIC_AND_DIVERSITY_AUDIT.md`.
@@ -82,5 +99,5 @@ responses are preserved.
 | Cohen’s κ (three-level) | Two-coder summary |
 | Binary explicit vs not-explicit (agreement + κ) | Sensitivity aligned with primary estimand |
 
-Implementation prepared in `scse.calibration_metrics` — **not computed** until
-returns exist. Round 1 is exploratory, not final validation.
+Implementation in `scse.calibration_metrics`; Round 1 diagnostics computed on
+complete pairs only. Round 1 remains exploratory, not final validation.
