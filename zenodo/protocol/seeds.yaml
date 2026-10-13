@@ -1,10 +1,12 @@
 version: 0
-status: calibration_round1_seed_set
+status: calibration_round1_and_round2_seeds_set
 seeds:
   development: null
   link_audit: null
   calibration: 2071684612
   main_sample: null
   bootstrap: null
-notes: calibration seed = Round 1 only (derived from 'spanish_control_session_equivocation|calibration_round1|reply_status_v0.3').
-  main_sample and bootstrap remain null. unit_test seed (42) is non-scientific.
+  calibration_round2: 322720977
+notes: calibration = Round 1 seed 2071684612; calibration_round2 = 322720977 from
+  'spanish_control_session_equivocation|calibration_round2|fresh_diversity_draw'.
+  main_sample and bootstrap remain null.

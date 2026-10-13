@@ -1,0 +1,49 @@
+status: calibration_round2_drawn
+phase: 5B
+created_on: '2026-10-13'
+n_units: 20
+seed: 322720977
+seed_source_string: spanish_control_session_equivocation|calibration_round2|fresh_diversity_draw
+seed_sha256: 08efb313015ceeab90ac2ddb093d45ecaf07ad5cbba2daa0a721e08299cfa330
+seed_conversion_rule: int(sha256(source_string).hexdigest()[:16], 16) % (2**31 - 1)
+final_planned_calibration_round: true
+round3_planned: false
+exclusion_from_main_sampling: true
+not_for_main_analysis: true
+unit_ids:
+- cal1_d177559eeb7566a0
+- cal1_885f353224810fac
+- cal1_bca0768bd9703051
+- cal1_9f5de9aff9e46cb2
+- cal1_42a6ef67e15f990e
+- cal1_492f75c4c064ef19
+- cal1_9afc9326761df433
+- cal1_f30e8b1d1e36ae5a
+- cal1_8de3e6297f4b268e
+- cal1_6bb200e236667b9b
+- cal1_bd84728760b2bd11
+- cal1_b0de634f68c3cfc0
+- cal1_2a561f07bd6c0a68
+- cal1_eed2f691d6bb91e8
+- cal1_532075a2f3f9b509
+- cal1_a486e9ec7261e5e0
+- cal1_480fcb37f4515f22
+- cal1_f423332f1cbababf
+- cal1_5842352a23968b08
+- cal1_99a53123190b8796
+codebook_version_at_draw: 0.3.0
+private_dir: _internal/data_private/calibration/round2/
+human_dir: _internal/calibration_round2/
+diversity_ladder_used:
+  max_q: 4
+  max_sit: 2
+  max_topic: 8
+  label: relax_questioner_to_4
+targets_missed:
+- max_per_questioner_le_2
+notes:
+- Outside XIV eligible population.
+- No overlap with development, Round 1, Phase-0 probes, linkage QA, or XIV.
+- Diversity from registered+Q1 only; no reply-status inspection.
+- Independent Round-2 coding after joint review of Round-1 cases 5,6,7,10.
+- No Round 3 planned by default.

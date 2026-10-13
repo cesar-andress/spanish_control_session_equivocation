@@ -482,3 +482,26 @@ Format per entry:
 - **effect on protocol:** Agreement n=20 is 16/20 (κ≈0.67); disagreements are
   cases 5, 6, 7, 10; next gate is disagreement discussion; Round 2 undrawn;
   no XIV main coding.
+
+## 2026-10-13 — Phase 5B final calibration package (joint review + Round 2)
+
+- **decision:** Issue one final calibration package: (1) short joint review of
+  Round-1 cases 5, 6, 7, 10 only, recording two boundary clarifications in the
+  professors’ own words; (2) independent Round-2 of 20 completely new OOP
+  units under a new documented seed and diversity-constrained draw; (3) one
+  short email covering joint-first then independent-second. Do **not** write
+  codebook v0.4 before the joint return. Round 2 is the final planned
+  calibration round (no Round 3 by default). No XIV outcomes.
+- **status:** accepted for final calibration delivery
+- **evidence:** `calibration_round2_manifest.yaml`; `seeds.yaml`
+  (`calibration_round2`); `_internal/calibration_round2/`;
+  `_internal/reports/CALIBRATION_ROUND2_SELECTION_AND_NOVELTY_AUDIT.md`;
+  `src/scse/build_calibration_round2.py`;
+  `scripts/build_calibration_round2_package.py`
+- **reason:** Close calibration with minimal burden after Round-1 adjacent
+  disagreements; preserve contemporaneous clarification before independent
+  Round-2 coding.
+- **effect on protocol:** Round-1 draw unchanged; Round-2 drawn (seed
+  322720977); soft target max-2-per-questioner not feasible in OOP remainder
+  (relaxed to 4, documented); after both Round-2 returns, compute agreement
+  before discussion, then either freeze or reconsider the scheme.

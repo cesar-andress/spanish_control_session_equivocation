@@ -14,7 +14,7 @@ Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/
 
 **Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
 
-**Phase.** Phase 5A: Calibration Round 1 returns complete under codebook v0.3 (calibration version, not frozen for main study). Jose Jaime clarified cases 5 and 10; agreement n=20 is 16/20 (disagreements 5, 6, 7, 10). No main annotation; no XIV outcomes.
+**Phase.** Phase 5B: Final calibration package prepared (joint review of Round-1 cases 5/6/7/10 + independent Round 2, N=20 new OOP). Codebook still v0.3 until joint clarifications are returned and transcribed to v0.4. No Round 3 planned by default. No main annotation; no XIV outcomes.
 
 
 
@@ -61,4 +61,4 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Discuss Round-1 disagreements (cases 5, 6, 7, 10) → optional guide tweak → Round 2. No XIV main coding yet.
+Send the Phase 5B package (one email, three DOCX). Professors complete joint review first, then independent Round 2. On return: archive joint clarifications → compute Round-2 agreement before discussion → transcribe agreed wording into codebook v0.4 (no retrospective rewrite) → freeze or reconsider scheme. No Round 3 by default. No XIV main coding yet.
