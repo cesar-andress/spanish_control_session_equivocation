@@ -170,12 +170,17 @@ def add_joint_decision_block(doc) -> None:
         p.paragraph_format.space_before = Pt(before)
         set_run_font(p.add_run(text), size=12, bold=bold, italic=italic)
 
-    _line("Decisión después de comentarlo:", bold=True, before=6, after=6)
+    _line(
+        "Si después de comentarlo llegáis a una lectura común, marcadla aquí.",
+        bold=True,
+        before=6,
+        after=6,
+    )
     _line("☐  Respuesta explícita", after=3)
     _line("☐  Respuesta parcial o intermedia", after=3)
     _line("☐  Ausencia de respuesta", after=3)
     _line("☐  Seguimos sin verlo igual", after=8)
-    _line("¿Qué criterio os ayuda a decidir este caso?", bold=True, after=4)
+    _line("¿Qué os ayuda a decidir este caso?", bold=True, after=4)
     rule = cell.add_paragraph()
     set_run_font(rule.add_run("_" * 64), size=10)
     for _ in range(3):
@@ -235,7 +240,7 @@ def build_joint() -> Path:
 
     add_para(
         doc,
-        "Revisión conjunta de cuatro casos",
+        "Revisión de cuatro casos",
         size=20,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
@@ -243,7 +248,7 @@ def build_joint() -> Path:
     )
     add_para(
         doc,
-        "Primera ronda de calibración",
+        "Tipo de respuesta en las sesiones de control parlamentario",
         size=14,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
@@ -253,8 +258,9 @@ def build_joint() -> Path:
         doc,
         (
             "En la primera ronda coincidisteis en dieciséis de los veinte casos. "
-            "Os pedimos que comentéis juntos solo estos cuatro, donde vuestras "
-            "lecturas no coincidieron."
+            "Antes de pasar a la última tanda, interesa revisar únicamente estos "
+            "cuatro, para dejar un poco más clara la frontera entre las tres "
+            "opciones."
         ),
         size=12,
         space_after=8,
@@ -262,8 +268,10 @@ def build_joint() -> Path:
     add_para(
         doc,
         (
-            "No hace falta rehacer la guía. Basta con decidir cada caso y dejar "
-            "por escrito, con vuestras palabras, las dos distinciones del final."
+            "La idea no es decidir quién acertó, sino ver qué os lleva a leer "
+            "cada caso de forma distinta. No hace falta rehacer la guía: "
+            "comentad cada caso y, al final, dejad por escrito las dos "
+            "distinciones que encontraréis."
         ),
         size=12,
         space_after=8,
@@ -296,16 +304,23 @@ def build_joint() -> Path:
         add_body_block(doc, row["Q1"])
         add_label(doc, "Primera respuesta del Presidente del Gobierno")
         add_body_block(doc, row["R1"])
-        add_para(doc, "Vuestras valoraciones iniciales", size=12, bold=True, space_before=10, space_after=4)
         add_para(
             doc,
-            f"Daniel: {LABEL_ES[str(code.daniel_reply_status)]}",
+            "Vuestras valoraciones iniciales",
+            size=12,
+            bold=True,
+            space_before=10,
+            space_after=4,
+        )
+        add_para(
+            doc,
+            f"Daniel: {str(code.daniel_reply_status)}.",
             size=12,
             space_after=2,
         )
         add_para(
             doc,
-            f"Jose Jaime: {LABEL_ES[str(code.jose_jaime_reply_status)]}",
+            f"Jose Jaime: {str(code.jose_jaime_reply_status)}.",
             size=12,
             space_after=6,
         )
@@ -313,7 +328,7 @@ def build_joint() -> Path:
 
     add_para(
         doc,
-        "DOS COSAS QUE QUEREMOS DEJAR CLARAS",
+        "Dos distinciones para dejar por escrito",
         size=16,
         bold=True,
         space_before=8,
@@ -323,8 +338,8 @@ def build_joint() -> Path:
     add_para(
         doc,
         (
-            "Con lo hablado en estos cuatro casos, dejad por escrito, con vuestras "
-            "palabras, solo estas dos distinciones."
+            "Con lo hablado en estos cuatro casos, dejad anotado, con vuestras "
+            "palabras, solo esto."
         ),
         size=12,
         space_after=10,
@@ -332,8 +347,8 @@ def build_joint() -> Path:
     add_para(
         doc,
         (
-            "1. ¿Cuándo una respuesta deja de ser una simple ausencia de respuesta "
-            "y pasa a ser una respuesta parcial?"
+            "1. ¿En qué momento una intervención deja de ser, para vosotros, "
+            "una simple ausencia de respuesta y pasa a ser una respuesta parcial?"
         ),
         size=12,
         bold=True,
@@ -343,8 +358,8 @@ def build_joint() -> Path:
     add_para(
         doc,
         (
-            "2. ¿Cuándo una respuesta parcial contiene ya suficiente información "
-            "para considerarla una respuesta explícita?"
+            "2. ¿Cuándo una respuesta parcial os parece ya lo bastante completa "
+            "para marcarla como explícita?"
         ),
         size=12,
         bold=True,
@@ -405,21 +420,30 @@ def build_round2_one(slug: str, display_name: str) -> Path:
     add_para(
         doc,
         (
-            "Antes de empezar estos casos, terminad la revisión conjunta de los "
-            "cuatro casos anteriores. A partir de aquí, cada uno trabaja por separado."
+            "Antes de empezar, terminad la revisión conjunta de los cuatro casos "
+            "anteriores. A partir de aquí, cada uno trabaja por separado."
         ),
         size=12,
-        space_after=10,
+        space_after=8,
     )
     add_para(
         doc,
         (
-            "Son 20 casos nuevos. No hace falta justificar todos. Usad "
-            "observaciones solo si el caso os genera una duda real o veis algún "
-            "problema con el criterio."
+            "Os paso una última tanda de 20 casos nuevos. Hacedlos cada uno por "
+            "vuestra cuenta y no comentéis las respuestas entre vosotros hasta "
+            "que me devolváis los dos documentos."
         ),
         size=12,
-        space_after=10,
+        space_after=8,
+    )
+    add_para(
+        doc,
+        (
+            "En cada caso hay que valorar hasta qué punto la primera respuesta "
+            "del Presidente responde a la cuestión planteada."
+        ),
+        size=12,
+        space_after=8,
     )
     add_para(
         doc,
@@ -436,7 +460,7 @@ def build_round2_one(slug: str, display_name: str) -> Path:
     add_para(doc, "Respuesta explícita", size=12, bold=True, space_after=2)
     add_para(
         doc,
-        "Atiende directamente a la cuestión principal.",
+        "La respuesta atiende directamente a la cuestión principal.",
         size=12,
         space_after=8,
     )
@@ -444,8 +468,8 @@ def build_round2_one(slug: str, display_name: str) -> Path:
     add_para(
         doc,
         (
-            "Aporta una respuesta sustantiva a una parte relevante de la cuestión, "
-            "pero deja otra parte sin resolver o requiere una inferencia razonable."
+            "Responde a una parte relevante de la cuestión, pero deja otra "
+            "parte sin resolver o exige una inferencia razonable."
         ),
         size=12,
         space_after=8,
@@ -454,20 +478,27 @@ def build_round2_one(slug: str, display_name: str) -> Path:
     add_para(
         doc,
         (
-            "Aunque pueda hablar del mismo tema, no aporta información suficiente "
-            "para responder realmente a la cuestión planteada."
+            "Aunque pueda hablar del mismo tema, no aporta información que "
+            "responda realmente a la cuestión planteada."
         ),
         size=12,
         space_after=8,
     )
     add_para(
         doc,
-        (
-            "Importa responder a lo que se pregunta, no simplemente hablar del "
-            "mismo tema."
-        ),
+        "Hablar del mismo tema no es necesariamente responder a la pregunta.",
         size=12,
         italic=True,
+        space_after=8,
+    )
+    add_para(
+        doc,
+        (
+            "No hace falta justificar todos los casos. Utilizad el espacio de "
+            "observaciones solo cuando tengáis dudas o veáis algún problema "
+            "con el criterio."
+        ),
+        size=12,
         space_after=6,
     )
 
