@@ -66,7 +66,7 @@ def validate_pool_dataframe(df: pd.DataFrame) -> None:
         if d < LEGISLATURE_START or d > PARLAMINT_COVERAGE_END:
             errors.append(f"{row['exchange_id']}: date outside XIV/ParlaMint window")
 
-    # Phase-0 / QA must not remain sampling-eligible
+    # Phase-0 probes must remain excluded from the main frame
     bad_probe = df[
         df["expediente"].isin(PHASE0_PROBE_EXPEDIENTES)
         & df["eligible"]
@@ -75,9 +75,17 @@ def validate_pool_dataframe(df: pd.DataFrame) -> None:
     if not bad_probe.empty:
         errors.append("phase0 probe rows still sampling-eligible")
 
-    qa = df[df["sampling_exclusion_reason"].eq("linkage_QA") & ~df["exclude_from_sampling"]]
-    if not qa.empty:
-        errors.append("linkage_QA rows not marked exclude_from_sampling")
+    # Phase 6A: linkage_QA units are restored (not contaminated for reply_status).
+    # Active exclusions with reason linkage_QA must not remain.
+    qa_active = df[
+        df["sampling_exclusion_reason"].eq("linkage_QA")
+        & df["exclude_from_sampling"].fillna(False)
+    ]
+    if not qa_active.empty:
+        errors.append(
+            "linkage_QA rows still exclude_from_sampling "
+            "(Phase 6A requires restoration after contamination audit)"
+        )
 
     dev = df[
         df["sampling_exclusion_reason"].eq("development_codebook")

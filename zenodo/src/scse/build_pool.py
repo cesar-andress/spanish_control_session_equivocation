@@ -254,20 +254,13 @@ def build_pool(*, sleep_s: float = 0.75) -> dict:
     df = pd.DataFrame(rows)
     df = apply_sampling_exclusions(df)
 
-    # Mark linkage QA exclusions after selecting
+    # Select linkage-QA packet for provenance only.
+    # Phase 6A contamination audit: these 30 units are NOT excluded from the
+    # main frame (linkage review only; no reply_status judgement; main
+    # annotators did not see them). Phase-0 probes remain excluded above.
     qa = select_linkage_qa(df, n=30)
     qa_ids = set(qa["exchange_id"].tolist())
-    qa_mask = df["exchange_id"].isin(qa_ids)
-    # Don't overwrite phase0 reason
-    for idx in df.index[qa_mask]:
-        if not bool(df.at[idx, "exclude_from_sampling"]):
-            df.at[idx, "exclude_from_sampling"] = True
-            df.at[idx, "sampling_exclusion_reason"] = "linkage_QA"
-        elif df.at[idx, "sampling_exclusion_reason"] == "phase0_feasibility_probe":
-            pass
-        else:
-            # already excluded for another reason; keep prior, note QA also
-            pass
+    _ = qa_ids  # retained via write_linkage_qa_packet / manifests
 
     # Codebook development units (if already selected) stay out of future samples
     from scse.refresh_development_exclusions import apply_development_exclusions

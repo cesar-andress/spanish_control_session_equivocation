@@ -1,21 +1,75 @@
 \section{Data and Method}
 \label{sec:data-method}
 
-% Planned workflow (future tense). Nothing below reports completed empirical work.
+\subsection{Scope and sources}
 
-This study is designed as a human annotation project on Spanish parliamentary
-control sessions. The intended coding unit is the triple formed by a
-pre-registered oral question, the questioner's opening turn, and the Prime
-Minister's first response. The intended central construct is reply status
-(explicit reply, intermediate reply, or non-reply), conceptually aligned with
-the Bull reply/non-reply tradition; operational definitions remain to be frozen
-in a codebook before main annotation.
+The study is restricted to the XIV Spanish legislature, oral control questions
+addressed to the President of the Government, with answer dates inside the
+coverage of ParlaMint 5.0 / ParlaMint-ES (handle 11356/2004; CC BY 4.0) through
+23~February 2023. Registered questions are Congreso initiatives of type
+\texttt{180/######}. Transcript turns are taken from ParlaMint-ES; registered
+wording is taken from Congreso initiative records. Public redistribution of
+Congreso full text remains identifier-based until reuse packaging is cleared;
+ParlaMint-derived identifiers are releasable under CC BY 4.0 with attribution.
 
-The planned sequence is development, calibration, protocol freeze, independent
-main annotation by two expert annotators, reliability estimation, adjudication
-only after reliability is committed, and then analysis of a pre-specified
-primary endpoint: the risk difference in explicit-reply rates across a
-pre-defined political-alignment contrast of the questioner's parliamentary
-group. Independent labels will be preserved separately from adjudicated labels.
-No corpus acquisition, sampling, or annotation has been completed at the time
-of this scaffold.
+\subsection{Unit of analysis}
+
+The coding unit is the triple formed by (i)~the registered question,
+(ii)~the questioner's opening oral turn (Q1), and (iii)~the Prime Minister's
+first response (R1). The planned outcome is \emph{reply status} judged on Q1
+and anchored by the registered text: explicit reply, partial or intermediate
+reply, or absence of reply. Definitions follow a human codebook developed and
+calibrated out of pool; the main-study instrument version will be frozen only
+after calibration closes (currently draft v0.3 pending Round-2 clarifications).
+
+\subsection{Linkage and attrition}
+
+Candidate PM control exchanges were extracted from ParlaMint-ES (n\,=\,139).
+Linkage to Congreso records used sitting date and questioner name against that
+day's initiative set, with TEI expediente notes accepted only when
+name-confirmed. Link statuses: exact 46, high confidence 54, ambiguous 2,
+unlinked 37. Eligible exchanges with complete registered+Q1+R1 text and PM
+authorship of R1: n\,=\,100.
+
+A 30-case human linkage QA judged linkage correctness only; no reply-status
+coding was performed, and the main annotators did not see those cases. After a
+contamination audit, those 30 units were restored to the main population.
+Three Phase-0 feasibility-probe exchanges remain excluded. The pre-outcome
+main frame is therefore n\,=\,97. No outcome-based exclusions are applied.
+Linkage missingness is not assumed random.
+
+\subsection{Formation-vote alignment}
+
+Each questioner is classified by their individual named vote on the XIV second
+investiture vote (7~January 2020; DSCD-14-PL-4): supported, opposed, or
+abstained. The draft primary descriptive contrast is opposed versus
+non-opposed (supported $\cup$ abstained). Labels such as allies/adversaries are
+not used analytically.
+
+\subsection{Question-side composition (pre-outcome)}
+
+Registered and Q1 texts in the eligible pool were coded for topic, question
+form, and confrontational formulation without inspecting reply outcomes.
+Confrontational formulation is strongly imbalanced by alignment in this
+population (rare among non-opposed questioners; common among opposed
+questioners). Alignment contrasts in reply explicitness therefore cannot be
+interpreted as clean causal effects of political side; question-side
+composition is reported as a descriptive confound risk.
+
+\subsection{Development and calibration}
+
+Instrument development and calibration use out-of-pool prime-ministerial
+control exchanges from prior legislatures so that the XIV main frame is not
+burned for training. Two expert annotators (Daniel Pinto Pajares; Jose Jaime
+Baena Rojas) complete independent coding after a joint clarification step.
+Calibration Round~2 is in progress at the time of this writing; main
+annotation does not begin until the codebook is frozen.
+
+\subsection{Planned annotation and analysis}
+
+After freeze, both annotators will code the n\,=\,97 main-frame exchanges
+independently. Reliability will be estimated before adjudication. The primary
+descriptive contrast is the difference in explicit-reply proportions between
+non-opposed and opposed questioners, with questioner-cluster uncertainty and
+leave-one-questioner-out sensitivity. Topic and confrontational strata are
+descriptive or sensitivity analyses only. No LLM labelling is used.

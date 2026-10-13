@@ -2,21 +2,30 @@
 
 ## Paper identity
 
-**Working title (under review; not finalized).** Answering Allies and Adversaries: Equivocation in Prime-Ministerial Replies during Spanish Parliamentary Control Sessions
+**Working title.** Answering the Question? Reply Explicitness in Spanish
+Prime-Ministerial Control Sessions
 
-Neutral title options: `_internal/reports/PROTOCOL_REFINEMENT_AFTER_CLAUDE.md` (prefer scoped wording without allies/adversaries).
+(Avoid allies/adversaries as the main title framing.)
 
-**Primary question (observational, descriptive — Phase 4A).** In XIV Spanish Congress control sessions, how does the rate of explicit first responses to oral control questions vary by a fixed formation-vote baseline (`primary_alignment`: opposed vs non_opposed), and how does that descriptive pattern relate to independently coded question-side features?
+**Primary question (observational, descriptive).** In XIV Spanish Congress
+control sessions, how does the rate of explicit first responses to oral control
+questions vary by a fixed formation-vote baseline (`primary_alignment`: opposed
+vs non_opposed), and how does that descriptive pattern relate to independently
+coded question-side features?
 
-Do not sharpen this into a causal claim. Do not use allies/adversaries/friendly/hostile as analytic labels. Operational codebook definitions are not frozen.
+Do not sharpen this into a causal claim. Do not use allies/adversaries as
+analytic labels. Operational codebook definitions are not frozen.
 
-**Analytic variable name (neutral):** `formation_vote_alignment` (institutional baseline indicator; not “allies/adversaries”).
+**Analytic variable name (neutral):** `formation_vote_alignment`.
 
-**Annotation target (Phase 4A draft):** `reply_status` judged on **Q1**, anchored by the registered question; unit = registered + Q1 + R1 (first response).
+**Annotation target:** `reply_status` judged on **Q1**, anchored by the
+registered question; unit = registered + Q1 + R1.
 
-**Phase.** Phase 5B: Final calibration package prepared (joint review of Round-1 cases 5/6/7/10 + independent Round 2, N=20 new OOP). Codebook still v0.3 until joint clarifications are returned and transcribed to v0.4. No Round 3 planned by default. No main annotation; no XIV outcomes.
-
-
+**Phase.** Phase 6A: pre-outcome main-study infrastructure in parallel with
+pending human Calibration Round 2. Codebook still v0.3 until joint
+clarifications are returned and transcribed to v0.4. Main-frame N=97 (QA30
+restored; 3 Phase-0 probes excluded). **No XIV reply_status labels. No main
+annotation packets issued.**
 
 ## Authors (byline order)
 
@@ -53,7 +62,8 @@ Phase 4A:
 - Do not claim primacy / “first”.
 - Do not push `_internal/` or manuscript drafts to the public remote.
 - Do not burn the XIV eligible pool on development/calibration (use out-of-pool sources).
-- Do not start main annotation until codebook v0.3 + out-of-pool calibration plan are ready.
+- Do not start main annotation until codebook is frozen after calibration.
+- Do not invent XIV reply_status outcomes while waiting for Round 2.
 
 ## Integrity sequence
 
@@ -61,4 +71,7 @@ out-of-pool development → out-of-pool calibration → protocol freeze → main
 
 ## Next gate
 
-Send the Phase 5B package (one email, three DOCX). Professors complete joint review first, then independent Round 2. On return: archive joint clarifications → compute Round-2 agreement before discussion → transcribe agreed wording into codebook v0.4 (no retrospective rewrite) → freeze or reconsider scheme. No Round 3 by default. No XIV main coding yet.
+Await Round-2 returns (joint clarifications first, then independent packets).
+On return: archive joint clarifications → compute Round-2 agreement before
+discussion → transcribe into codebook v0.4 → freeze or reconsider → then issue
+main packets for N=97. No Round 3 by default.

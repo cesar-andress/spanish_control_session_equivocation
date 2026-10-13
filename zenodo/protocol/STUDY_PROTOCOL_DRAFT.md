@@ -49,9 +49,12 @@ Minister provides the relevant first response in person; answer date inside
 verified ParlaMint-ES 5.0 coverage with operational upper bound **2023-02-23**.
 XII post-censure is not in the primary pool.
 
-Phase-0 feasibility-probe exchanges and Phase-2 linkage-QA rows are retained in
-the master catalogue with `exclude_from_sampling = true` and are excluded from
-all scientific samples drawn from the XIV pool.
+Phase-0 feasibility-probe exchanges remain in the catalogue with
+`exclude_from_sampling = true` and are excluded from the main frame.
+Phase-2 linkage-QA rows (n=30) were reviewed for linkage correctness only;
+after the Phase 6A contamination audit they are **restored** to the main
+frame (not reply-status contaminated). Pre-outcome main frame N = **97**
+(100 eligible − 3 Phase-0 probes).
 
 Political alignment (`formation_vote_alignment`) uses a draft individual-MP
 investiture rule (Phase 3) as a **January 2020 institutional baseline**, not as
@@ -230,20 +233,23 @@ primary estimand decision rule.
   linkage.
 - **Answerer criterion:** first response utterance `who` equals ParlaMint person
   id for Pedro Sánchez Pérez-Castejón; ministerial substitutes are out of pool.
-- **Exclusions from XIV scientific samples:** Phase-0 probe expedientes; Phase-2
-  linkage-QA rows (hash-ranked, not a scientific seed); SPDB previous-paper
-  sitting dates when any candidate falls on those dates (Phase 2 observed
-  **zero** overlap). Phase-4 in-pool development exclusions were **superseded**
-  in Phase 4.1 (restored to frame); development/calibration use out-of-pool
-  units only (`development_set_manifest.yaml`).
-- **Attrition (summary; full table pending):** raw PM-control extractions 139;
-  eligible 100; link_status on raw: exact 46, high_confidence 54, unlinked 37,
-  ambiguous 2. A detailed population → linked → eligible flow is required before
-  freeze.
+- **Exclusions from XIV main frame:** Phase-0 probe expedientes only (n=3).
+  Phase-2 linkage-QA rows (n=30) restored after contamination audit (Phase 6A).
+  SPDB previous-paper sitting dates: Phase 2 observed **zero** overlap.
+  Development/calibration remain out-of-pool only.
+- **Attrition (pre-outcome):** raw PM-control extractions 139; eligible 100;
+  link_status on raw: exact 46, high_confidence 54, unlinked 37, ambiguous 2;
+  main frame **97** after restoring QA30 and keeping Phase-0 probes out.
+  See `_internal/reports/MAIN_ATTRITION_AND_LINKAGE_REPORT.md`.
 - **Canonical pool:** `_internal/data_private/eligible_pool_full.parquet`
   (private full text). Public projection:
   `data/derived/eligible_pool_metadata_preannotation.csv` (identifier-only).
-- **Seeds:** `development`, `calibration`, and `main_sample` remain **null**.
+  Main-frame public metadata:
+  `data/derived/main_frame_metadata_preannotation.csv`.
+  Private main corpus: `_internal/data_private/main/`.
+- **Seeds:** `calibration` / `calibration_round2` set; `main_sample` remains
+  **null** (main frame is a census of the eligible-minus-probes set, not a
+  random draw).
 
 ---
 

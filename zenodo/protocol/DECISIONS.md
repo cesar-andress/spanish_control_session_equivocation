@@ -505,3 +505,36 @@ Format per entry:
   322720977); soft target max-2-per-questioner not feasible in OOP remainder
   (relaxed to 4, documented); after both Round-2 returns, compute agreement
   before discussion, then either freeze or reconsider the scheme.
+
+## 2026-10-13 — Phase 6A: restore linkage-QA to main frame (pre-outcome)
+
+- **decision:** After contamination audit, classify the 30 Phase-2 linkage-QA
+  exchanges as **not contaminated** for reply-status annotation (linkage-only
+  review by/to the project lead; Daniel and Jose Jaime did not see the cases;
+  no reply_status judgement). Restore them to the main XIV population. Keep the
+  3 Phase-0 feasibility probes excluded. Pre-outcome main-frame N = **97**.
+- **status:** accepted for pre-outcome infrastructure
+- **evidence:** `_internal/reports/MAIN_POPULATION_CONTAMINATION_AUDIT.md`;
+  `_internal/reports/LINKAGE_QA_HUMAN_VALIDATION_REPORT.md`;
+  `PHASE2_LINKAGE_QA_HUMAN_VALIDATION.json` (`reply_status_judgement_performed:
+  false`); `protocol/main_frame_manifest.yaml`
+- **reason:** Correct an unnecessarily conservative exclusion; not
+  outcome-driven.
+- **effect on protocol:** Sampling/main frame among eligible = 97; no XIV
+  reply_status labels; main annotation still blocked until calibration freeze;
+  Round-2 materials unchanged.
+
+## 2026-10-13 — Phase 6A: pre-outcome main infrastructure
+
+- **decision:** Build private main corpus, public metadata projection, internal
+  source-review PDF, packet-generator templates (not issued), analysis scaffold
+  with synthetic tests only, table/figure shells, and study-flow asset. Advance
+  manuscript sections without Results outcomes.
+- **status:** accepted for Phase 6A
+- **evidence:** `_internal/data_private/main/`; `_internal/main_packets/`;
+  `_internal/main_annotation/templates/`; `zenodo/outputs/`;
+  `src/scse/main_frame.py`; `analysis_scaffold.py`; `preoutcome_assets.py`
+- **reason:** Use waiting time during Round-2 without crossing the outcome
+  firewall.
+- **effect on protocol:** Generator ready; human packets **not** issued;
+  codebook still v0.3 until Round-2 clarifications → v0.4.

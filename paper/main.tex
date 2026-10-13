@@ -1,5 +1,5 @@
-% Scaffold manuscript — spanish_control_session_equivocation
-% Working title only; no Results content; no unverified novelty claims.
+% Pre-outcome manuscript — spanish_control_session_equivocation
+% Working title; Results intentionally empty of empirical outcomes.
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
@@ -16,7 +16,7 @@
 \usepackage{microtype}
 \usepackage{xurl}
 \usepackage{graphicx}
-\graphicspath{{figures/}}
+\graphicspath{{figures/}{../zenodo/outputs/figures/}}
 \usepackage{booktabs}
 \usepackage{natbib}
 \bibliographystyle{plainnat}
@@ -28,8 +28,9 @@
   urlcolor=black,
 ]{hyperref}
 
-\title{Answering Allies and Adversaries:\\
-  Equivocation in Prime-Ministerial Replies during Spanish Parliamentary Control Sessions}
+% Working title (neutral; not allies/adversaries framing)
+\title{Answering the Question?\\
+  Reply Explicitness in Spanish Prime-Ministerial Control Sessions}
 \author{%
   C\'{e}sar Andr\'{e}s \and
   Jose Jaime Baena Rojas \and
@@ -41,7 +42,19 @@
 \maketitle
 
 \begin{abstract}
-% Intentionally empty at scaffold. Do not invent findings.
+Oral control sessions require the Spanish Prime Minister to respond to
+registered questions from deputies. This study measures how often the first
+response is an explicit reply, a partial reply, or an absence of reply, using
+linked Congreso and ParlaMint-ES materials for the XIV legislature. The
+pre-outcome main frame comprises $N=97$ exchanges after restoring thirty
+linkage-QA cases that were never reply-coded and retaining three Phase-0 probe
+exclusions. Formation-vote alignment is used only as a descriptive grouping;
+confrontational formulation is strongly imbalanced by alignment, so alignment
+differences are not interpretable as clean causal effects.
+% PLACEHOLDER — final inter-annotator reliability after calibration:
+% [RELIABILITY\_PENDING].
+% PLACEHOLDER — explicit-reply proportions by alignment:
+% [OUTCOME\_ESTIMATES\_PENDING].
 \end{abstract}
 
 \input{sections/01_introduction}
@@ -51,7 +64,29 @@
 \input{sections/05_discussion}
 \input{sections/06_conclusion}
 
-% Bibliography intentionally empty until Phase 0 literature freeze.
-% \bibliography{bib/references}
+\section*{Data availability}
+ParlaMint-ES identifiers and public metadata projections will accompany the
+reproducibility package under CC BY~4.0 where applicable. Congreso full-text
+redistribution remains deferred to an identifier-based strategy until reuse
+packaging is cleared. Private annotation packets are not part of the public
+release.
+
+\section*{Competing interests}
+% PLACEHOLDER
+The authors declare no competing interests. % confirm before submission
+
+\section*{Author contributions}
+% PLACEHOLDER — CRediT to be finalised before submission
+C.A.: conceptualisation, methodology, software, data curation, writing.
+J.J.B.R.: annotation, validation, writing (review).
+D.P.P.: annotation, validation, writing (review).
+
+\section*{Acknowledgements}
+% Keep acknowledgements out of blinded review copies.
+We thank colleagues who provided methodological comments during design review.
+Annotation is ongoing; names of any additional helpers will be confirmed before
+submission.
+
+\bibliography{bib/references}
 
 \end{document}

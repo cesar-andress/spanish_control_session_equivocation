@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640">
+  <style>
+    .box { fill:#ffffff; stroke:#222; stroke-width:1.4; }
+    .title { font: 700 15px 'Times New Roman', serif; fill:#111; }
+    .body { font: 13px 'Times New Roman', serif; fill:#222; }
+    .note { font: italic 12px 'Times New Roman', serif; fill:#444; }
+    .arrow { stroke:#222; stroke-width:1.5; fill:none; marker-end:url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+  <text x="360" y="28" text-anchor="middle" class="title">Study flow (pre-outcome)</text>
+
+  <rect class="box" x="180" y="48" width="360" height="52" rx="4"/>
+  <text x="360" y="70" text-anchor="middle" class="body">Congreso registered oral-question records</text>
+  <text x="360" y="88" text-anchor="middle" class="body">acquired for candidates ≈ 166</text>
+
+  <path class="arrow" d="M360 100 V120"/>
+
+  <rect class="box" x="180" y="120" width="360" height="52" rx="4"/>
+  <text x="360" y="142" text-anchor="middle" class="body">PM-directed candidate exchanges</text>
+  <text x="360" y="160" text-anchor="middle" class="body">ParlaMint-ES XIV PM FORMULA = 139</text>
+
+  <path class="arrow" d="M360 172 V192"/>
+
+  <rect class="box" x="180" y="192" width="360" height="52" rx="4"/>
+  <text x="360" y="214" text-anchor="middle" class="body">Linked exchanges (exact ∪ high_confidence)</text>
+  <text x="360" y="232" text-anchor="middle" class="body">complete registered + Q1 + R1 = 100</text>
+
+  <path class="arrow" d="M360 244 V264"/>
+
+  <rect class="box" x="80" y="264" width="250" height="70" rx="4"/>
+  <text x="205" y="290" text-anchor="middle" class="body">Linkage QA reviewed</text>
+  <text x="205" y="308" text-anchor="middle" class="body">n = 30 (linkage only)</text>
+  <text x="205" y="324" text-anchor="middle" class="note">not reply-status contaminated</text>
+
+  <rect class="box" x="390" y="264" width="250" height="70" rx="4"/>
+  <text x="515" y="290" text-anchor="middle" class="body">Phase-0 feasibility probes</text>
+  <text x="515" y="308" text-anchor="middle" class="body">n = 3 excluded</text>
+  <text x="515" y="324" text-anchor="middle" class="note">kept out for continuity</text>
+
+  <path class="arrow" d="M205 334 V370"/>
+  <path class="arrow" d="M515 334 V370"/>
+  <path class="arrow" d="M205 370 H515"/>
+  <path class="arrow" d="M360 370 V400"/>
+
+  <rect class="box" x="160" y="400" width="400" height="70" rx="4"/>
+  <text x="360" y="428" text-anchor="middle" class="title">Final pre-outcome main frame</text>
+  <text x="360" y="450" text-anchor="middle" class="body">N = 97  (100 linked − 3 Phase-0 probes)</text>
+
+  <text x="360" y="500" text-anchor="middle" class="note">Unlinked / ambiguous mechanical attrition: 37 unlinked + 2 ambiguous (from 139).</text>
+  <text x="360" y="520" text-anchor="middle" class="note">No reply-status outcomes. No outcome-based exclusions.</text>
+  <text x="360" y="560" text-anchor="middle" class="note">QA30 restored after contamination audit (Phase 6A).</text>
+</svg>

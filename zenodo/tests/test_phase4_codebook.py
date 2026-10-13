@@ -73,8 +73,12 @@ def test_xiv_pool_not_holding_development_exclusions():
     df = pd.read_parquet(pool)
     assert "reply_status" not in df.columns
     assert not (df["sampling_exclusion_reason"] == "development_codebook").any()
-    # phase0 + linkage QA still excluded
-    assert (df["sampling_exclusion_reason"] == "linkage_QA").sum() == 30
+    # Phase 6A: linkage QA restored; Phase-0 probes remain excluded
+    assert not (
+        (df["sampling_exclusion_reason"] == "linkage_QA")
+        & df["exclude_from_sampling"].fillna(False)
+    ).any()
+    assert (df["sampling_exclusion_reason"] == "phase0_feasibility_probe").sum() == 3
 
 
 def test_calibration_design_round1_status():

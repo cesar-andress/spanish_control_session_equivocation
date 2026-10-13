@@ -1,0 +1,15 @@
+{
+  "figure": "fig1_study_flow_preoutcome",
+  "path": "zenodo/outputs/figures/fig1_study_flow_preoutcome.svg",
+  "counts": {
+    "registered_approx": 166,
+    "pm_candidates": 139,
+    "linked_eligible": 100,
+    "linkage_qa_reviewed": 30,
+    "phase0_excluded": 3,
+    "main_frame": 97,
+    "unlinked": 37,
+    "ambiguous": 2
+  },
+  "outcome_exclusions": 0
+}
