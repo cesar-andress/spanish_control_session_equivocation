@@ -34,7 +34,7 @@ not be inspected for protocol work.**
 
 ## Hard constraints
 
-- No LLM labelling for the human study (AI simulation deferred until freeze).
+- No LLM labelling for the human study. AI simulation status: **DEFERRED — DO NOT RUN BEFORE HUMAN CODEBOOK FREEZE** (archived JSON/prompt only; no MODE A/B).
 - No GPU / torch / transformers stack.
 - Do not reanalyse the previous paper's N=100 pilot.
 - Do not claim primacy / “first”.

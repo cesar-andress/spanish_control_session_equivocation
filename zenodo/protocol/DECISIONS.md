@@ -613,3 +613,15 @@ Format per entry:
   `_internal/ai_simulation/` remains unused for new runs
 - **reason:** Pre-outcome workflow clarity without starting main coding.
 - **effect on protocol:** Generator/templates only; human packets blocked.
+
+## 2026-10-13 — Pre-Round-2 cleanup: AI simulation must not be run
+
+- **decision:** Mark Round-1 AI simulation materials as
+  **DEFERRED — DO NOT RUN BEFORE HUMAN CODEBOOK FREEZE**. Archived JSON/prompt
+  may remain. Do not execute MODE A/B; do not create AI reply-status labels;
+  do not instruct the next agent to run the simulation now.
+- **status:** accepted
+- **evidence:** `_internal/ai_simulation/AI_SIMULATION_DEFERRED.md`;
+  `_internal/reports/PROJECT_STATE.md`
+- **reason:** Human calibration and codebook freeze first.
+- **effect on protocol:** No change to Round-2 or main frame; AI path blocked.
