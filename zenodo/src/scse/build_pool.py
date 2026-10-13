@@ -154,14 +154,13 @@ def recover_missing_expedientes(
 
 def apply_sampling_exclusions(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-    # Phase-0 probes
-    probe_mask = df["expediente"].isin(PHASE0_PROBE_EXPEDIENTES)
-    df.loc[probe_mask, "exclude_from_sampling"] = True
-    df.loc[probe_mask, "sampling_exclusion_reason"] = "phase0_feasibility_probe"
+    # Phase 6B: Phase-0 probe expedientes are NOT sampling-excluded.
+    # They remain identifiable via PHASE0_PROBE_EXPEDIENTES / probe CSV for
+    # provenance; contamination audit restored them for reply-status coding.
+    _ = PHASE0_PROBE_EXPEDIENTES
 
-    # SPDB sitting-date overlap
+    # SPDB sitting-date overlap (XII dates in this list; XIV pool typically zero)
     overlap = df["date"].isin(SPDB_SITTING_DATES)
-    # Only mark if not already excluded for phase0
     new_overlap = overlap & ~df["exclude_from_sampling"].fillna(False)
     df.loc[new_overlap, "exclude_from_sampling"] = True
     df.loc[new_overlap, "sampling_exclusion_reason"] = "spdb_previous_paper_sitting_date"

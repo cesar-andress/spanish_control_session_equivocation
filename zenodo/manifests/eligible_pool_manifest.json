@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-10-13T13:51:09.210436+00:00",
-  "pipeline_commit": "1a211669746a8c15492b869473b81e73e3a30bb4",
+  "created_at": "2026-10-13T14:05:11.213372+00:00",
+  "pipeline_commit": "b00816b09f08997ecbccc792fe5ed8f8b7cc78ec",
   "eligibility_rule_version": "phase2-xiv-v1",
   "parlamint_release": "5.0",
   "parlamint_sha256": "b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68",
@@ -27,19 +27,19 @@
     ]
   ],
   "eligible_count": 100,
-  "sampling_frame_count": 97,
+  "sampling_frame_count": 100,
   "sessions_eligible": 48,
   "questioners_eligible": 19,
   "groups_eligible": 7,
-  "phase0_excluded": 3,
+  "phase0_excluded": 0,
   "spdb_overlap_rows": 0,
   "linkage_qa_n": 0,
   "development_codebook_n": 0,
   "private_pool_path": "_internal/data_private/eligible_pool_full.parquet",
-  "private_pool_sha256": "40ffa1ba0ee42de9cfdc308d4e8db441fb549671c11661a6d51f00016ba5f4f4",
+  "private_pool_sha256": "46d7d9b684c0b231034b8c56a3fec0147cc2064dcd12d349996fb9126275a1fa",
   "public_pool_path": "zenodo/data/derived/eligible_pool_metadata_preannotation.csv",
-  "public_pool_sha256": "d3a17981dc48862b6eea2065b1a9d143d53a7bd008a617bb70488941a3771855",
-  "exclusions_sha256": "fa37b5cbdd86c0093c3e330fc9537dd0d000b0ad04699bdb34393cc8bfbe2661",
+  "public_pool_sha256": "9ffcd249d58137e67afb065d4da527775918c9c40e996d57562f7dff297d658b",
+  "exclusions_sha256": "a29bca4c4dd66187eb9de833dbd05c674cb8fc05eedf11f30716ac9505df081d",
   "qa_packet_path": "_internal/link_audit_private/PHASE2_LINKAGE_QA.xlsx",
   "seeds": {
     "development": null,
@@ -48,7 +48,7 @@
   },
   "outcome_columns_present": [],
   "reply_status_codebook_status": "draft_v0.1_not_frozen",
-  "refresh_reason": "phase6a_restore_linkage_qa_preoutcome",
+  "refresh_reason": "phase6b_restore_qa30_and_phase0_probes_preoutcome",
   "human_linkage_validation": {
     "reviewed": true,
     "n_reviewed": 30,
@@ -61,9 +61,10 @@
     "reply_status_judgement_performed": false
   },
   "human_linkage_validation_recorded_at": "2026-10-01T21:19:11.413611+00:00",
-  "core_sha256": "4212c067fa75b0770a62a62a74356f18ccd6029c99e10ca54080b14398c2dd0a",
+  "core_sha256": "59ccc3da46b859224a7b48b34e14074b8f9c9abfc84dac10ee7767ab21533ac1",
   "linkage_qa_restored_n": 30,
   "linkage_qa_active_exclusion_n": 0,
-  "phase0_still_excluded": 3,
-  "main_frame_n": 97
+  "phase0_probes_restored_n": 3,
+  "phase0_still_excluded": 0,
+  "main_frame_n": 100
 }

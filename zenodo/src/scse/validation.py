@@ -9,7 +9,6 @@ import pandas as pd
 from scse.config import (
     LEGISLATURE_START,
     PARLAMINT_COVERAGE_END,
-    PHASE0_PROBE_EXPEDIENTES,
     PM_WHO,
 )
 
@@ -66,17 +65,20 @@ def validate_pool_dataframe(df: pd.DataFrame) -> None:
         if d < LEGISLATURE_START or d > PARLAMINT_COVERAGE_END:
             errors.append(f"{row['exchange_id']}: date outside XIV/ParlaMint window")
 
-    # Phase-0 probes must remain excluded from the main frame
-    bad_probe = df[
-        df["expediente"].isin(PHASE0_PROBE_EXPEDIENTES)
-        & df["eligible"]
-        & ~df["exclude_from_sampling"].fillna(False)
+    # Phase 6B: Phase-0 probes and linkage_QA units are restored to the main
+    # frame after contamination audit. Active exclusions with those reasons
+    # must not remain on eligible rows.
+    probe_active = df[
+        df["sampling_exclusion_reason"].eq("phase0_feasibility_probe")
+        & df["exclude_from_sampling"].fillna(False)
+        & df["eligible"].fillna(False)
     ]
-    if not bad_probe.empty:
-        errors.append("phase0 probe rows still sampling-eligible")
+    if not probe_active.empty:
+        errors.append(
+            "phase0_feasibility_probe rows still exclude_from_sampling "
+            "(Phase 6B requires restoration after contamination audit)"
+        )
 
-    # Phase 6A: linkage_QA units are restored (not contaminated for reply_status).
-    # Active exclusions with reason linkage_QA must not remain.
     qa_active = df[
         df["sampling_exclusion_reason"].eq("linkage_QA")
         & df["exclude_from_sampling"].fillna(False)
@@ -84,7 +86,7 @@ def validate_pool_dataframe(df: pd.DataFrame) -> None:
     if not qa_active.empty:
         errors.append(
             "linkage_QA rows still exclude_from_sampling "
-            "(Phase 6A requires restoration after contamination audit)"
+            "(Phase 6A/6B requires restoration after contamination audit)"
         )
 
     dev = df[

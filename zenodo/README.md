@@ -5,72 +5,44 @@ Project slug: `spanish_control_session_equivocation`
 ## What this project studies
 
 A human-annotated corpus study of first-response explicitness in Spanish
-parliamentary control sessions. Expert annotators code whether the Prime
-Minister's first response is an explicit reply, a partial reply, or an absence
-of reply to a registered oral question (anchored by the oral turn).
+parliamentary control sessions.
 
-## Primary question
+## Primary framing
 
-How explicit-reply rates vary across a pre-defined formation-vote alignment
-contrast of the questioner (opposed vs non-opposed), in descriptive terms only.
+Reply explicitness / responsiveness in first prime-ministerial responses.
+Formation-vote alignment is a **descriptive contextual grouping**, not a
+confirmatory causal contrast.
 
-This is an observational contrast, not a causal claim. Confrontational question
-formulation is strongly imbalanced by alignment in the XIV pool.
+## Current status (Phase 6B)
 
-## Current status (Phase 6A)
-
-- Sources acquired; eligible pool built (100 linked eligible XIV exchanges).
-- Linkage-QA (n=30) restored to the main frame after contamination audit.
-- Phase-0 probes (n=3) remain excluded → **pre-outcome main frame N=97**.
-- Out-of-pool development and Calibration Round 1 completed; Round 2 pending.
-- **No XIV reply_status labels exist.**
-- Main annotation packets are **not** issued until the codebook is frozen.
-- Public projections are identifier / metadata only (no Congreso full text).
-
-## Research workflow
-
-1. development (out of pool)
-2. calibration (out of pool)
-3. protocol freeze
-4. main annotation
-5. reliability
-6. adjudication
-7. analysis
-8. release
+- Eligible linked XIV exchanges: 100.
+- QA30 + Phase-0 probes restored after contamination audit → **main frame N=100**.
+- Round-2 decision rule locked prospectively (α 0.67 / binary κ fallback / STOP).
+- Round 2 human returns pending; codebook still v0.3.
+- **No XIV reply_status labels.** Main packets **not** issued.
+- `question_confrontational`: exploratory/diagnostic rule-based indicator only.
+- AI simulation **deferred**.
 
 ## Repository layout
 
 | Path | Role |
 |------|------|
-| `protocol/` | Draft study protocol and decision log (not yet preregistered) |
+| `protocol/` | Draft protocol, decisions, codebook, calibration design |
 | `data/derived/` | Public-safe metadata projections |
-| `src/scse/` | Analysis and pipeline package |
+| `src/scse/` | Pipeline package |
 | `tests/` | Unit and hygiene tests |
-| `outputs/` | Generated tables and figures (shells + pre-outcome assets) |
-| `docs/` | Licensing notes and reproduction docs |
-| `manifests/` | Release and provenance manifests |
+| `outputs/` | Tables/figures (pre-outcome + shells) |
 
-Private working material lives outside this public tree (project `_internal/`).
-It must never be copied into a Zenodo or GitHub public release.
+Private material: project `_internal/` (not for public release bags).
 
-## Reproducibility commands
-
-From this directory (`zenodo/`):
+## Commands
 
 ```text
-make help
 make test
 make hygiene
-uv run python scripts/build_phase6a_preoutcome.py   # rebuild pre-outcome assets
+uv run python scripts/build_phase6b_pre_round2_lock.py
 ```
-
-Later-phase Make targets fail safely until their phase starts.
 
 ## Licensing
 
-See `docs/licensing.md`. ParlaMint-ES: CC BY 4.0. Congreso full-text public
-bundling: unresolved / identifier-based until cleared.
-
-## Computational requirements
-
-CPU-only. No GPU, torch, or transformers.
+See `docs/licensing.md`. Congreso full text: identifier-based until cleared.

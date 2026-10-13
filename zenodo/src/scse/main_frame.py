@@ -42,7 +42,8 @@ QUESTION_SIDE_CSV = DATA_PRIVATE / "question_side" / "xiv_eligible_question_side
 MAIN_PRIVATE = DATA_PRIVATE / "main"
 MAIN_PACKETS = INTERNAL_DIR / "main_packets"
 MAIN_ANNOTATION = INTERNAL_DIR / "main_annotation"
-VOLUMES_DEFAULT = (25, 24, 24, 24)  # sum 97
+# Contiguous volume sizes must sum to final main-frame N (Phase 6B: 100)
+VOLUMES_DEFAULT = (25, 25, 25, 25)
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -60,18 +61,37 @@ def load_qa30_exchange_ids() -> list[str]:
 
 
 def restore_linkage_qa(df: pd.DataFrame, qa_ids: list[str] | None = None) -> pd.DataFrame:
-    """Clear sampling exclusion for linkage-QA rows; keep Phase-0 probes excluded."""
+    """Clear sampling exclusion for linkage-QA rows (Phase 6A/6B)."""
     df = df.copy()
     qa_ids = qa_ids or load_qa30_exchange_ids()
     qa_set = set(qa_ids)
     mask = df["exchange_id"].isin(qa_set)
     if int(mask.sum()) != 30:
         raise ValueError(f"expected 30 QA rows in pool, found {int(mask.sum())}")
-    # Do not touch phase0 probes even if somehow overlapping (none expected)
-    probe = df["sampling_exclusion_reason"].eq("phase0_feasibility_probe")
-    restore = mask & ~probe
-    df.loc[restore, "exclude_from_sampling"] = False
-    df.loc[restore, "sampling_exclusion_reason"] = pd.NA
+    df.loc[mask, "exclude_from_sampling"] = False
+    df.loc[mask, "sampling_exclusion_reason"] = pd.NA
+    return df
+
+
+def restore_phase0_probes(df: pd.DataFrame) -> pd.DataFrame:
+    """Clear Phase-0 probe sampling exclusions after Phase 6B contamination audit."""
+    df = df.copy()
+    mask = df["sampling_exclusion_reason"].eq("phase0_feasibility_probe")
+    # Also catch eligible probe expedientes still flagged exclude_from_sampling
+    from scse.config import PHASE0_PROBE_EXPEDIENTES
+
+    mask = mask | (
+        df["expediente"].isin(PHASE0_PROBE_EXPEDIENTES)
+        & df["eligible"].fillna(False)
+        & df["exclude_from_sampling"].fillna(False)
+    )
+    n = int(mask.sum())
+    if n not in {0, 3}:
+        # 0 if already restored; 3 expected on first Phase 6B pass
+        if n > 3:
+            raise ValueError(f"unexpected phase0 restore mask size: {n}")
+    df.loc[mask, "exclude_from_sampling"] = False
+    df.loc[mask, "sampling_exclusion_reason"] = pd.NA
     return df
 
 
@@ -103,15 +123,17 @@ def build_main_frame(df: pd.DataFrame | None = None) -> dict:
 
     qa_ids = load_qa30_exchange_ids()
     df = restore_linkage_qa(df, qa_ids)
+    df = restore_phase0_probes(df)
     validate_pool_dataframe(df)
 
     # Refresh public identifier projection + pool manifest
     summary = refresh_public_projections(df)
-    summary["refresh_reason"] = "phase6a_restore_linkage_qa_preoutcome"
+    summary["refresh_reason"] = "phase6b_restore_qa30_and_phase0_probes_preoutcome"
     summary["linkage_qa_restored_n"] = 30
     summary["linkage_qa_active_exclusion_n"] = int(
         df["sampling_exclusion_reason"].eq("linkage_QA").sum()
     )
+    summary["phase0_probes_restored_n"] = 3
     summary["phase0_still_excluded"] = int(
         df["sampling_exclusion_reason"].eq("phase0_feasibility_probe").sum()
     )
@@ -133,8 +155,8 @@ def build_main_frame(df: pd.DataFrame | None = None) -> dict:
     )
     main.insert(0, "case_no", range(1, len(main) + 1))
 
-    if len(main) != 97:
-        raise ValueError(f"expected main-frame N=97, got {len(main)}")
+    if len(main) != 100:
+        raise ValueError(f"expected main-frame N=100, got {len(main)}")
 
     qs = load_question_side_metadata()
     main = main.merge(qs, on="exchange_id", how="left", validate="one_to_one")
@@ -228,7 +250,13 @@ def build_main_frame(df: pd.DataFrame | None = None) -> dict:
         "status": "pre_outcome_main_frame_frozen",
         "created_at": datetime.now(timezone.utc).isoformat(),
         "n": int(len(corpus)),
-        "phase0_probes_excluded_n": 3,
+        "phase0_probes_excluded_n": 0,
+        "phase0_probes_restored_n": 3,
+        "phase0_probe_expedientes_restored": [
+            "180/000041",
+            "180/000047",
+            "180/000128",
+        ],
         "linkage_qa_restored_n": 30,
         "linkage_qa_exchange_ids": qa_ids,
         "completeness": completeness,
@@ -247,8 +275,9 @@ def build_main_frame(df: pd.DataFrame | None = None) -> dict:
         "reply_status_present": False,
         "human_packets_issued": False,
         "notes": (
-            "Census of eligible XIV exchanges minus Phase-0 probes. "
-            "Linkage-QA units restored after contamination audit. "
+            "Census of all 100 linked eligible XIV exchanges. "
+            "Linkage-QA (30) and Phase-0 probes (3) restored after Phase 6B "
+            "contamination audit (same reply-status exposure rule). "
             "No reply_status labels."
         ),
     }
@@ -321,7 +350,7 @@ def assign_volumes(case_nos: list[int], sizes: tuple[int, ...] = VOLUMES_DEFAULT
             "No outcome-based splitting. Target ~24–25 cases per volume for "
             "human burden (~one sitting of coding)."
         ),
-        "recommended": "4 volumes (25+24+24+24)",
+        "recommended": "4 volumes (" + "+".join(str(s) for s in sizes) + ")",
         "volumes": volumes,
     }
 

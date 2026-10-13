@@ -39,8 +39,8 @@
 
   <rect class="box" x="390" y="264" width="250" height="70" rx="4"/>
   <text x="515" y="290" text-anchor="middle" class="body">Phase-0 feasibility probes</text>
-  <text x="515" y="308" text-anchor="middle" class="body">n = 3 excluded</text>
-  <text x="515" y="324" text-anchor="middle" class="note">kept out for continuity</text>
+  <text x="515" y="308" text-anchor="middle" class="body">n = 3 (linkage probe only)</text>
+  <text x="515" y="324" text-anchor="middle" class="note">restored after Phase 6B audit</text>
 
   <path class="arrow" d="M205 334 V370"/>
   <path class="arrow" d="M515 334 V370"/>
@@ -49,9 +49,9 @@
 
   <rect class="box" x="160" y="400" width="400" height="70" rx="4"/>
   <text x="360" y="428" text-anchor="middle" class="title">Final pre-outcome main frame</text>
-  <text x="360" y="450" text-anchor="middle" class="body">N = 97  (100 linked − 3 Phase-0 probes)</text>
+  <text x="360" y="450" text-anchor="middle" class="body">N = 100  (full linked eligible census)</text>
 
   <text x="360" y="500" text-anchor="middle" class="note">Unlinked / ambiguous mechanical attrition: 37 unlinked + 2 ambiguous (from 139).</text>
   <text x="360" y="520" text-anchor="middle" class="note">No reply-status outcomes. No outcome-based exclusions.</text>
-  <text x="360" y="560" text-anchor="middle" class="note">QA30 restored after contamination audit (Phase 6A).</text>
+  <text x="360" y="560" text-anchor="middle" class="note">QA30 + Phase-0 probes restored (Phase 6B contamination audit).</text>
 </svg>

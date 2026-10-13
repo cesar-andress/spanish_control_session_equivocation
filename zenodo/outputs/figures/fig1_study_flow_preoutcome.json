@@ -6,8 +6,9 @@
     "pm_candidates": 139,
     "linked_eligible": 100,
     "linkage_qa_reviewed": 30,
-    "phase0_excluded": 3,
-    "main_frame": 97,
+    "phase0_restored": 3,
+    "phase0_excluded": 0,
+    "main_frame": 100,
     "unlinked": 37,
     "ambiguous": 2
   },

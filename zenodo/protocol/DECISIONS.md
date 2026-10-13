@@ -538,3 +538,78 @@ Format per entry:
   firewall.
 - **effect on protocol:** Generator ready; human packets **not** issued;
   codebook still v0.3 until Round-2 clarifications → v0.4.
+
+## 2026-10-13 — Phase 6B: Round-2 decision rule locked (pre-returns)
+
+- **decision:** Lock prospective Round-2 gate before inspecting returns.
+  Primary metric = nominal Krippendorff α (3-category). A: α≥0.67 → keep
+  3-category, no Round 3, v0.4 freeze, main annotation. B: α<0.67 but binary
+  explicit vs non-explicit κ≥0.67 → no Round 3; binary primary; 3-category
+  secondary with transparent weaker reliability. C: both <0.67 → STOP; no
+  automatic Round 3; reconsider scheme. Always report raw agreement, 3-way κ,
+  α, binary agreement, binary κ, confusion matrix.
+- **status:** accepted; locked before Round-2 returns
+- **evidence:** `CALIBRATION_DESIGN.md`; this entry
+- **reason:** Prevent post-hoc threshold shopping.
+- **effect on protocol:** Round 3 not planned by default; main annotation
+  gated by A/B/C only.
+
+## 2026-10-13 — Phase 6B: QA30 provenance + Phase-0 probes restored
+
+- **decision:** Formalise QA30 provenance with evidence classes (exact
+  reviewer personal name UNKNOWN in JSON; roles DOCUMENTED; Daniel/Jose
+  non-appearance SUPPORTED BY CONTEMPORANEOUS RECORD). Keep QA30 restored
+  (30/0). Reassess Phase-0 probes under the **same** reply-status
+  contamination rule (not “continuity”): restore all three
+  (`180/000041`, `180/000047`, `180/000128`). Final pre-outcome main frame
+  **N=100**.
+- **status:** accepted
+- **evidence:** `_internal/reports/MAIN_POPULATION_CONTAMINATION_AUDIT.md`
+  (Phase 6B); `PHASE0_LINKAGE_PROBE.csv`; linkage QA validation JSON
+- **reason:** Continuity is not contamination; probes were linkage-feasibility
+  only with no reply_status labels and no use in OOP development/calibration.
+- **effect on protocol:** Main census = all linked eligible units; rebuild
+  corpus/metadata/study-flow; no reply_status outcomes.
+
+## 2026-10-13 — Phase 6B: descriptive alignment framing
+
+- **decision:** Primary scientific framing = reply explicitness in first
+  prime-ministerial responses. `formation_vote_alignment` /
+  opposed vs non_opposed is a **descriptive contextual grouping**, not a
+  confirmatory causal contrast. Drop “primary confirmatory contrast” wording
+  for this variable.
+- **status:** accepted for manuscript/protocol language
+- **evidence:** Phase 6B task; confrontational imbalance audit
+- **reason:** Avoid causal overclaim before outcomes.
+- **effect on protocol:** Analysis remains descriptive risk-difference
+  reporting with uncertainty; not a confirmatory political-effect test.
+
+## 2026-10-13 — Phase 6B: question_confrontational exploratory-diagnostic
+
+- **decision:** Reclassify `question_confrontational` as an
+  **exploratory / diagnostic rule-based indicator** (keyword/regex; no human
+  reliability). Not mandatory primary; not confirmatory covariate. Preserve
+  audit for provenance; purpose = document why causal alignment interpretation
+  is unsafe. No new human coding task.
+- **status:** accepted
+- **evidence:** `scse.question_side.classify_question_confrontational`;
+  question-side audit report
+- **reason:** Unvalidated rule coding must not be presented as human-validated.
+- **effect on protocol:** `question_topic` / `question_form` remain descriptive
+  if rules are deterministic; confrontational not primary.
+
+## 2026-10-13 — Phase 6B: main adjudication + packet orders + AI deferral
+
+- **decision:** (1) Dual independent coding of all main-frame units; preserve
+  originals; agreement before discussion; adjudication after both finish;
+  store adjudicated labels separately; report per-annotator and adjudicated
+  analyses separately; no AI adjudication; neither annotator automatically
+  authoritative. (2) Same main cases, different deterministic random orders
+  (seeds frozen after N=100). Packets not issued yet. (3) AI simulation
+  **deferred** until Round 2 complete, v0.4 frozen, and human protocol locked;
+  no LLM reply-status labelling now.
+- **status:** accepted
+- **evidence:** `MAIN_PACKET_ORDERINGS.json`; `seeds.yaml` order seeds;
+  `_internal/ai_simulation/` remains unused for new runs
+- **reason:** Pre-outcome workflow clarity without starting main coding.
+- **effect on protocol:** Generator/templates only; human packets blocked.

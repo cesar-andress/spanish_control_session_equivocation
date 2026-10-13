@@ -49,19 +49,19 @@ Minister provides the relevant first response in person; answer date inside
 verified ParlaMint-ES 5.0 coverage with operational upper bound **2023-02-23**.
 XII post-censure is not in the primary pool.
 
-Phase-0 feasibility-probe exchanges remain in the catalogue with
-`exclude_from_sampling = true` and are excluded from the main frame.
-Phase-2 linkage-QA rows (n=30) were reviewed for linkage correctness only;
-after the Phase 6A contamination audit they are **restored** to the main
-frame (not reply-status contaminated). Pre-outcome main frame N = **97**
-(100 eligible − 3 Phase-0 probes).
+Phase-0 feasibility-probe exchanges and Phase-2 linkage-QA rows (n=30) were
+reviewed for linkage/source correspondence only. After the Phase 6B
+contamination audit (same reply-status exposure rule; “continuity” is not a
+reason to exclude), **all are restored**. Pre-outcome main frame N = **100**
+(full linked eligible census).
 
 Political alignment (`formation_vote_alignment`) uses a draft individual-MP
 investiture rule (Phase 3) as a **January 2020 institutional baseline**, not as
-a claim of current alliance. The draft **primary descriptive contrast**
-(Phase 3.5 / 4A) is `primary_alignment`: **opposed** vs **non_opposed**
-(supported + abstained). Raw categories supported / opposed / abstained are
-retained for description. Nothing is protocol-frozen or preregistered yet.
+a claim of current alliance. The planned **descriptive contextual grouping**
+is `primary_alignment`: **opposed** vs **non_opposed** (supported + abstained).
+This is **not** a confirmatory causal contrast. Raw categories supported /
+opposed / abstained are retained for description. Nothing is
+protocol-frozen or preregistered yet.
 
 ---
 
@@ -233,14 +233,14 @@ primary estimand decision rule.
   linkage.
 - **Answerer criterion:** first response utterance `who` equals ParlaMint person
   id for Pedro Sánchez Pérez-Castejón; ministerial substitutes are out of pool.
-- **Exclusions from XIV main frame:** Phase-0 probe expedientes only (n=3).
-  Phase-2 linkage-QA rows (n=30) restored after contamination audit (Phase 6A).
+- **Exclusions from XIV main frame (pre-outcome):** none for reply-status
+  contamination after Phase 6B. QA30 (30) and Phase-0 probes (3) restored.
   SPDB previous-paper sitting dates: Phase 2 observed **zero** overlap.
   Development/calibration remain out-of-pool only.
 - **Attrition (pre-outcome):** raw PM-control extractions 139; eligible 100;
   link_status on raw: exact 46, high_confidence 54, unlinked 37, ambiguous 2;
-  main frame **97** after restoring QA30 and keeping Phase-0 probes out.
-  See `_internal/reports/MAIN_ATTRITION_AND_LINKAGE_REPORT.md`.
+  main frame **100**. See `_internal/reports/MAIN_ATTRITION_AND_LINKAGE_REPORT.md`
+  and `_internal/reports/MAIN_POPULATION_CONTAMINATION_AUDIT.md` (Phase 6B).
 - **Canonical pool:** `_internal/data_private/eligible_pool_full.parquet`
   (private full text). Public projection:
   `data/derived/eligible_pool_metadata_preannotation.csv` (identifier-only).
@@ -248,8 +248,15 @@ primary estimand decision rule.
   `data/derived/main_frame_metadata_preannotation.csv`.
   Private main corpus: `_internal/data_private/main/`.
 - **Seeds:** `calibration` / `calibration_round2` set; `main_sample` remains
-  **null** (main frame is a census of the eligible-minus-probes set, not a
-  random draw).
+  **null** (census, not a subsample). Phase 6B adds distinct
+  `main_packet_order_daniel` / `main_packet_order_jose_jaime` presentation
+  seeds (packets not issued).
+- **Round-2 decision rule:** locked in `CALIBRATION_DESIGN.md` (α≥0.67 /
+  binary κ fallback / STOP); no Round 3 by default.
+- **`question_confrontational`:** exploratory/diagnostic rule-based indicator
+  only (not mandatory primary; not confirmatory covariate).
+- **AI simulation:** deferred until Round 2 + v0.4 freeze; no LLM labelling
+  for the human study.
 
 ---
 
@@ -310,23 +317,27 @@ protocol freeze.
 
 ---
 
-## Phase 3.5 confirmatory contrast design (2026-10-01)
+## Phase 3.5 alignment grouping (2026-10-01; reframed Phase 6B)
 
-**Status remains DRAFT — NOT PREREGISTERED.**
+**Status remains DRAFT — NOT PREREGISTERED.**  
+**Phase 6B:** do **not** call this a “primary confirmatory contrast.”
 
-- **Primary descriptive contrast:** `primary_alignment` =
+- **Descriptive contextual grouping:** `primary_alignment` =
   **opposed** vs **non_opposed**.
 - **Construction:** from raw individual-MP investiture categories;
   `non_opposed` = supported ∪ abstained.
-- **Rationale:** single interpretable formation-opposition contrast; avoids two
-  thin n≈18 primary strata; keeps sí vs abstención visible descriptively.
-- **Secondary / descriptive:** report exchange and questioner counts (and later
-  rates, only after annotation) by raw supported / opposed / abstained.
+- **Rationale:** interpretable formation-opposition description; avoids two
+  thin n≈18 strata as if they were dual primary endpoints; keeps sí vs
+  abstención visible descriptively.
+- **Also descriptive:** exchange and questioner counts (and later rates, only
+  after annotation) by raw supported / opposed / abstained.
 - **Planned lightweight robustness (at analysis, not yet frozen):**
-  questioner-level displays; leave-one-questioner-out (Casado, Esteban);
-  optional secondary contrast opposed vs supported only; question-side
-  stratification.
-- **Detail:** `_internal/reports/CONFIRMATORY_CONTRAST_DESIGN.md`
+  questioner-level displays; leave-one-questioner-out; optional opposed vs
+  supported-only description; topic strata. Confrontational indicator =
+  exploratory/diagnostic only.
+- **Historical detail file (title retained):**
+  `_internal/reports/CONFIRMATORY_CONTRAST_DESIGN.md` (superseded wording:
+  “confirmatory” → descriptive grouping per Phase 6B).
 
 ---
 
@@ -338,8 +349,8 @@ protocol freeze.
   (`alignment_table.yaml` still `draft_not_frozen`)
 - Whether opposed-vs-supported-only is a pre-specified secondary contrast at
   freeze
-- Whether the XIV analysis uses the full eligible census vs a sample (review
-  preferred census)
+- XIV analysis uses the full eligible census (N=100) unless a later logged
+  deviation (Phase 6B freeze)
 - Exact Bull-derived codebook definitions and Spanish examples (v0.2 draft
   exists; freeze after out-of-pool calibration)
 - Operational definitions polish for `question_form` /

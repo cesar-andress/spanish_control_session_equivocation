@@ -32,29 +32,32 @@ unlinked 37. Eligible exchanges with complete registered+Q1+R1 text and PM
 authorship of R1: n\,=\,100.
 
 A 30-case human linkage QA judged linkage correctness only; no reply-status
-coding was performed, and the main annotators did not see those cases. After a
-contamination audit, those 30 units were restored to the main population.
-Three Phase-0 feasibility-probe exchanges remain excluded. The pre-outcome
-main frame is therefore n\,=\,97. No outcome-based exclusions are applied.
+coding was performed. Contemporaneous QA records do not name the main
+annotators as reviewers. After a Phase~6B contamination audit, those 30 units
+remain restored. Three Phase-0 feasibility-probe exchanges were reassessed
+under the same rule (linkage feasibility only; no reply-status labels; not
+used in out-of-pool development/calibration) and restored. The pre-outcome
+main frame is therefore n\,=\,100. No outcome-based exclusions are applied.
 Linkage missingness is not assumed random.
 
 \subsection{Formation-vote alignment}
 
 Each questioner is classified by their individual named vote on the XIV second
 investiture vote (7~January 2020; DSCD-14-PL-4): supported, opposed, or
-abstained. The draft primary descriptive contrast is opposed versus
-non-opposed (supported $\cup$ abstained). Labels such as allies/adversaries are
-not used analytically.
+abstained. Opposed versus non-opposed (supported $\cup$ abstained) is a
+descriptive contextual grouping only, not a confirmatory causal contrast.
+Labels such as allies/adversaries are not used analytically.
 
 \subsection{Question-side composition (pre-outcome)}
 
-Registered and Q1 texts in the eligible pool were coded for topic, question
-form, and confrontational formulation without inspecting reply outcomes.
-Confrontational formulation is strongly imbalanced by alignment in this
-population (rare among non-opposed questioners; common among opposed
-questioners). Alignment contrasts in reply explicitness therefore cannot be
-interpreted as clean causal effects of political side; question-side
-composition is reported as a descriptive confound risk.
+Registered and Q1 texts in the eligible pool were coded for topic and question
+form with deterministic rules, and for an exploratory rule-based
+confrontational indicator, without inspecting reply outcomes. The
+confrontational indicator is not a validated human measure and is not a
+mandatory primary covariate; it documents why causal interpretation of
+alignment would be unsafe given a strong imbalance by alignment stratum.
+Alignment contrasts in reply explicitness therefore cannot be interpreted as
+clean causal effects of political side.
 
 \subsection{Development and calibration}
 
@@ -67,9 +70,11 @@ annotation does not begin until the codebook is frozen.
 
 \subsection{Planned annotation and analysis}
 
-After freeze, both annotators will code the n\,=\,97 main-frame exchanges
-independently. Reliability will be estimated before adjudication. The primary
-descriptive contrast is the difference in explicit-reply proportions between
-non-opposed and opposed questioners, with questioner-cluster uncertainty and
-leave-one-questioner-out sensitivity. Topic and confrontational strata are
-descriptive or sensitivity analyses only. No LLM labelling is used.
+After freeze, both annotators will code the n\,=\,100 main-frame exchanges
+independently (same units; distinct deterministic presentation orders).
+Agreement is calculated before discussion; original labels are preserved;
+adjudicated labels, if used, are stored separately. Descriptive reporting will
+include explicit-reply proportions by formation-vote grouping with
+questioner-cluster uncertainty and leave-one-questioner-out sensitivity.
+Topic strata remain descriptive; the confrontational indicator remains
+exploratory/diagnostic only. No LLM labelling is used for the human study.

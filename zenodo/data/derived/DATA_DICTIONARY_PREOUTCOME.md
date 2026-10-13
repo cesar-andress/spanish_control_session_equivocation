@@ -1,28 +1,25 @@
-# Data dictionary — pre-outcome public projections
+# Data dictionary — pre-outcome public projections (Phase 6B)
 
 ## `eligible_pool_metadata_preannotation.csv`
 
-Identifier-only projection of the Phase-2 pool (eligible and non-eligible rows).
-**No** registered/Q1/R1 full text. **No** `reply_status`.
+Identifier-only projection of the Phase-2 pool. **No** full text. **No**
+`reply_status`.
 
-Key fields: `exchange_id`, `expediente`, `date`, `session_id`, `questioner_id`,
-`link_status`, `eligible`, `exclude_from_sampling`, `sampling_exclusion_reason`.
-
-After Phase 6A: active `linkage_QA` sampling exclusions are cleared; Phase-0
-probes remain excluded. Sampling/main frame among eligible = 97.
+After Phase 6B: no active `linkage_QA` or `phase0_feasibility_probe` sampling
+exclusions on eligible rows. Eligible ∧ ¬exclude_from_sampling = **100**.
 
 ## `main_frame_metadata_preannotation.csv`
 
-Public-safe main-frame roster (n=97). Includes pre-outcome metadata:
+Public-safe main-frame roster (**n=100**), including:
 
 - identifiers and linkage fields
-- `formation_vote_alignment`, `primary_alignment`
-- `question_topic`, `question_form`, `question_confrontational`
+- `formation_vote_alignment`, `primary_alignment` (descriptive grouping)
+- `question_topic`, `question_form`
+- `question_confrontational` — **exploratory/diagnostic rule-based indicator**
+  only (not a validated mandatory human variable)
 
 **Omits** full Congreso/ParlaMint spoken and registered text strings.
 
-## Private (not for public release)
+## Private
 
-`_internal/data_private/main/MAIN_FRAME_CORPUS_FULL.*` holds full texts for
-annotation preparation. Do not bundle into Zenodo until Congreso packaging is
-cleared.
+`_internal/data_private/main/` holds full texts for annotation preparation.
