@@ -1,14 +1,14 @@
 # Calibration design (reply_status) — Round 1 RETURNS INGESTED
 
-**Status:** Calibration Round 1 independent returns archived; agreement computed
-on 18/20 complete pairs before discussion.  
-**Updated:** 2026-10-09 (Phase 5A)  
+**Status:** Calibration Round 1 returns complete after Jose Jaime mark
+clarification (cases 5 and 10); agreement on n=20 recorded.  
+**Updated:** 2026-10-13 (Phase 5A)  
 **Related:** `reply_status_codebook_v0.3.md` (CALIBRATION VERSION — not frozen for
 main study); `calibration_round1_manifest.yaml`; `seeds.yaml`;
 `_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md`
 
-Do **not** freeze the main-study codebook yet. Clarify Jose Jaime cases 5 and 10
-before disagreement discussion.
+Do **not** freeze the main-study codebook yet. Proceed to disagreement
+discussion for cases 5, 6, 7 and 10.
 
 ---
 
@@ -46,17 +46,17 @@ before disagreement discussion.
 | Agreement report | `_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md` |
 | Codebook | v0.3.0 |
 
-### Round 1 agreement (before discussion)
+### Round 1 agreement (before disagreement discussion)
 
 | Field | Value |
 |-------|-------|
-| Complete pairs | 18 / 20 |
-| Unusable Jose Jaime marks | cases 5 (none), 10 (all three) |
-| Agree (complete) | 16 / 18 |
-| Raw agreement | 0.889 |
-| Cohen’s κ (3-way) | 0.815 |
-| Krippendorff’s α | 0.815 |
-| Usable disagreements | cases 6, 7 |
+| Complete pairs | 20 / 20 (after Jose Jaime mark clarification on 5 and 10) |
+| First-pass usable pairs (2026-10-09) | 18 / 20 |
+| Agree (n=20, adjusted) | 16 / 20 |
+| Raw agreement | 0.800 |
+| Cohen’s κ (3-way) | 0.672 |
+| Krippendorff’s α | 0.669 |
+| Disagreements | cases 5, 6, 7, 10 |
 
 Question-side audit of the XIV eligible pool (no R1 outcomes):
 `_internal/reports/QUESTION_SIDE_TOPIC_AND_DIVERSITY_AUDIT.md`.

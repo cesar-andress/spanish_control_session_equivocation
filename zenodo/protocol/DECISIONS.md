@@ -465,3 +465,20 @@ Format per entry:
   frozen; next step is clarification of cases 5 and 10, then disagreement
   discussion (usable disagreements: cases 6 and 7); Round 2 still undrawn;
   no XIV main coding.
+
+## 2026-10-13 — Jose Jaime Round-1 mark clarification ingested
+
+- **decision:** Accept Jose Jaime’s adjusted Round-1 Word file as a
+  clarification of previously unusable marks on cases 5 and 10 only; preserve
+  the first return; recompute exploratory agreement on n=20; do not treat the
+  adjustment as a fresh full coding pass.
+- **status:** accepted as calibration diagnostics (not gold; not freeze)
+- **evidence:** `_internal/calibration_round1/returns/` (pre_adjust + adjusted);
+  `_internal/reports/CALIBRATION_ROUND1_AGREEMENT.md`;
+  `_internal/data_private/calibration/round1/CALIBRATION_ROUND1_CODES.csv`
+- **reason:** Cases 5 (blank) and 10 (triple mark) could not enter the
+  agreement table; the adjusted file supplies one mark each without changing
+  the other 18 cases.
+- **effect on protocol:** Agreement n=20 is 16/20 (κ≈0.67); disagreements are
+  cases 5, 6, 7, 10; next gate is disagreement discussion; Round 2 undrawn;
+  no XIV main coding.
