@@ -625,3 +625,19 @@ Format per entry:
   `_internal/reports/PROJECT_STATE.md`
 - **reason:** Human calibration and codebook freeze first.
 - **effect on protocol:** No change to Round-2 or main frame; AI path blocked.
+
+## 2026-10-14 — Joint review return archived (cases 5, 6, 7, 10)
+
+- **decision:** Archive the returned joint-review Word file for Round-1
+  disagreements 5, 6, 7, 10; extract joint marks and the two boundary
+  clarifications in the professors’ own words. Do **not** write codebook v0.4
+  yet; do **not** inspect Round-2 independent returns in this step.
+- **status:** accepted as calibration clarification evidence (not gold; not freeze)
+- **evidence:**
+  `_internal/calibration_round2/returns/01_REVISION_CONJUNTA_CASOS_5_6_7_10_returned.docx`
+  (sha256 `84fde12c…`); `JOINT_REVIEW_RETURN.json`;
+  `_internal/reports/JOINT_REVIEW_ROUND1_RETURN.md`
+- **reason:** Contemporaneous joint wording is required before v0.4 transcription
+  after the locked Round-2 A/B/C gate.
+- **effect on protocol:** Issued blank joint DOCX preserved; Round-2 packets
+  still outstanding; main annotation still blocked.

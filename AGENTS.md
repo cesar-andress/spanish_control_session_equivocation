@@ -56,5 +56,7 @@ annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Await Round-2 returns → apply locked A/B/C rule → v0.4 (if A/B) → issue main
+Joint review of Round-1 cases 5/6/7/10 is archived. Await **independent
+Round-2 returns** (do not inspect until both are in) → apply locked A/B/C rule
+→ v0.4 (if A/B; incorporate joint clarifications faithfully) → issue main
 packets (distinct orders) for N=100.
