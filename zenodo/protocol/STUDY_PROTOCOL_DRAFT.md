@@ -259,6 +259,9 @@ primary estimand decision rule.
   labelling for the human study.
 - **Round-2 returns (2026-10-15):** Gate C (α≈0.126; binary κ≈0.121; 20/20
   complete). Main annotation blocked; no automatic Round 3.
+- **Phase 7B (2026-10-15):** binary validation materials issued (orientation
+  read-only + N=12 independent packets). Not Round 3. Awaiting returns under
+  locked gate κ≥0.67 and ≥10/12.
 - **Phase 7A (2026-10-15):** three-category instrument retired for future coding
   after Gate C FAIL. New draft:
   `direct_resolution_codebook_v1.0-draft.md` (binary direct resolution). Fresh

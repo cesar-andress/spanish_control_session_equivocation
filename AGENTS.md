@@ -22,7 +22,7 @@ contextual grouping).
 **Legacy annotation target:** `reply_status` on **Q1**, anchored by the registered
 question; unit = registered + Q1 + R1.
 
-**Phase.** 7A: binary redesign approved (direct resolution v1.0-draft). Round-2 Gate C FAIL preserved. Fresh OOP validation frame ready (15 untouched; N=12 drawn). Annotator packets not issued. AI simulation deferred.
+**Phase.** 7B: binary validation packets issued (N=12 fresh OOP). Orientation read-only; independent coding. Awaiting returns under locked gate (κ≥0.67 and ≥10/12). Not Round 3. No main XIV packets. AI deferred.
 
 
 ## Authors (byline order)
@@ -39,7 +39,7 @@ question; unit = registered + Q1 + R1.
 - Do not claim primacy / “first”.
 - Do not push `_internal/` privately sensitive material into public releases.
 - Do not burn XIV units on development/calibration (OOP only).
-- Do not start main annotation until Round-2 rule A/B applied and codebook frozen.
+- Do not start main annotation until binary validation PASSes and `direct_resolution` v1.0 is frozen.
 - Do not optimise the Round-2 threshold after seeing returns.
 
 ## Round-2 locked rule (summary)
@@ -55,4 +55,4 @@ annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Generate minimal joint orientation + 12-case independent validation packets under the locked binary gate (κ≥0.67 and ≥10/12). Do not recode Round 2. Do not issue main XIV packets.
+Await Daniel and Jose Jaime binary-validation returns. Compute agreement before discussion; apply locked PASS/FAIL. Do not adjudicate first. Do not issue main packets until PASS and freeze v1.0.

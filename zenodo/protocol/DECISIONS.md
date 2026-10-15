@@ -711,3 +711,21 @@ Format per entry:
 - **effect on protocol:** Main construct reframed as direct resolution /
   responsiveness; three-category scheme retired for future coding; validation
   packets await orientation materials generation.
+
+## 2026-10-15 — Phase 7B binary validation materials issued
+
+- **decision:** Freeze `direct_resolution_codebook_v1.0-validation.md` for the
+  already-drawn N=12 fresh OOP sample (not redrawn). Issue one-page joint
+  orientation (read only; no joint coding) and identical independent packets
+  for Daniel and Jose Jaime. Prospective pass rule unchanged: κ≥0.67 and
+  raw agreement ≥10/12; FAIL → STOP. This is fresh binary validation, **not**
+  Calibration Round 3. No main XIV packets; no AI labels.
+- **status:** accepted (materials issued; awaiting human returns)
+- **evidence:** `_internal/binary_validation/`;
+  `_internal/reports/BINARY_VALIDATION_PACKET_AUDIT.md`;
+  `zenodo/protocol/direct_resolution_codebook_v1.0-validation.md`;
+  `zenodo/scripts/build_binary_validation_package.py`
+- **reason:** Approved redesign requires minimal-burden human validation before
+  any main annotation.
+- **effect on protocol:** Annotators may begin orientation + independent coding;
+  returns handled under locked gate; no threshold changes after returns.

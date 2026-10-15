@@ -66,8 +66,9 @@ def test_prospective_gate_locked():
     assert gate["raw_agreement_threshold_of"] == 12
     assert gate["automatic_further_round_on_fail"] is False
     assert gate["locked_before_human_returns"] is True
-    assert gate["annotator_docx_generated"] is False
     assert gate["seed"] == SEED_BINARY_VAL
+    # Phase 7B sets annotator_docx_generated True once packets are issued
+    assert "annotator_docx_generated" in gate
 
 
 def test_seed_and_manifest():
@@ -76,21 +77,15 @@ def test_seed_and_manifest():
     man = json.loads((VAL / "BINARY_VALIDATION_MANIFEST.json").read_text())
     assert man["n_untouched_after_exclusions"] >= 12
     assert man["untouched_before_expansion"] == 4
-    assert man["annotator_docx_generated"] is False
     assert man["xiv_reply_labels_created"] is False
     assert man["ai_labels_created"] is False
     assert SEED_SOURCE_STRING in man["seed_source_string"]
 
 
-def test_no_xiv_reply_labels_no_docx_packets():
+def test_no_xiv_reply_labels_frame_reports_exist():
     pool = pd.read_parquet(DATA_PRIVATE / "eligible_pool_full.parquet")
     assert "reply_status" not in pool.columns
     assert "direct_resolution" not in pool.columns
-    # No human DOCX under validation/
-    docx = list((PROJECT_ROOT / "_internal" / "validation").rglob("*.docx")) if (
-        PROJECT_ROOT / "_internal" / "validation"
-    ).exists() else []
-    assert docx == []
     assert (REP / "FRESH_BINARY_VALIDATION_FRAME_AUDIT.md").is_file()
     assert (REP / "BINARY_REDESIGN_RATIONALE.md").is_file()
 
