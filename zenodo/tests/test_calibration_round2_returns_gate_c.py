@@ -24,14 +24,13 @@ def test_round2_codes_and_returns_present():
     assert (R2 / "CALIBRATION_ROUND2_RETURNS.json").is_file()
 
 
-def test_case_5_incomplete_not_imputed():
+def test_case_5_complete_disagreement():
     codes = pd.read_csv(R2 / "CALIBRATION_ROUND2_CODES.csv")
     row = codes.loc[codes["case_no"] == 5].iloc[0]
-    assert bool(row["pair_complete"]) is False
-    assert pd.isna(row["jose_jaime_reply_status"]) or str(
-        row["jose_jaime_reply_status"]
-    ).strip() in {"", "nan"}
-    assert "missing_reply_status" in str(row["jose_jaime_issues"])
+    assert bool(row["pair_complete"]) is True
+    assert row["daniel_reply_status"] == "respuesta explícita"
+    assert row["jose_jaime_reply_status"] == "respuesta parcial o intermedia"
+    assert bool(row["agreement_reply_status"]) is False
 
 
 def test_agreement_gate_c_locked():
@@ -42,9 +41,10 @@ def test_agreement_gate_c_locked():
     assert gate["thresholds_not_optimised_after_returns"] is True
     assert gate["krippendorff_alpha_nominal"] < 0.67
     assert gate["cohen_kappa_explicit_vs_rest"] < 0.67
-    assert agr["n_complete_pairs"] == 19
-    assert agr["n_incomplete_pairs"] == 1
-    assert 5 in agr["incomplete_case_nos"]
+    assert agr["n_complete_pairs"] == 20
+    assert agr["n_incomplete_pairs"] == 0
+    assert agr["incomplete_case_nos"] == []
+    assert 5 in agr["agreement_complete_pairs"]["disagree_case_nos"]
 
 
 def test_no_codebook_v04_and_no_main_outcomes():

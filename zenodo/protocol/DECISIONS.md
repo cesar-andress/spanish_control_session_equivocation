@@ -658,3 +658,18 @@ Format per entry:
 - **reason:** Thresholds were locked before returns; both floors missed.
 - **effect on protocol:** Main annotation blocked; scheme reconsideration
   required; Round-2 draw/seed unchanged; XIV outcomes still absent.
+
+## 2026-10-15 — Round-2 case 5 completed; Gate C confirmed on n=20
+
+- **decision:** Re-ingest Jose Jaime Round-2 return with case 5 marked
+  (respuesta parcial o intermedia). All 20 pairs complete. Locked A/B/C rule
+  reapplied without threshold optimisation → still **Gate C** (α ≈ 0.126;
+  binary κ ≈ 0.121). Case 5 is a disagreement (Daniel explícita vs Jose Jaime
+  parcial). No v0.4; no main packets; no automatic Round 3.
+- **status:** accepted
+- **evidence:** `_internal/reports/CALIBRATION_ROUND2_AGREEMENT.md`;
+  `_internal/data_private/calibration/round2/CALIBRATION_ROUND2_CODES.csv`
+- **reason:** Completing the missing mark does not change the locked decision
+  floors; both remain unmet on the full sample.
+- **effect on protocol:** Confirms STOP; measurement-scheme reconsideration
+  still required before any main annotation.

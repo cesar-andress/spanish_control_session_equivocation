@@ -84,8 +84,9 @@ Do **not** optimise this rule after seeing Round-2 results.
 
 ### Applied outcome (2026-10-15)
 
-**Gate C.** Observed α ≈ 0.172; binary κ ≈ 0.184. STOP before main;
-no automatic Round 3; codebook remains v0.3.
+**Gate C.** Observed α ≈ 0.126; binary κ ≈ 0.121 (n=20 complete pairs after
+case-5 completion). STOP before main; no automatic Round 3; codebook remains
+v0.3.
 
 ---
 

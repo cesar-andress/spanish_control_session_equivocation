@@ -20,7 +20,7 @@ contextual grouping).
 **Annotation target:** `reply_status` on **Q1**, anchored by the registered
 question; unit = registered + Q1 + R1.
 
-**Phase.** Calibration Round 2 ingested. Locked decision rule → **Gate C (STOP)**: α≈0.172 and binary κ≈0.184 both < 0.67. Codebook remains v0.3 (no v0.4). **No main packets. No XIV reply_status labels. No automatic Round 3.** AI simulation deferred.
+**Phase.** Calibration Round 2 ingested (20/20 complete). Locked decision rule → **Gate C (STOP)**: α≈0.126 and binary κ≈0.121 both < 0.67. Codebook remains v0.3 (no v0.4). **No main packets. No XIV reply_status labels. No automatic Round 3.** AI simulation deferred.
 
 
 ## Authors (byline order)

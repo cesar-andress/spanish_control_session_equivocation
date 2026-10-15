@@ -257,8 +257,8 @@ primary estimand decision rule.
   only (not mandatory primary; not confirmatory covariate).
 - **AI simulation:** deferred (Round 2 → Gate C STOP; no v0.4 freeze); no LLM
   labelling for the human study.
-- **Round-2 returns (2026-10-15):** Gate C (α≈0.172; binary κ≈0.184). Main
-  annotation blocked; no automatic Round 3.
+- **Round-2 returns (2026-10-15):** Gate C (α≈0.126; binary κ≈0.121; 20/20
+  complete). Main annotation blocked; no automatic Round 3.
 
 ---
 
