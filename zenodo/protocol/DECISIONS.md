@@ -641,3 +641,20 @@ Format per entry:
   after the locked Round-2 A/B/C gate.
 - **effect on protocol:** Issued blank joint DOCX preserved; Round-2 packets
   still outstanding; main annotation still blocked.
+
+## 2026-10-15 — Calibration Round 2 returns ingested; Gate C STOP
+
+- **decision:** Archive independent Round-2 Word returns (Daniel; Jose Jaime)
+  and the joint-review file; compute agreement on complete pairs **before**
+  discussion; apply the prospectively locked A/B/C rule. Result: **Gate C**
+  (nominal α = 0.172 < 0.67 and binary explicit κ = 0.184 < 0.67). STOP before
+  main annotation; **no** automatic Round 3; **no** codebook v0.4; **no** main
+  packets. Case 5 incomplete (Jose Jaime unmarked reply_status); not imputed.
+- **status:** accepted (calibration diagnostics; locked rule applied)
+- **evidence:** `_internal/reports/CALIBRATION_ROUND2_AGREEMENT.md`;
+  `_internal/reports/CALIBRATION_ROUND2_GATE_C_STOP.md`;
+  `_internal/data_private/calibration/round2/CALIBRATION_ROUND2_CODES.csv`;
+  `zenodo/scripts/ingest_calibration_round2_returns.py`
+- **reason:** Thresholds were locked before returns; both floors missed.
+- **effect on protocol:** Main annotation blocked; scheme reconsideration
+  required; Round-2 draw/seed unchanged; XIV outcomes still absent.

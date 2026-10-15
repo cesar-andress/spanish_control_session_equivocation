@@ -255,8 +255,10 @@ primary estimand decision rule.
   binary κ fallback / STOP); no Round 3 by default.
 - **`question_confrontational`:** exploratory/diagnostic rule-based indicator
   only (not mandatory primary; not confirmatory covariate).
-- **AI simulation:** deferred until Round 2 + v0.4 freeze; no LLM labelling
-  for the human study.
+- **AI simulation:** deferred (Round 2 → Gate C STOP; no v0.4 freeze); no LLM
+  labelling for the human study.
+- **Round-2 returns (2026-10-15):** Gate C (α≈0.172; binary κ≈0.184). Main
+  annotation blocked; no automatic Round 3.
 
 ---
 

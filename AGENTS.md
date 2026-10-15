@@ -20,11 +20,8 @@ contextual grouping).
 **Annotation target:** `reply_status` on **Q1**, anchored by the registered
 question; unit = registered + Q1 + R1.
 
-**Phase.** Phase 6B: Round-2 decision rule locked prospectively; main frame
-**N=100** (QA30 + Phase-0 probes restored after contamination audit). Codebook
-still v0.3 until Round-2 joint clarifications → v0.4. **No XIV reply_status
-labels. No main packets issued. AI simulation deferred. Round-2 returns must
-not be inspected for protocol work.**
+**Phase.** Calibration Round 2 ingested. Locked decision rule → **Gate C (STOP)**: α≈0.172 and binary κ≈0.184 both < 0.67. Codebook remains v0.3 (no v0.4). **No main packets. No XIV reply_status labels. No automatic Round 3.** AI simulation deferred.
+
 
 ## Authors (byline order)
 
@@ -56,7 +53,4 @@ annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Joint review of Round-1 cases 5/6/7/10 is archived. Await **independent
-Round-2 returns** (do not inspect until both are in) → apply locked A/B/C rule
-→ v0.4 (if A/B; incorporate joint clarifications faithfully) → issue main
-packets (distinct orders) for N=100.
+Gate C STOP. Human scientific reconsideration of the measurement scheme is required before any main annotation. Do not invent Round 3 or freeze v0.4 automatically.

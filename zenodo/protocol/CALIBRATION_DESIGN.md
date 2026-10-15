@@ -3,7 +3,7 @@
 **Status:** Round 2 in progress (independent returns not yet inspected for
 protocol lock). Round-2 **decision rule locked prospectively** (Phase 6B).  
 **Updated:** 2026-10-13 (Phase 6B)  
-**Codebook:** `reply_status_codebook_v0.3.md` until joint clarifications → v0.4
+**Codebook:** `reply_status_codebook_v0.3.md` (Round-2 Gate C STOP; no v0.4)
 
 Do **not** use the XIV PM eligible pool for development or calibration.
 
@@ -37,7 +37,9 @@ Do **not** use the XIV PM eligible pool for development or calibration.
 | Manifest | `calibration_round2_manifest.yaml` |
 | Round 3 | **Not** planned by default |
 
-Human packets are issued; **do not inspect independent returns for this lock**.
+Human packets returned 2026-10-15 and ingested. Agreement computed before
+discussion. Locked rule applied → **Gate C (STOP)**. See
+`_internal/reports/CALIBRATION_ROUND2_AGREEMENT.md`.
 
 ---
 
@@ -79,6 +81,11 @@ If nominal α < **0.67** AND binary explicit vs non-explicit κ < **0.67**:
 - reconsider the measurement scheme.
 
 Do **not** optimise this rule after seeing Round-2 results.
+
+### Applied outcome (2026-10-15)
+
+**Gate C.** Observed α ≈ 0.172; binary κ ≈ 0.184. STOP before main;
+no automatic Round 3; codebook remains v0.3.
 
 ---
 
