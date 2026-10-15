@@ -690,3 +690,24 @@ Format per entry:
   v0.3 sufficiency language are not independently operational.
 - **effect on protocol:** No main annotation; redesign decision pending project
   lead; Round-2 labels frozen as failed-calibration provenance.
+
+## 2026-10-15 — Phase 7A binary redesign Option 1 + fresh validation frame
+
+- **decision:** Adopt Redesign Option 1 as a new instrument lineage
+  (`direct_resolution_codebook_v1.0-draft.md`), not v0.4. Expand OOP extract
+  with date-aware PM answerer (70 usable; 15 untouched; human-exposure overlap
+  0). Draw validation N=12 under locked seed `731954444` without inspecting R1
+  for ease. Lock prospective PASS: κ≥0.67 AND raw agreement ≥10/12; FAIL → STOP
+  (no automatic further round). Annotator DOCX not generated yet. Round-2
+  failure preserved; no Round-2 recoding; no XIV outcomes; no AI labels.
+- **status:** accepted (instrument draft + frame prepared)
+- **evidence:** `zenodo/protocol/direct_resolution_codebook_v1.0-draft.md`;
+  `_internal/reports/BINARY_REDESIGN_RATIONALE.md`;
+  `_internal/reports/FRESH_BINARY_VALIDATION_FRAME_AUDIT.md`;
+  `_internal/data_private/validation/binary_v1/`;
+  `zenodo/src/scse/build_binary_validation_frame.py`
+- **reason:** Gate C required substantive redesign; binary direct resolution is
+  the approved minimum-complexity construct.
+- **effect on protocol:** Main construct reframed as direct resolution /
+  responsiveness; three-category scheme retired for future coding; validation
+  packets await orientation materials generation.

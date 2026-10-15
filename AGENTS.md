@@ -17,10 +17,12 @@ Do not sharpen this into a causal claim. Do not call opposed vs non_opposed a
 **Analytic variable name (neutral):** `formation_vote_alignment` (descriptive
 contextual grouping).
 
-**Annotation target:** `reply_status` on **Q1**, anchored by the registered
+**Annotation target (redesign):** binary `direct_resolution` on **Q1** (v0.3 `reply_status` failed Gate C; preserved as provenance).
+
+**Legacy annotation target:** `reply_status` on **Q1**, anchored by the registered
 question; unit = registered + Q1 + R1.
 
-**Phase.** Calibration Round 2 ingested (20/20 complete). Locked decision rule → **Gate C (STOP)**: α≈0.126 and binary κ≈0.121 both < 0.67. Codebook remains v0.3 (no v0.4). **No main packets. No XIV reply_status labels. No automatic Round 3.** AI simulation deferred.
+**Phase.** 7A: binary redesign approved (direct resolution v1.0-draft). Round-2 Gate C FAIL preserved. Fresh OOP validation frame ready (15 untouched; N=12 drawn). Annotator packets not issued. AI simulation deferred.
 
 
 ## Authors (byline order)
@@ -53,7 +55,4 @@ annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Gate C FAIL is final. Phase 6C diagnostic is in
-`_internal/reports/ROUND2_MEASUREMENT_FAILURE_DIAGNOSTIC.md`. Next human decision:
-approve binary redesign (Option 1) and expand OOP extract for fresh validation,
-or stop. Do not invent Round 3 or freeze v0.4 automatically.
+Generate minimal joint orientation + 12-case independent validation packets under the locked binary gate (κ≥0.67 and ≥10/12). Do not recode Round 2. Do not issue main XIV packets.
