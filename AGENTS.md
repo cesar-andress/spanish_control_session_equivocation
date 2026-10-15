@@ -53,4 +53,7 @@ annotation → reliability → adjudication → analysis
 
 ## Next gate
 
-Gate C STOP. Human scientific reconsideration of the measurement scheme is required before any main annotation. Do not invent Round 3 or freeze v0.4 automatically.
+Gate C FAIL is final. Phase 6C diagnostic is in
+`_internal/reports/ROUND2_MEASUREMENT_FAILURE_DIAGNOSTIC.md`. Next human decision:
+approve binary redesign (Option 1) and expand OOP extract for fresh validation,
+or stop. Do not invent Round 3 or freeze v0.4 automatically.

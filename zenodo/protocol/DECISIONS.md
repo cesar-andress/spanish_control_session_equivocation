@@ -673,3 +673,20 @@ Format per entry:
   floors; both remain unmet on the full sample.
 - **effect on protocol:** Confirms STOP; measurement-scheme reconsideration
   still required before any main annotation.
+
+## 2026-10-15 — Phase 6C Round-2 measurement failure diagnostic
+
+- **decision:** Preserve Gate C as final. Diagnose the measurement failure without
+  relabelling, threshold search, v0.4, main packets, XIV outcomes, AI labels, or
+  automatic Round 3. Recommend binary **direct resolution of the main
+  communicative demand** as Redesign Option 1; keep a coverage trichotomy only
+  if middle category is observational (multipart completeness). Fresh validation
+  requires OOP extract expansion (only 4 untouched units remain in the current
+  44-unit calibration frame).
+- **status:** accepted (diagnostic)
+- **evidence:** `_internal/reports/ROUND2_MEASUREMENT_FAILURE_DIAGNOSTIC.md`;
+  `_internal/reports/ROUND2_FAILED_RESULT_FREEZE.json`
+- **reason:** Locked reliability floors were missed; joint clarifications and
+  v0.3 sufficiency language are not independently operational.
+- **effect on protocol:** No main annotation; redesign decision pending project
+  lead; Round-2 labels frozen as failed-calibration provenance.
