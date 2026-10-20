@@ -22,7 +22,7 @@ authors:
     orcid: "https://orcid.org/0000-0001-9397-811X"
     email: daniel.pinto@unir.net
     affiliation: "Universidad Internacional de la Rioja, Spain"
-repository-code: "https://github.com/cesar-andress/spanish-control-session-equivocation"
+repository-code: "https://github.com/cesar-andress/spanish_control_session_equivocation"
 license: MIT
 version: "1.0.0"
 keywords:
