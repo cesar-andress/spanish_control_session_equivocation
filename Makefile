@@ -12,13 +12,14 @@ PYTHON ?= $(UV) run python
 PHASE2_MSG := Phase 2 data acquisition has not yet been completed.
 PHASE_LATER_MSG := This target depends on a later research phase that has not started.
 
-.PHONY: help test data pool power calibrate freeze packets validate \
+.PHONY: help test public-repro data pool power calibrate freeze packets validate \
 	agreement adjudicate analysis figures paper-assets release hygiene check-env
 
 help: ## Show available targets
 	@echo "Spanish control-session equivocation — Make targets"
 	@echo ""
 	@echo "  make test          Run unit and hygiene tests (private tests skip in standalone)"
+	@echo "  make public-repro  Recompute locked agreement metrics from public 67-unit table"
 	@echo "  make hygiene       Scan public tree for private-path / secret patterns"
 	@echo "  make check-env     Verify uv environment"
 	@echo "  make data          Acquire pinned ParlaMint-ES + Congreso records (Phase 2)"
@@ -43,6 +44,9 @@ check-env: ## Verify Python environment via uv
 
 test: ## Run pytest suite
 	@$(PYTEST)
+
+public-repro: ## Recompute agreement metrics from HUMAN_EVIDENCE_67_PUBLIC.csv
+	@$(PYTHON) scripts/reproduce_public_agreement.py
 
 hygiene: ## Public-tree hygiene scan
 	@$(PYTHON) scripts/hygiene_scan.py

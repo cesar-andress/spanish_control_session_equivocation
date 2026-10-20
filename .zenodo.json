@@ -1,7 +1,7 @@
 {
   "title": "When Does a Reply Count as an Answer? Threshold Instability in Expert Coding of Spanish Parliamentary Replies (research package)",
-  "description": "Public reproducibility package (v1.0.0) for a methodological / measurement study of expert agreement when coding whether a Spanish prime minister's first reply resolves an oral control question. The package includes analysis code, protocols/codebooks from a sequential measurement programme, identifier-only XIV frame metadata (N=100 context), aggregate locked agreement summaries, and figures. No substantive XIV reply or responsiveness outcomes are included. The instruments are not claimed as validated for main annotation. The methodological publication pivot was not preregistered as a separate study.",
-  "version": "1.0.0",
+  "description": "Public reproducibility package (v1.0.1) for a methodological / measurement study of expert agreement when coding whether a Spanish prime minister's first reply resolves an oral control question. Version 1.0.1 adds the redistributable 67-unit independent label table (coder_A/coder_B) and enables public recomputation of locked agreement statistics. The package includes analysis code, protocols/codebooks from a sequential measurement programme, identifier-only XIV frame metadata (N=100 context), and figures. No substantive XIV reply or responsiveness outcomes are included. No scientific results or labels changed relative to v1.0.0. The instruments are not claimed as validated for main annotation. The methodological publication pivot was not preregistered as a separate study.",
+  "version": "1.0.1",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
@@ -36,6 +36,12 @@
       "relation": "isSupplementedBy",
       "resource_type": "dataset",
       "scheme": "handle"
+    },
+    {
+      "identifier": "10.5281/zenodo.23495525",
+      "relation": "isNewVersionOf",
+      "resource_type": "software",
+      "scheme": "doi"
     }
   ]
 }

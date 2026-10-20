@@ -1,0 +1,224 @@
+{
+  "title": "Public recomputation from HUMAN_EVIDENCE_67_PUBLIC.csv",
+  "version": "1.0.1",
+  "source_csv": "data/HUMAN_EVIDENCE_67_PUBLIC.csv",
+  "human_evidence_n": 67,
+  "xiv_reply_outcomes_included": false,
+  "ai_reply_labels_included": false,
+  "coder_convention": "coder_A and coder_B are stable anonymous labels for the two independent expert annotators across all 67 units.",
+  "bootstrap": {
+    "n_resamples": 5000,
+    "seed": 20261020,
+    "interval": "percentile_95"
+  },
+  "note_binary_instrument": "The redesigned binary validation uses a DIFFERENT instrument (direct_resolution) and must not be pooled with the three-category explicit-versus-rest collapse.",
+  "exercises": {
+    "development": {
+      "n": 15,
+      "raw_agreement": 0.667,
+      "cohen_kappa_3way": 0.51,
+      "cohen_kappa_3way_ci": [
+        0.151,
+        0.8
+      ],
+      "krippendorff_alpha": 0.498,
+      "krippendorff_alpha_ci": [
+        0.078,
+        0.797
+      ],
+      "binary_collapse_kappa": 0.857,
+      "binary_collapse_kappa_ci": [
+        0.5,
+        1.0
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
+    },
+    "round1_initial_18": {
+      "n": 18,
+      "raw_agreement": 0.889,
+      "cohen_kappa_3way": 0.815,
+      "cohen_kappa_3way_ci": [
+        0.538,
+        1.0
+      ],
+      "krippendorff_alpha": 0.815,
+      "binary_collapse_kappa": 0.88,
+      "note": "Excludes Round-1 cases with administrative_clarification_flag=1 (usable_in_initial_round1_18=0). Clarification is not adjudication.",
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
+    },
+    "round1_final_20": {
+      "n": 20,
+      "raw_agreement": 0.8,
+      "cohen_kappa_3way": 0.672,
+      "cohen_kappa_3way_ci": [
+        0.367,
+        0.917
+      ],
+      "krippendorff_alpha": 0.669,
+      "krippendorff_alpha_ci": [
+        0.339,
+        0.917
+      ],
+      "binary_collapse_kappa": 0.783,
+      "binary_collapse_kappa_ci": [
+        0.468,
+        1.0
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
+    },
+    "round2": {
+      "n": 20,
+      "raw_agreement": 0.55,
+      "cohen_kappa_3way": 0.159,
+      "cohen_kappa_3way_ci": [
+        -0.176,
+        0.496
+      ],
+      "krippendorff_alpha": 0.126,
+      "krippendorff_alpha_ci": [
+        -0.261,
+        0.488
+      ],
+      "binary_collapse_kappa": 0.121,
+      "binary_collapse_kappa_ci": [
+        -0.319,
+        0.529
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
+    },
+    "pooled_r1_r2": {
+      "n": 40,
+      "raw_agreement": 0.675,
+      "cohen_kappa_3way": 0.47,
+      "cohen_kappa_3way_ci": [
+        0.237,
+        0.69
+      ],
+      "krippendorff_alpha": 0.463,
+      "krippendorff_alpha_ci": [
+        0.211,
+        0.686
+      ],
+      "binary_collapse_kappa": 0.501,
+      "binary_collapse_kappa_ci": [
+        0.227,
+        0.75
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      },
+      "note": "Same three-category v0.3 instrument only; excludes binary redesign."
+    },
+    "binary_validation": {
+      "n": 12,
+      "raw_agreement": 0.667,
+      "n_agree": 8,
+      "cohen_kappa": 0.226,
+      "cohen_kappa_ci": [
+        0.0,
+        0.75
+      ],
+      "cohen_kappa_bootstrap_n_valid": 5000,
+      "cohen_kappa_bootstrap_n_invalid": 0,
+      "cohen_kappa_bootstrap_n_zero": 1818,
+      "coder_A_yes": 11,
+      "coder_B_yes": 7,
+      "kappa_max": 0.226,
+      "po_max": 0.6666666666666666,
+      "max_agreements": 8,
+      "observed_equals_kappa_max": true,
+      "ci_floor_note": "The reported CI lower bound 0.000 can arise from degenerate resamples (e.g. near-ceiling Yes rates); invalid/degenerate draws are counted in cohen_kappa_bootstrap_n_invalid and excluded from the percentile."
+    }
+  },
+  "disagreement_direction": {
+    "development": {
+      "coder_A_more": 4,
+      "coder_B_more": 1
+    },
+    "round1": {
+      "coder_A_more": 0,
+      "coder_B_more": 4
+    },
+    "round2": {
+      "coder_A_more": 4,
+      "coder_B_more": 5
+    },
+    "binary_validation": {
+      "coder_A_more": 4,
+      "coder_B_more": 0
+    },
+    "combined": {
+      "coder_A_more": 12,
+      "coder_B_more": 10,
+      "n_disagree": 22
+    },
+    "stable_coder_severity_trait_supported": false
+  },
+  "lock_checks": {
+    "development": {
+      "raw": true,
+      "kappa3": true,
+      "alpha": true,
+      "binary_kappa": true
+    },
+    "round1_initial_18": {
+      "n": true,
+      "raw": true,
+      "kappa3": true,
+      "alpha": true,
+      "binary_kappa": true
+    },
+    "round1_final_20": {
+      "n": true,
+      "raw": true,
+      "kappa3": true,
+      "alpha": true,
+      "binary_kappa": true
+    },
+    "round2": {
+      "raw": true,
+      "kappa3": true,
+      "alpha": true,
+      "binary_kappa": true
+    },
+    "pooled_r1_r2": {
+      "raw": true,
+      "kappa3": true,
+      "alpha": true,
+      "binary_kappa": true
+    },
+    "binary_validation": {
+      "raw": true,
+      "kappa": true,
+      "kappa_max": true,
+      "equals_max": true,
+      "marginals": true
+    },
+    "directions": {
+      "development": true,
+      "round1": true,
+      "round2": true,
+      "binary": true,
+      "combined": true
+    }
+  },
+  "all_lock_checks_pass": true
+}

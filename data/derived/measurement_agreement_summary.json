@@ -1,7 +1,7 @@
 {
-  "title": "Locked aggregate agreement summary (public)",
-  "version": "1.0.0",
-  "note": "Aggregate statistics only. Original independent unit-level human labels, comments, and full texts are NOT included in this public package.",
+  "title": "Locked agreement summary (public recomputable from unit table)",
+  "version": "1.0.1",
+  "note": "Unit-level independent labels are in data/HUMAN_EVIDENCE_67_PUBLIC.csv. Source full texts, free-text comments, and original return documents are not redistributed. No XIV reply outcomes and no AI reply labels.",
   "human_evidence_n": 67,
   "xiv_frame_n_context_only": 100,
   "xiv_reply_outcomes_included": false,
@@ -15,67 +15,153 @@
       "n": 15,
       "raw_agreement": 0.667,
       "cohen_kappa_3way": 0.51,
-      "cohen_kappa_3way_ci": [0.151, 0.8],
+      "cohen_kappa_3way_ci": [
+        0.151,
+        0.8
+      ],
       "krippendorff_alpha": 0.498,
-      "krippendorff_alpha_ci": [0.078, 0.797],
+      "krippendorff_alpha_ci": [
+        0.078,
+        0.797
+      ],
       "binary_collapse_kappa": 0.857,
-      "binary_collapse_kappa_ci": [0.5, 1.0]
+      "binary_collapse_kappa_ci": [
+        0.5,
+        1.0
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
     },
     "round1_initial_18": {
       "n": 18,
       "raw_agreement": 0.889,
       "cohen_kappa_3way": 0.815,
-      "cohen_kappa_3way_ci": [0.538, 1.0],
-      "note": "Before administrative clarification of Jose Jaime cases 5 and 10"
+      "cohen_kappa_3way_ci": [
+        0.538,
+        1.0
+      ],
+      "krippendorff_alpha": 0.815,
+      "binary_collapse_kappa": 0.88,
+      "note": "Excludes Round-1 cases with administrative_clarification_flag=1 (usable_in_initial_round1_18=0). Clarification is not adjudication."
     },
     "round1_final_20": {
       "n": 20,
       "raw_agreement": 0.8,
       "cohen_kappa_3way": 0.672,
-      "cohen_kappa_3way_ci": [0.367, 0.917],
+      "cohen_kappa_3way_ci": [
+        0.367,
+        0.917
+      ],
       "krippendorff_alpha": 0.669,
-      "krippendorff_alpha_ci": [0.339, 0.917],
+      "krippendorff_alpha_ci": [
+        0.339,
+        0.917
+      ],
       "binary_collapse_kappa": 0.783,
-      "binary_collapse_kappa_ci": [0.468, 1.0]
+      "binary_collapse_kappa_ci": [
+        0.468,
+        1.0
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
     },
     "round2": {
       "n": 20,
       "raw_agreement": 0.55,
       "cohen_kappa_3way": 0.159,
-      "cohen_kappa_3way_ci": [-0.176, 0.496],
+      "cohen_kappa_3way_ci": [
+        -0.176,
+        0.496
+      ],
       "krippendorff_alpha": 0.126,
-      "krippendorff_alpha_ci": [-0.261, 0.489],
+      "krippendorff_alpha_ci": [
+        -0.261,
+        0.488
+      ],
       "binary_collapse_kappa": 0.121,
-      "binary_collapse_kappa_ci": [-0.319, 0.529]
+      "binary_collapse_kappa_ci": [
+        -0.319,
+        0.529
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      }
     },
     "pooled_r1_r2": {
       "n": 40,
       "raw_agreement": 0.675,
       "cohen_kappa_3way": 0.47,
-      "cohen_kappa_3way_ci": [0.237, 0.69],
+      "cohen_kappa_3way_ci": [
+        0.237,
+        0.69
+      ],
       "krippendorff_alpha": 0.463,
-      "krippendorff_alpha_ci": [0.211, 0.686],
+      "krippendorff_alpha_ci": [
+        0.211,
+        0.686
+      ],
       "binary_collapse_kappa": 0.501,
-      "binary_collapse_kappa_ci": [0.227, 0.75]
+      "binary_collapse_kappa_ci": [
+        0.227,
+        0.75
+      ],
+      "bootstrap_invalid_draws": {
+        "cohen_kappa_3way": 0,
+        "krippendorff_alpha": 0,
+        "binary_collapse_kappa": 0
+      },
+      "note": "Same three-category v0.3 instrument only; excludes binary redesign."
     },
     "binary_validation": {
       "n": 12,
       "raw_agreement": 0.667,
       "n_agree": 8,
       "cohen_kappa": 0.226,
-      "cohen_kappa_ci": [0.0, 0.75],
-      "daniel_yes": 11,
-      "jose_jaime_yes": 7,
+      "cohen_kappa_ci": [
+        0.0,
+        0.75
+      ],
+      "cohen_kappa_bootstrap_n_valid": 5000,
+      "cohen_kappa_bootstrap_n_invalid": 0,
+      "cohen_kappa_bootstrap_n_zero": 1818,
+      "coder_A_yes": 11,
+      "coder_B_yes": 7,
       "kappa_max": 0.226,
       "observed_equals_kappa_max": true
     }
   },
   "disagreement_direction": {
-    "development": {"daniel_more": 4, "jose_jaime_more": 1},
-    "round1": {"daniel_more": 0, "jose_jaime_more": 4},
-    "round2": {"daniel_more": 4, "jose_jaime_more": 5},
-    "binary_validation": {"daniel_more": 4, "jose_jaime_more": 0},
-    "combined": {"daniel_more": 12, "jose_jaime_more": 10, "n_disagree": 22},
+    "development": {
+      "coder_A_more": 4,
+      "coder_B_more": 1
+    },
+    "round1": {
+      "coder_A_more": 0,
+      "coder_B_more": 4
+    },
+    "round2": {
+      "coder_A_more": 4,
+      "coder_B_more": 5
+    },
+    "binary_validation": {
+      "coder_A_more": 4,
+      "coder_B_more": 0
+    },
+    "combined": {
+      "coder_A_more": 12,
+      "coder_B_more": 10,
+      "n_disagree": 22
+    },
     "stable_coder_severity_trait_supported": false
-  }
+  },
+  "public_unit_table": "data/HUMAN_EVIDENCE_67_PUBLIC.csv",
+  "public_data_dictionary": "data/HUMAN_EVIDENCE_67_PUBLIC_DATA_DICTIONARY.md"
 }

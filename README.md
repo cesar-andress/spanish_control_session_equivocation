@@ -2,36 +2,44 @@
 
 **Threshold Instability in Expert Coding of Spanish Parliamentary Replies**
 
-Public research / reproducibility package **v1.0.0**.
+Public research / reproducibility package **v1.0.1**.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23495525.svg)](https://doi.org/10.5281/zenodo.23495525)
+Previous archive: [v1.0.0 DOI 10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525).  
+The v1.0.1 Zenodo DOI is minted after the GitHub Release is published.
 
-## Archived release
+## What changed in v1.0.1
 
-| Field | Value |
-|-------|-------|
-| Archived release | **v1.0.0** (stable research package) |
-| Zenodo DOI | [https://doi.org/10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525) |
-| Published | 2026-10-20 |
+v1.0.1 improves **computational reproducibility** by adding:
 
-Cite the Zenodo DOI for the archived package. Post-release DOI metadata on the
-default branch documents that archive; it was not necessarily present inside
-the frozen v1.0.0 Git snapshot.
+- `data/HUMAN_EVIDENCE_67_PUBLIC.csv` — redistributable 67-unit independent label table;
+- `data/HUMAN_EVIDENCE_67_PUBLIC_DATA_DICTIONARY.md`;
+- public recomputation of the locked agreement statistics from that table alone
+  (`scripts/reproduce_public_agreement.py`).
 
-## What this release contains
+**No scientific result changed. No labels changed. No new annotation occurred.**
+
+## Archived releases
+
+| Field | v1.0.0 | v1.0.1 |
+|-------|--------|--------|
+| Status | Published | Prepared (Git tag); Zenodo DOI pending GitHub Release |
+| Zenodo DOI | [10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525) | Not yet minted |
+
+## What this package contains
 
 This package supports a short **methodological / measurement** study of expert
 agreement when coding whether a prime minister’s first reply resolves a
 parliamentary oral question. It includes:
 
-- analysis code (`src/scse/`);
+- the public 67-unit evidence table and data dictionary;
+- analysis code (`src/scse/`) including public recomputation helpers;
 - protocols and codebooks used in the sequential measurement programme;
 - identifier-only public metadata for the XIV target frame (N=100 context);
-- aggregate locked agreement summaries;
+- locked agreement summaries (recomputable from the unit table);
 - pre-outcome tables/figures and measurement-paper figures;
 - schemas, manifests, and reproducibility documentation.
 
-**Version:** `v1.0.0`
+**Version:** `v1.0.1`
 
 ## Research purpose
 
@@ -51,16 +59,18 @@ measurement programme; the publication pivot came later).
 
 | Path | Contents |
 |------|----------|
-| `src/scse/` | Python package (pool, calibration helpers, metrics, hygiene) |
+| `data/HUMAN_EVIDENCE_67_PUBLIC.csv` | 67-unit independent labels (coder_A / coder_B) |
+| `data/HUMAN_EVIDENCE_67_PUBLIC_DATA_DICTIONARY.md` | Column and instrument documentation |
+| `src/scse/` | Python package (metrics, public recomputation, hygiene) |
 | `protocol/` | Codebooks, calibration design, decisions log, manifests |
-| `data/derived/` | Identifier-only metadata + aggregate agreement summary |
+| `data/derived/` | Identifier-only metadata + agreement summary JSON |
 | `data/raw_pinned/` | ParlaMint pin provenance (no bulk corpus) |
 | `outputs/` | Tables and figures |
 | `schemas/` | JSON schemas |
 | `manifests/` | Acquisition / release manifests |
 | `docs/` | Licensing, reproduction, private-area boundary notes |
 | `tests/` | Unit and hygiene tests |
-| `scripts/` | Build/ingest helpers (many require private monorepo materials) |
+| `scripts/` | Build/ingest helpers + public agreement reproduction |
 
 ## Reproduce (public package)
 
@@ -68,15 +78,15 @@ Requires Python ≥ 3.11 and [`uv`](https://github.com/astral-sh/uv).
 
 ```bash
 uv sync --all-extras
+uv run python scripts/reproduce_public_agreement.py
 make test
 make hygiene
 ```
 
-In this **standalone** public package, tests that need private human returns or
-the manuscript tree are skipped automatically. Full local recomputation of
-unit-level agreement from original labels is **not** possible from the public
-bag alone (labels remain private). Aggregate locked metrics are provided in
-`data/derived/measurement_agreement_summary.json`.
+The public package alone recomputes raw agreement, Cohen’s κ, Krippendorff’s α,
+pooled Round 1+Round 2 estimates, binary κ_max, and disagreement-direction
+counts from `data/HUMAN_EVIDENCE_67_PUBLIC.csv` (bootstrap: 5,000 resamples;
+seed `20261020`).
 
 ## Software requirements
 
@@ -86,19 +96,21 @@ bag alone (labels remain private). Aggregate locked metrics are provided in
 
 ## Data provenance
 
-- **ParlaMint-ES / ParlaMint 5.0** (handle [11356/2004](http://hdl.handle.net/11356/2004)): CC BY 4.0. Bulk archive is **not** redistributed here; see `data/raw_pinned/` and `docs/licensing.md`.
-- **Congreso de los Diputados** initiative records: identifier-based public packaging only; full registered-question text redistribution remains deferred (see `docs/licensing.md`).
+- **ParlaMint-ES / ParlaMint 5.0** (handle [11356/2004](http://hdl.handle.net/11356/2004)): CC BY 4.0. Bulk archive is **not** redistributed here; utterance identifiers in the public evidence table point to the ParlaMint release. See `data/raw_pinned/` and `docs/licensing.md`.
+- **Congreso de los Diputados** initiative records: identifier-based public packaging only; full registered-question text redistribution remains deferred (see `docs/licensing.md`). The OOP evidence table leaves `congreso_expediente` empty when not stored in the source audits.
 - **XIV main-frame metadata** (`data/derived/main_frame_metadata_preannotation.*`): identifiers and non-outcome fields only; **no** reply labels; **no** full spoken/registered text.
 
 ## Intentionally NOT included
 
 - private `_internal/` working materials;
 - annotator return DOCX / XLSX packets;
-- unit-level independent human labels and free-text comments;
-- full Congreso initiative HTML/text;
+- annotator free-text comments;
+- full Congreso initiative HTML/text and full parliamentary reply text;
 - ParlaMint bulk `.tgz`;
 - manuscript LaTeX (`paper/`);
-- AI reply-side labels (none were used as outcomes).
+- personal annotator names in the unit-level table (coder_A / coder_B only);
+- AI reply-side labels (none were used as outcomes);
+- XIV responsiveness outcomes (none exist under the failed instruments).
 
 ## Licensing / reuse
 
@@ -109,12 +121,13 @@ bag alone (labels remain private). Aggregate locked metrics are provided in
 
 ## Citation
 
-See `CITATION.cff`. Preferred citation for the archived package:
+See `CITATION.cff`. Until the v1.0.1 Zenodo DOI is minted, cite the published
+v1.0.0 archive for the frozen package concept, and note the Git tag `v1.0.1`
+for the unit-level evidence table:
 
 Andrés, C., Baena Rojas, J. J., & Pinto Pajares, D. (2026). *When Does a Reply
 Count as an Answer? … (research package)* (v1.0.0). Zenodo.
 https://doi.org/10.5281/zenodo.23495525
-
 
 ## Authors / contact
 

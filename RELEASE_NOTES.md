@@ -1,3 +1,21 @@
+# v1.0.1
+
+Reproducibility update with the public unit-level evidence table.
+
+This patch release adds `data/HUMAN_EVIDENCE_67_PUBLIC.csv` (67 independently
+double-coded OOP units; anonymous `coder_A` / `coder_B` labels), a data
+dictionary, and public recomputation of the locked agreement statistics
+(`scripts/reproduce_public_agreement.py`).
+
+Explicitly:
+
+- **no scientific result changed**;
+- **no labels changed**;
+- **no new annotation occurred**.
+
+Source full texts, free-text annotator comments, and original return documents
+remain excluded. No XIV responsiveness outcomes are included.
+
 # v1.0.0
 
 First stable public research package for Zenodo archival.
