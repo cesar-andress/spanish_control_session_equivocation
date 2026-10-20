@@ -823,3 +823,15 @@ Format per entry:
   `_internal/reports/SUBMISSION_READINESS_AUDIT.md`;
   `_internal/reports/UNRESOLVED_CITATIONS.md`
 - **effect on protocol:** Editorial closure; next is submission packaging only.
+
+## 2026-10-20 — Post-release DOI integration (no new archive)
+
+- **decision:** Record published Zenodo DOI 10.5281/zenodo.23495525 on the
+  default branch (README, CITATION.cff, docs/ARCHIVE_DOI.md) and in the
+  manuscript data/code availability statement. Leave `.zenodo.json` unchanged
+  (future-deposit metadata). Do not move tag v1.0.0; do not create v1.0.1.
+- **status:** accepted
+- **evidence:** Zenodo record https://doi.org/10.5281/zenodo.23495525;
+  GitHub Release v1.0.0 published 2026-10-20T09:35:51Z
+- **effect on protocol:** Manuscript cites archived package DOI; anonymous
+  review suppresses the identifying archive URL.

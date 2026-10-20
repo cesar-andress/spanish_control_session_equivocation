@@ -4,6 +4,20 @@
 
 Public research / reproducibility package **v1.0.0**.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23495525.svg)](https://doi.org/10.5281/zenodo.23495525)
+
+## Archived release
+
+| Field | Value |
+|-------|-------|
+| Archived release | **v1.0.0** (stable research package) |
+| Zenodo DOI | [https://doi.org/10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525) |
+| Published | 2026-10-20 |
+
+Cite the Zenodo DOI for the archived package. Post-release DOI metadata on the
+default branch documents that archive; it was not necessarily present inside
+the frozen v1.0.0 Git snapshot.
+
 ## What this release contains
 
 This package supports a short **methodological / measurement** study of expert
@@ -95,7 +109,12 @@ bag alone (labels remain private). Aggregate locked metrics are provided in
 
 ## Citation
 
-See `CITATION.cff`. After Zenodo archival, prefer the Zenodo DOI once assigned.
+See `CITATION.cff`. Preferred citation for the archived package:
+
+Andrés, C., Baena Rojas, J. J., & Pinto Pajares, D. (2026). *When Does a Reply
+Count as an Answer? … (research package)* (v1.0.0). Zenodo.
+https://doi.org/10.5281/zenodo.23495525
+
 
 ## Authors / contact
 
