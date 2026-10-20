@@ -1,30 +1,35 @@
 # Archived package DOI
 
-## v1.0.0 (published; immutable)
-
-| Field | Value |
-|-------|-------|
-| Release | v1.0.0 |
-| Status | **PUBLISHED** |
-| Zenodo DOI | `10.5281/zenodo.23495525` |
-| Canonical URL | https://doi.org/10.5281/zenodo.23495525 |
-| GitHub Release published | 2026-10-20T09:35:51Z |
-| Tag commit (immutable) | `83a29b65a8feed6adc714a945682636ca1f8849a` |
-
-## v1.0.1 (prepared; DOI not yet minted)
+## Current citation target: v1.0.1
 
 | Field | Value |
 |-------|-------|
 | Release | v1.0.1 |
-| Status | Git tag prepared; **GitHub Release / Zenodo DOI pending user publication** |
-| Zenodo DOI | **NOT YET MINTED** |
-| Purpose | Add public 67-unit evidence table for computational reproducibility |
+| Status | **PUBLISHED** |
+| Zenodo DOI | `10.5281/zenodo.23496446` |
+| Canonical URL | https://doi.org/10.5281/zenodo.23496446 |
+| Purpose | Public 67-unit evidence table + recomputation of locked agreement analyses |
+| GitHub tag | `v1.0.1` (force-moved to current public tree; DOI unchanged) |
+| Tag commit | see GitHub `v1.0.1` after retag |
+
+Cite **v1.0.1** (`10.5281/zenodo.23496446`) in the manuscript and other current
+citations. Do not cite v1.0.0 as the current reproducibility package.
+
+## Prior version: v1.0.0 (superseded for citation)
+
+| Field | Value |
+|-------|-------|
+| Release | v1.0.0 |
+| Status | Published (historical) |
+| Zenodo DOI | `10.5281/zenodo.23495525` |
+| Canonical URL | https://doi.org/10.5281/zenodo.23495525 |
+| Tag commit (immutable) | `83a29b65a8feed6adc714a945682636ca1f8849a` |
 
 ## Policy
 
-- Do **not** recreate or move tag `v1.0.0`.
-- Do **not** force-push history.
-- Publish `v1.0.1` via a new GitHub Release (user action); Zenodo will mint the
-  new version DOI.
-- Cite `10.5281/zenodo.23495525` until the v1.0.1 DOI exists; then prefer the
-  version-specific DOI for the unit-table package.
+- Do **not** mint a new Zenodo version for metadata-only fixes when the
+  scientific evidence is unchanged; keep citing `10.5281/zenodo.23496446`.
+- Historical tag `v1.0.0` remains immutable.
+- Tag `v1.0.1` may be force-moved on GitHub so the public tree matches the
+  cited Zenodo record without creating Zenodo v1.0.2.
+- Concept record: Zenodo conceptrecid `23495524`.

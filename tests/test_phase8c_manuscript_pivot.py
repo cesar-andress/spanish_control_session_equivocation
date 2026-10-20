@@ -57,7 +57,17 @@ def test_no_false_claims():
 
 
 def test_qualitative_taxonomy_labelled_non_independent():
+    # Taxonomy lives in the IJSRM supplement; keep the same non-independence label.
+    candidates = [
+        PAPER / "supplement" / "supplement.tex",
+        PAPER / "tables" / "tab4_mechanism_taxonomy.tex",
+    ]
+    import re
+
     mech = " ".join(
-        (PAPER / "tables/tab4_mechanism_taxonomy.tex").read_text(encoding="utf-8").lower().split()
+        p.read_text(encoding="utf-8").lower()
+        for p in candidates
+        if p.is_file()
     )
+    mech = re.sub(r"\s+", " ", mech)
     assert "not independent reliability evidence" in mech

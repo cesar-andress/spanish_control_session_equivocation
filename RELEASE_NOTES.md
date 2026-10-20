@@ -1,5 +1,7 @@
 # v1.0.1
 
+Zenodo DOI: https://doi.org/10.5281/zenodo.23496446
+
 Reproducibility update with the public unit-level evidence table.
 
 This patch release adds `data/HUMAN_EVIDENCE_67_PUBLIC.csv` (67 independently

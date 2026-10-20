@@ -1,8 +1,7 @@
 cff-version: 1.2.0
 message: >-
   If you use this research software and data package, please cite it using
-  the metadata below. Prefer the Zenodo DOI once v1.0.1 is archived; until
-  then cite Git tag v1.0.1 and the published v1.0.0 concept DOI.
+  the metadata below. Prefer the current Zenodo DOI for v1.0.1.
 title: >-
   When Does a Reply Count as an Answer? Threshold Instability in Expert
   Coding of Spanish Parliamentary Replies (research package)
@@ -26,7 +25,7 @@ authors:
 repository-code: "https://github.com/cesar-andress/spanish_control_session_equivocation"
 license: MIT
 version: "1.0.1"
-doi: "10.5281/zenodo.23495525"
+doi: "10.5281/zenodo.23496446"
 date-released: "2026-10-20"
 keywords:
   - parliamentary discourse
@@ -44,5 +43,5 @@ abstract: >-
   No substantive XIV reply outcomes are included.
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23495525"
-    description: Zenodo archived research package v1.0.0 (prior release; v1.0.1 DOI pending)
+    value: "10.5281/zenodo.23496446"
+    description: Zenodo archived research package v1.0.1 (current)

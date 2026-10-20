@@ -4,8 +4,8 @@
 
 Public research / reproducibility package **v1.0.1**.
 
-Previous archive: [v1.0.0 DOI 10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525).  
-The v1.0.1 Zenodo DOI is minted after the GitHub Release is published.
+Current archive: [DOI 10.5281/zenodo.23496446](https://doi.org/10.5281/zenodo.23496446).  
+Previous archive: [v1.0.0 DOI 10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525).
 
 ## What changed in v1.0.1
 
@@ -22,8 +22,8 @@ v1.0.1 improves **computational reproducibility** by adding:
 
 | Field | v1.0.0 | v1.0.1 |
 |-------|--------|--------|
-| Status | Published | Prepared (Git tag); Zenodo DOI pending GitHub Release |
-| Zenodo DOI | [10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525) | Not yet minted |
+| Status | Published (superseded for citation) | **Published (current)** |
+| Zenodo DOI | [10.5281/zenodo.23495525](https://doi.org/10.5281/zenodo.23495525) | [10.5281/zenodo.23496446](https://doi.org/10.5281/zenodo.23496446) |
 
 ## What this package contains
 
@@ -121,18 +121,16 @@ seed `20261020`).
 
 ## Citation
 
-See `CITATION.cff`. Until the v1.0.1 Zenodo DOI is minted, cite the published
-v1.0.0 archive for the frozen package concept, and note the Git tag `v1.0.1`
-for the unit-level evidence table:
+See `CITATION.cff`. Cite the current v1.0.1 archive:
 
 Andrés, C., Baena Rojas, J. J., & Pinto Pajares, D. (2026). *When Does a Reply
-Count as an Answer? … (research package)* (v1.0.0). Zenodo.
-https://doi.org/10.5281/zenodo.23495525
+Count as an Answer? … (research package)* (v1.0.1). Zenodo.
+https://doi.org/10.5281/zenodo.23496446
 
 ## Authors / contact
 
 1. César Andrés — ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404) — cesar.andres@unir.net  
-2. Jose Jaime Baena Rojas — ORCID [0000-0002-0915-4087](https://orcid.org/0000-0002-0915-4087)  
-3. Daniel Pinto Pajares — ORCID [0000-0001-9397-811X](https://orcid.org/0000-0001-9397-811X)  
+2. Jose Jaime Baena Rojas — ORCID [0000-0002-0915-4087](https://orcid.org/0000-0002-0915-4087) — josejaime.baena@unir.net  
+3. Daniel Pinto Pajares — ORCID [0000-0001-9397-811X](https://orcid.org/0000-0001-9397-811X) — daniel.pinto@unir.net  
 
 Affiliation: Universidad Internacional de la Rioja, Spain.
