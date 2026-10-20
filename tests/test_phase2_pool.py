@@ -43,7 +43,7 @@ def test_congreso_fixture_parser():
         legislature="XIV",
         source_url="https://example.test/180/000128",
     )
-    assert rec.title and "perspectivas económicas" in rec.title.lower()
+    assert rec.title and "synthetic fixture title" in rec.title.lower()
     assert rec.questioner_name and "Casado" in rec.questioner_name
     assert rec.parliamentary_group == "GP"
     assert "DSCD-14-PL-22" in rec.ds_references
