@@ -1,0 +1,41 @@
+{
+  "title": "When Does a Reply Count as an Answer? Threshold Instability in Expert Coding of Spanish Parliamentary Replies (research package)",
+  "description": "Public reproducibility package (v1.0.0) for a methodological / measurement study of expert agreement when coding whether a Spanish prime minister's first reply resolves an oral control question. The package includes analysis code, protocols/codebooks from a sequential measurement programme, identifier-only XIV frame metadata (N=100 context), aggregate locked agreement summaries, and figures. No substantive XIV reply or responsiveness outcomes are included. The instruments are not claimed as validated for main annotation. The methodological publication pivot was not preregistered as a separate study.",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Andrés, César",
+      "orcid": "0009-0001-8968-3404",
+      "affiliation": "Universidad Internacional de la Rioja, Spain"
+    },
+    {
+      "name": "Baena Rojas, Jose Jaime",
+      "orcid": "0000-0002-0915-4087",
+      "affiliation": "Universidad Internacional de la Rioja, Spain"
+    },
+    {
+      "name": "Pinto Pajares, Daniel",
+      "orcid": "0000-0001-9397-811X",
+      "affiliation": "Universidad Internacional de la Rioja, Spain"
+    }
+  ],
+  "keywords": [
+    "parliamentary discourse",
+    "reply status",
+    "inter-annotator agreement",
+    "measurement reliability",
+    "Spanish Congress",
+    "annotation methodology"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "http://hdl.handle.net/11356/2004",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset",
+      "scheme": "handle"
+    }
+  ]
+}

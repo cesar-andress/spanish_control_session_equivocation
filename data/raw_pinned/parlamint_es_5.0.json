@@ -1,0 +1,13 @@
+{
+  "source": "ParlaMint-ES",
+  "release": "5.0",
+  "handle": "http://hdl.handle.net/11356/2004",
+  "source_page": "https://www.clarin.si/repository/xmlui/handle/11356/2004",
+  "archive": "ParlaMint-ES.tgz",
+  "sha256": "b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68",
+  "md5": "2ba1216f3fcf1300ee74f50efe42ec6a",
+  "bytes": 88100938,
+  "cache_relpath": "_internal/source_cache/parlamint/ParlaMint-ES.tgz",
+  "licence": "CC BY 4.0",
+  "note": "Bulk archive stored in private source cache; not committed."
+}

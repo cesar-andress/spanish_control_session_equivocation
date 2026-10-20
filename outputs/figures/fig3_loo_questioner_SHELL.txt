@@ -1,0 +1,3 @@
+FIGURE 3 — leave-one-questioner-out sensitivity
+STATUS: PLACEHOLDER_AWAITING_OUTCOMES
+Do not invent values. Populate only after main annotation.

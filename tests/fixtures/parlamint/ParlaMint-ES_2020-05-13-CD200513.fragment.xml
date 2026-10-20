@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="es" xml:id="ParlaMint-ES_2020-05-13-CD200513" ana="#parla.sitting #covid">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en" type="main">Spanish parliamentary corpus ParlaMint-ES, Plenary session 21 (2020-05-13) [ParlaMint]</title>
+            <title xml:lang="es" type="main">Corpus parlamentario en español ParlaMint-ES, Sesión plenaria núm. 21 (2020-05-13) [ParlaMint]</title>
+            <title xml:lang="es" type="sub">Sesión plenaria núm. 21 (2020-05-13)</title>
+            <title xml:lang="en" type="sub">Plenary session 21 (2020-05-13)</title>
+            <meeting n="2020-05-13" corresp="#CD" ana="#parla.lower #parla.sitting">2020-05-13</meeting>
+            <meeting n="21" corresp="#CD" ana="#parla.lower #parla.session">Sesión plenaria núm. 21</meeting>
+            <meeting n="14" corresp="#CD" ana="#parla.lower #parla.term #CD.14">Legislatura XIV</meeting>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0003-0830-4837">María Calzada Pérez</persName>
+               <resp xml:lang="en">Data retrieval and conversion to XML</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://www.linkedin.com/in/ruben-de-libano/">Ruben de Libano</persName>
+               <resp xml:lang="en">XML tagging improvement</resp>
+               <resp xml:lang="en">Conversion to ParlaMint TEI</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://www.linkedin.com/in/monica-albini-3179ba166/">Monica Albini</persName>
+               <resp xml:lang="en">Data retrieval and conversion to XML. Quality Control</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
+               <resp xml:lang="en">Government person metadata retrieval</resp>
+               <resp xml:lang="en">Conversion to ParlaMint TEI</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
+               <resp xml:lang="en">Conversion to ParlaMint TEI</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Maria del Mar Bonet Ramos</persName>
+               <resp xml:lang="en">Conversion to ParlaMint TEI</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-7436-9896">Taja Kuzman</persName>
+               <resp xml:lang="en">Compute utterance topics</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="es">CLARIN infraestructura de investigación científica</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="en">OSCARS (Open Science Clusters' Action for Research &amp; Society)</orgName>
+               <ref target="https://oscars-project.eu/projects/parlacap-comparing-agenda-settings-across-parliaments-parlamint-dataset">ParlaCap project</ref>
+            </funder>
+            <funder>
+               <orgName xml:lang="es">Ministerio de Ciencia e Innovación</orgName>
+               <orgName xml:lang="en">Ministry of Science and Innovation of Spain</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>5.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="speeches" quantity="233" xml:lang="es">233 intervenciones</measure>
+            <measure unit="speeches" quantity="233" xml:lang="en">233 speeches</measure>
+            <measure unit="words" quantity="59667" xml:lang="es">59,667 palabras</measure>
+            <measure unit="words" quantity="59667" xml:lang="en">59,667 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="es">Infraestructura de investigación CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno type="URI" subtype="handle">http://hdl.handle.net/11356/XXXX</idno>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="es">Este trabajo se encuentra protegido por la licencia <ref target="https://creativecommons.org/licenses/by/4.0/">Atribución 4.0 Internacional</ref>.</p>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2025-06-16">2025-06-16</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title xml:lang="es" type="main">CORTES GENERALES DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS PLENO Y DIPUTACIÓN PERMANENTE</title>
+               <idno type="URI" subtype="parliament">http://www.congreso.es</idno>
+               <date when="2020-05-13">2020-05-13</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/parlamint">ParlaMint</ref> is a project that aims to (1) create a multilingual set of comparable corpora of parliamentary proceedings uniformly encoded according to the <ref target="https://clarin-eric.github.io/ParlaMint/">ParlaMint encoding guidelines</ref>, covering the period from 2015 to mid-2022; (2) add linguistic annotations to the corpora and machine-translate them to English; (3) make the corpora available through concordancers; and (4) build use cases in Political Sciences and Digital Humanities based on the corpus data.</p>
+            <p xml:lang="es"><ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref>
+            </p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="desc" occurs="111"/>
+               <tagUsage gi="div" occurs="7"/>
+               <tagUsage gi="head" occurs="7"/>
+               <tagUsage gi="incident" occurs="41"/>
+               <tagUsage gi="kinesic" occurs="67"/>
+               <tagUsage gi="note" occurs="20"/>
+               <tagUsage gi="seg" occurs="691"/>
+               <tagUsage gi="text" occurs="1"/>
+               <tagUsage gi="u" occurs="233"/>
+               <tagUsage gi="vocal" occurs="3"/>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <name type="address">Calle Floridablanca, s/n. 28071</name>
+               <name type="city">Madrid</name>
+               <name type="country" key="ES">Spain</name>
+               <date ana="#parla.sitting" when="2020-05-13">2020-05-13</date>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2025-06-15">
+            <name>Tomaž Erjavec</name>: Include topic related information.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text ana="#covid">
+      <body>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head1">MINUTO DE SILENCIO</head>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u1" ana="#chair topic:healt">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u1.p1">Buenos días señorías. Se abre la sesión.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u1.p2">Muchas personas siguen hoy trabajando en toda España por la salud y la seguridad de todos en la lucha contra la COVID-19 y sus consecuencias. En nombre de los ciudadanos y ciudadanas de nuestro país, quiero darles las gracias una vez más, a ellos y a quienes siguen cumpliendo con las instrucciones de las autoridades sanitarias en beneficio de todos. Nos une también a todos el deseo de recuperación de quienes padecen la enfermedad y el pésame por quienes han fallecido a causa de ella, por cuyo recuerdo la Junta de Portavoces acordó ayer guardar un minuto de silencio.</seg>
+               <incident type="action" xml:id="ParlaMint-ES_2020-05-13-CD200513.incident1">
+                  <desc>Las señoras y los señores diputados presentes en el hemiciclo, puestos en pie, guardan un minuto de silencio</desc>
+               </incident>
+            </u>
+         </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head2">EXCLUSIÓN DEL ORDEN DEL DÍA - INTERPELACIONES URGENTES: - DEL GRUPO PARLAMENTARIO MIXTO , SOBRE LAS ACCIONES QUE VA A IMPULSAR EL GOBIERNO PARA PALIAR LAS GRAVES CONSECUENCIAS ECONÓMICAS Y SOCIALES QUE TIENE PARA LA COMUNIDAD AUTÓNOMA DE CANARIAS LA PÉRDIDA ABSOLUTA DE SUS PRINCIPALES ACTIVIDADES ECONÓMICAS.</head>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u2" ana="#chair topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u2.p1">De conformidad con lo dispuesto en el artículo 881 del Reglamento y lo acordado por la Junta de Portavoces, esta Presidencia somete al Pleno de la Cámara la exclusión del orden del día de la presente sesión del punto 17, correspondiente a la interpelación urgente del Grupo Parlamentario Mixto <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note1">señora Oramas González-Moro</note> sobre las acciones que va a impulsar el Gobierno para paliar las graves consecuencias económicas y sociales que tiene para la Comunidad Autónoma de Canarias la pérdida absoluta de sus principales actividades económicas. ¿Lo acuerda así la Cámara?</seg>
+               <kinesic type="gesture" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic1">
+                  <desc>Asentimiento</desc>
+               </kinesic>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u2.p2">Muchas gracias. En consecuencia, queda excluido el punto de referencia.</seg>
+            </u>
+         </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head3">PREGUNTAS - DEL DIPUTADO DON PABLO CASADO BLANCO, DEL GRUPO PARLAMENTARIO POPULAR EN EL CONGRESO, QUE FORMULA AL SEÑOR PRESIDENTE DEL GOBIERNO: ¿CUÁLES SON LAS PERSPECTIVAS ECONÓMICAS DEL GOBIERNO PARA NUESTRO PAÍS?</head>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u3" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u3.p1">Comenzamos con las preguntas dirigidas al Gobierno conforme al orden remitido por el mismo. Preguntas dirigidas al señor presidente del Gobierno. Pregunta del diputado don Pablo Casado Blanco, del Grupo Parlamentario Popular en el Congreso.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u4" who="#PabloCasadoBlanco" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u4.p1">Señor Sánchez, ayer se cumplieron diez años del Pleno en el que, con su voto, se atacó al Estado del bienestar como nunca antes había pasado: Zapatero recortó 15 000 millones de euros, con su apoyo, el sueldo de los funcionarios, pensiones, ayudas a la maternidad o ayudas a la dependencia. Antes ya habían modificado la ley para agilizar los desahucios y también para precarizar el empleo; todo ello, por supuesto, después de muchos meses ocultando datos y engañando a los españoles. Ahora pasamos de esos brotes verdes a la V asimétrica, de la Champions League a la gama alta del éxito, del Plan E al escudo social. Misma propaganda en España, mismas mentiras en Europa.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u4.p2">Ahora piden otro plan Marshall, pero recuerden que el que tomó Europa hace setenta y cinco años fue para contener el comunismo, no para patrocinarlo, como pedía el otro día su vicepresidente en el Financial Times, recordando, por cierto, esos pulsos que echaban Tsipras y Varoufakis y que acabaron en un corralito. Para no tener que enterarnos otra vez por el Gobierno italiano, señor Sánchez, ¿nos puede decir si va a pedir el rescate, cuánto costaría y qué perspectivas económicas tiene el Gobierno?</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u5" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u5.p1">Gracias, señor Casado.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u5.p2">Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u6" who="#PedroSánchezPérezCastejón" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u6.p1">Gracias, señora presidenta. Gracias, señoría.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u6.p2">Efectivamente el COVID-19, la crisis del COVID, tiene una triple dimensión: la sanitaria, la social y la económica. Ahí están las perspectivas económicas de un parón de la actividad en el año 2020 y una recuperación de la misma en el año 2021, y creo que si algo se ha demostrado con esta crisis del COVID es que el camino para adelantar precisamente esa recuperación económica es el de la unidad. La unidad salva vidas, señorías, y la unidad también puede salvar empresas y puestos de trabajo. Ayer tuvimos un buen ejemplo en el Consejo de Ministros, donde aprobamos un real decreto-ley para extender los ERTE hasta el 30 de junio, previo diálogo y acuerdo entre el Gobierno y los agentes sociales, es decir, los empresarios y los sindicatos. Esta semana se va a poner en marcha la Comisión parlamentaria para la Reconstrucción Social y Económica, y creo, señoría, que su grupo - y el conjunto de grupos - está llamado a fraguar esa unidad, porque esa unidad, señorías, no solamente salva vidas en esta crisis del COVID, sino que también puede salvar empresas y puestos de trabajo.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic2">
+                  <desc>Aplausos</desc>
+               </kinesic>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u7" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u7.p1">Gracias, señor presidente.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u7.p2">Señor Casado Blanco.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u8" who="#PabloCasadoBlanco" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u8.p1">Señor Sánchez, el pasado 9 de marzo le propuse un plan de choque económico frente a la crisis del coronavirus, pero su Gobierno contestó que tendría un impacto poco significativo y transitorio. Yo no sé si les parece poco significativo que ya haya 27 000 fallecidos o que sea transitoria la destrucción de un 10 % de la economía nacional y de 5 millones de empleos. Ayer presentamos ese plan B, que usted no encuentra, para reactivar España con más liquidez, también con reducción de costes fiscales, laborales y burocráticos. En vez de presumir pagar, y tarde, 5 millones de prestaciones por desempleo, usted debería ocuparse de recuperar el empleo para evitar los recortes sociales como los que se votaron aquí hace diez años. Para ello, hay que desconfinar a la población española por grupos de riesgo, con mascarillas obligatorias, con test masivos, con rastreo de contagiados, con huella digital, y reforzar el Sistema Nacional de Salud. Para eso, hemos propuesto un pacto Cajal de Estado por la sanidad, la atención a los mayores o la investigación. Y sustituir de una vez el estado de alarma por la legislación básica, tal y como aconseja la Unión Europea y ya han asumido la mayor parte de sus Estados. Pero usted sigue con su geometría variable, que le llevó ayer a intentar hasta el final un pacto con la CUP, Esquerra, y Junts per Cat, mientras exige a los que meten un cordón sanitario que vengamos aquí a extender su manto de armiño un mes más. Pero, señor Sánchez, hasta aquí hemos llegado. Le hemos apoyado dos meses para salvar vidas, pero no le volveremos apoyar para arruinar a España por tercera vez. De nuevo, esa debe ser la vieja normalidad socialista.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u8.p2">Muchas gracias.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic3">
+                  <desc>Aplausos</desc>
+               </kinesic>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u9" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u9.p1">Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u10" who="#PedroSánchezPérezCastejón" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u10.p1">Gracias señoría.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u10.p2">Vamos a ver: el Gobierno se ha propuesto no entrar en esta suerte de dialéctica con sus argumentarios de cartón piedra, señor Casado, porque entendemos que el enemigo no es el Partido Popular; el enemigo común que tenemos es el COVID y, en consecuencia, tenemos que actuar frente a él. Serían fácilmente rebatibles muchas de las cosas que usted ha dicho, pero no voy a entrar en ello porque creo que los españoles no quieren eso, ni del grupo de la oposición ni tampoco del Gobierno de España.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u10.p3">Sí diré que la crisis de COVID, señorías, tiene sus singularidades. No está afectando a sectores poco competitivos, poco eficientes, sectores víctimas de una burbuja - como ocurrió, por ejemplo, con el sector de la construcción residencial en el año 2008-, sino que está afectando a sectores muy expuestos a esas restricciones sanitarias, por ejemplo, el sector turístico; sectores muy competitivos generadores de empleo Y ahí está la lógica de lo que estamos haciendo durante esta semanas, señoría: estamos sosteniendo, a través de las líneas ICO y a través también de las prestaciones para sostener renta de trabajadores y de empresas, a trabajadores autónomos, a trabajadores por cuenta ajena, a empresas del sector del turismo y sectores que están directamente afectados por estas restricciones sanitarias. Y ese es el camino, señoría, el camino es el de la unidad; el camino, señoría, es el de que entre todos forjemos esa unidad no solamente para salvar vidas en el frente sanitario, sino también para salvar empresas y salvar puestos de trabajo.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u10.p4">Yo, señorías, creo que este Congreso tiene una tarea muy importante a partir de esta semana con esa Comisión parlamentaria por la reconstrucción social y económica, y le pido que abandone la confrontación y que sume y arrime el hombro.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic4">
+                  <desc>Un señor diputado: ¡Muy bien!-Aplausos</desc>
+               </kinesic>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u11" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u11.p1">Muchas gracias.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u11.p2">- DEL DIPUTADO DON AITOR ESTEBAN BRAVO, DEL GRUPO PARLAMENTARIO VASCO <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note2">EAJ-PNV</note>, QUE FORMULA AL SEÑOR PRESIDENTE DEL GOBIERNO: ¿QUÉ ENTIENDE USTED POR NUEVA NORMALIDAD?</seg>
+               <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note3">Número de expediente 180/000127</note>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u12" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u12.p1">Pregunta del diputado don Aitor Esteban Bravo, del Grupo Parlamentario Vasco</seg>
+               <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note4">EAJ-PNV</note>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u13" who="#AitorEstebanBravo" ana="#regular topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u13.p1">Señor presidente, ¿qué entiende usted por nueva normalidad?</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u14" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u14.p1">Gracias, señor Esteban.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u14.p2">Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u15" who="#PedroSánchezPérezCastejón" ana="#regular topic:healt">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u15.p1">Gracias, presidenta.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u15.p2">Recuerdo que en la primera comparecencia pública que hice precisamente ese sábado en el que aprobamos el primer estado de alarma dije que solamente venceríamos al virus cuando encontrásemos ese remedio terapéutico o cuando la ciencia encontrase esa vacuna contra el COVID-19. Mientras tanto, lo que tenemos que hacer es desescalar, llegar a esa nueva normalidad, señorías, y por tanto respetar las normas sanitarias que nos están trasladando los expertos, la ciencia; es decir, las distancias sociales o el uso de mascarillas, por ejemplo, cuando utilizamos transportes públicos. En definitiva, todas aquellas cuestiones que lógicamente se han vuelto normales como consecuencia de la emergencia de esta pandemia.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u16" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u16.p1">Gracias, señor presidente.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u16.p2">Señor Esteban Bravo.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u17" who="#AitorEstebanBravo" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u17.p1">Señor presidente, yo no le oculto que no me gusta nada el término, me suena al título de una serie de televisión americana exactamente. Para mí normalidad es normalidad, eso es a lo que tenemos que tender y hay bastantes cosas en juego. Lo que no puede haber, una vez eliminado el riesgo de pandemia o una vez que esta esté controlada, son restricciones en el ámbito de los derechos; ni debe haber restricciones o cambios en los derechos competenciales institucionales, de acuerdo con el orden constitucional, o aprovechar para hacer una reforma en tal sentido con esa excusa.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u17.p2">Creo que hay que tomar medidas y, en prevención, hay que asegurarnos de que con los suministros no ocurra lo mismo - y en eso Europa tiene mucho que decir -, y estoy de acuerdo en que hay que trabajar con sistemas de alarmas tempranas. Pero sobre todo se trata de rehacerse económicamente. Tiene usted que aclarar cuanto antes exactamente cuál es la posición europea con respecto a la financiación que pueda producirse, porque en este momento todavía no lo tenemos nada claro y tenemos que saber cuáles son los márgenes de cada una de las instituciones, porque desde luego las instituciones van a tener que ser protagonistas en esa recuperación. Por eso le recuerdo que sería muy urgente hacer una comisión de concierto. Y habría que aprovechar para cambiar también las bases socioeconómicas. No se aprovechó en la crisis de 2008 y vemos que son muy endebles y con cada vendaval - que no tiene por qué depender del Estado español, sino que puede venir de fuera - se las pone en cuestión porque tenemos ámbitos económicos débiles. La Comisión de reconstrucción creo que debería ir destinada a esto. A ninguno se nos oculta que hay un mal clima y, la verdad, intentar ponernos a reformar temas en el ámbito sanitario, en el de la dependencia, el de los cuidados, etcétera, en plena pandemia y sin la necesaria tranquilidad y serenidad, no me parece lo más adecuado. Me recuerda a aquello de: en tiempo de tribulación, no hacer mudanza.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u17.p3">Por último, quisiera decirle que por algunas instituciones e incluso por representantes de sus coaligados en el Gobierno se ha dejado deslizar en los últimos días que el País Vasco ha pasado a la fase 1 por criterios políticos y no por criterios técnicos. A mí me parecen estas declaraciones muy graves e irresponsables y le pido....</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u18" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u18.p1">Gracias, señor Esteban Bravo.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u18.p2">Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u19" who="#PedroSánchezPérezCastejón" ana="#regular topic:healt">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u19.p1">Gracias, señora presidenta.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u19.p2">Señor Esteban, quiero que sepa, sobre el planteamiento que usted hace - y ahí está el ministro de Sanidad -, que la suya no es la única comunidad autónoma, que ha habido otras de distintos colores políticos que han criticado la decisión que ha tomado la autoridad sanitaria, pero, desde luego, el planteamiento que ha hecho siempre el Gobierno es decidir sobre la base de criterios técnicos y estrictamente técnicos, para nada políticos, porque estamos hablando de la salud pública, estamos a hablando de salvar vidas.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u19.p3">En relación con el término nueva normalidad, efectivamente, si alguna lógica tiene es la de alertar a la ciudadanía a que no podemos rebajar los niveles de protección, de restricción y de distanciamiento que exige para no propagar el virus, como hemos tenido estas últimas semanas. Creo que es compartido por todas sus señorías - también por los presidentes y presidentas autonómicos, con los que me reúno todos los domingos - que no podemos relajar los mensajes que traslademos a la ciudadanía, no podemos transmitirles que hemos vencido definitivamente al virus porque el virus sigue ahí presente en el conjunto de la sociedad.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u19.p4">Comparto con usted, señorías, que de verdad que el estado de alarma para nosotros es una necesidad, no es un proyecto político. No hemos recentralizado ningún tipo de competencias de las autonomías. Ahí está, por ejemplo, el ministro del Interior que ha hecho un trabajo extraordinariamente positivo de coordinación con las policías autonómicas, por ejemplo, con la Ertzaintza. Ahí está el ministro de Sanidad, que puede defender, como lo hemos hecho en esta Cámara, señoría, que desde luego las competencias y la gestión sanitaria en esta crisis han permanecido en manos de los Gobiernos autonómicos. Quiero decir con esto, señoría, que nosotros lo que queremos es transitar hacia esa nueva normalidad con un estado de alarma distinto, porque efectivamente es muy distinta a la situación de la de hace ocho semanas, pero necesitamos culminar esta etapa. A partir de ahí, señorías, se tiene que abrir un debate político en esta Cámara para ver cómo podemos reforzar esos mecanismos de coordinación entre los distintos niveles de la Administración para que efectivamente esos rebrotes, si se dan, sean los menos posible.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic5">
+                  <desc>Aplausos</desc>
+               </kinesic>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u20" ana="#chair topic:mixed">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u20.p1">Muchas gracias, señor presidente.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u20.p2">- DEL DIPUTADO DON OSKAR MATUTE GARCÍA DE JALÓN, DEL GRUPO PARLAMENTARIO EUSKAL HERRIA BILDU, QUE FORMULA AL SEÑOR PRESIDENTE DEL GOBIERNO: ¿APUESTA POR LA DERECHA NEOLIBERAL RECENTRALIZADORA Y SUS POLÍTICAS FRENTE A LA MAYORÍA PROGRESISTA DE LA INVESTIDURA?</seg>
+               <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note5">Número de expediente 180/000135</note>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u21" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u21.p1">Pregunta del diputado don Oskar Matute García de Jalón, del Grupo Parlamentario Euskal Herria Bildu.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u22" who="#OskarMatuteGarcíaDeJalón" ana="#regular topic:gover">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u22.p1">Muchas gracias, presidenta.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u22.p2">Señor presidente, a estas alturas yo creo que poca gente duda de que estamos ante una crisis de época y creemos que, ante esa crisis de época, lo que hace falta es claridad y determinación. Por eso le realizamos una pregunta que fácilmente se puede responder con un sí o con un no: ¿Apuesta por la derecha neoliberal recentralizadora y sus políticas frente a la mayoría progresista de la investidura?</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u23" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u23.p1">Gracias, señor Matute. Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u24" who="#PedroSánchezPérezCastejón" ana="#regular topic:mixed">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u24.p1">Muchas gracias, señora presidenta.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u24.p2">Señoría, yo creo que no hay que mezclar los debates. Estamos hablando, entiendo, infiero por su pregunta, del resultado de la votación de la prórroga del estado de alarma. Y le he dicho antes al señor Esteban, y también se lo planteo a su señoría, que el estado de alarma no es un proyecto político; nuestro proyecto político, el proyecto político de un Gobierno progresista formado por el Partido Socialista y por Unidas Podemos es reforzar el Estado del bienestar; es extender los derechos y libertades; es proteger algunos derechos que están puestos en cuestión por la derecha y por la ultraderecha, por ejemplo, el de la igualdad de género; es reforzar el papel en Europa; es reforzar el papel de España en el mundo, por ejemplo, fortaleciendo la cooperación al desarrollo; es impulsar la reindustrialización bajo parámetros de sostenibilidad, la transición ecológica justa; es, lógicamente, todo aquello que defendí desde esta tribuna precisamente en mi debate de investidura y que contó con el apoyo de la mayoría de sus señorías. Ese es el proyecto político de este Gobierno. Por cierto, creo que esta pandemia que usted ha calificado como la crisis de nuestra vida, y efectivamente lo es, demuestra que esa hoja de ruta, que ese programa de Gobierno con el que nosotros nos presentamos ante ustedes cobra aún mayor relevancia durante los próximos años. Y ese es nuestro proyecto político, señoría; lo otro, el estado de alarma, es simple y llanamente una necesidad para, desde el punto de vista constitucional, dar respuesta a una pandemia que por primera vez ha golpeado no solamente a España sino también al conjunto del mundo.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic6">
+                  <desc>Aplausos</desc>
+               </kinesic>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u25" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u25.p1">Señor Matute García de Jalón.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u26" who="#OskarMatuteGarcíaDeJalón" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u26.p1">Gracias.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u26.p2">Señor presidente, yo no me refería tanto al estado de alarma como a su voluntad de alcanzar acuerdos con las derechas. Conviene recordar, porque hay que tener memoria - yo no sé si esto es una crisis de nuestras vidas, pero desde luego es una crisis de época que creo que trasciende a nuestras propias vidas -, que fue la derecha quien consiguió que los ricos fueran más ricos y los pobres fueran más pobres durante la gestión de la anterior crisis, que un 10 % de la población acaparara el 90 % de los recursos del país, que un 1 % de la población tuviera más del 25 % del conjunto de la riqueza del país, que creciera la desigualdad, como señalaba el propio Banco de España, que los cuidados pasaran a ser relegados de cualquier faceta de atención pública y política. Eso fue lo que hicieron las derechas y eso es lo que tememos que se pueda volver a hacer si se opta por alcanzar acuerdos con ellos.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u26.p3">En definitiva, hay que optar por un modelo neoliberal, que fue el de la anterior gestión de la crisis, el que llevó a países a la ruina y el que llevó al empobrecimiento colectivo de la población en el Estado español, o apostar por un frente progresista que pueda hablar no tanto de reconstruir como de transformar. Porque en realidad de lo que se trata es de transformar la realidad actual para alcanzar el nuevo modelo económico y social y, sobre todo, para que no vuelvan a pagar la crisis aquellos que la pagaron en la anterior crisis: los jóvenes, las mujeres, los trabajadores en general. Y para eso hay que tomar medidas, medidas que vemos difícil que puedan alcanzarse con las derechas, medidas que tienen que ver con una nueva política fiscal, como la creación de un impuesto sobre la riqueza de manera clara y un impuesto también sobre las empresas - que las hay - que están obteniendo pingues beneficios también durante esta gestión sociosanitaria; recuperar el dinero que se entregó a los bancos, denunciar nuevamente el papel o timo de la estampita que hacen los bancos cuando reciben dinero al 0,25 y horas después lo venden al 1 %, obteniendo un 0,75 de ganancia neta por no hacer nada. Habrá que hablar también de los cuidados, de la dimensión de los cuidados, de la economía de los cuidados en esta nueva realidad. Habrá que hablar también de moratoria a grandes obras, para que no nos volvamos a encontrar con bochornos como el de grandes infraestructuras que apenas sirven para nada mientras la gente no tiene que comer. Y, asimismo, habrá que hablar también de nacionalizar empresas. Se lo dijimos en la investidura y se lo decimos ahora con total claridad y determinación: nosotros no estamos aquí para aceptar las cosas que no podemos cambiar; estamos aquí para cambiar las cosas que no podemos aceptar.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u27" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u27.p1">Gracias, señor Matute.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u27.p2">Señor presidente del Gobierno.</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u28" who="#PedroSánchezPérezCastejón" ana="#regular topic:macro">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u28.p1">Gracias, señora presidenta.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u28.p2">Señoría, yo creo que uno de los errores de la izquierda en muchas ocasiones es hablar de redistribución y olvidar el crecimiento y la creación de empleo. Esta crisis - antes lo he dicho - es una crisis que está afectando a sectores competitivos, a diferencia de lo que ocurrió en otras crisis. El sector de la construcción residencial, por ejemplo, sufrió una burbuja inmobiliaria que explotó y, como consecuencia de ello, tuvo una derivada precisamente en el sector financiero. Aquí estamos hablando de sectores expuestos claramente a las restricciones sanitarias. Y ahí está la lógica de las cosas que está haciendo el Gobierno de España, no solamente creando esa red de protección a las familias, sino también creando una red de protección a las empresas a través de las líneas ICO, con 300 000 operaciones casi en lo que llevamos de estado de alarma y con más de 30 000 millones de euros puestos en garantías de liquidez a las pequeñas y medianas empresas y a los trabajadores autónomos. En segundo lugar, por ejemplo, con los expedientes de regulación temporal de empleo o las prestaciones por cese de actividad de los trabajadores autónomos. ¿Por qué? Porque lo que debemos sostener es ese tejido productivo para que cuando se reanude la actividad económica ellos lideren el crecimiento económico y la creación de empleo. Por eso, señoría, creo que es tan importante la unidad. La unidad salva vidas, señoría, pero también la unidad política de todos nosotros, los grupos parlamentarios, puede salvar muchos empleos y muchas empresas.</seg>
+               <kinesic type="applause" xml:id="ParlaMint-ES_2020-05-13-CD200513.kinesic7">
+                  <desc>Aplausos</desc>
+               </kinesic>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u28.p3">- DE LA DIPUTADA DOÑA CAYETANA ÁLVAREZ DE TOLEDO PERALTA-RAMOS, DEL GRUPO PARLAMENTARIO POPULAR EN EL CONGRESO, QUE FORMULA A LA SEÑORA VICEPRESIDENTA PRIMERA Y MINISTRA DE LA PRESIDENCIA, RELACIONES CON LAS CORTES Y MEMORIA DEMOCRÁTICA: ¿QUÉ JUICIO LE MERECE SU PROPIA ACTUACIÓN AL FRENTE DEL COMITÉ DE COORDINACIÓN INTERMINISTERIAL CREADO ANTE LA AMENAZA PARA LA SALUD PÚBLICA PRODUCIDA POR EL CORONAVIRUS?</seg>
+               <note type="comment" xml:id="ParlaMint-ES_2020-05-13-CD200513.note6">Número de expediente 180/000130</note>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u29" ana="#chair topic:healt">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u29.p1">Preguntas dirigidas a la señora vicepresidenta primera del Gobierno y ministra de la Presidencia, Relaciones con las Cortes y Memoria Democrática. Pregunta de la diputada doña Cayetana Álvarez de Toledo Peralta-Ramos.</seg>
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u29.p2">La señora ÁLVAREZ DE TOLEDO PERALTA-RAMOS: Señora Calvo, celebro verla. Significa que está recuperada, contra lo que afirmaba usted el pasado domingo: He vuelto antes, contra el criterio de los médicos, llegó a decir. Supongo que era retórico, porque lo contrario sería inquietante. También aseguró que nadie va a eludir su responsabilidad. Hablemos de la suya. El 4 de febrero, ante el avance del virus, el Gobierno creó un comité de coordinación interministerial y le encargó a usted la tarea crucial de presidirlo. Dos semanas después usted rechazó la cancelación del Mobile porque, dijo, la alarma social no se corresponde con la realidad. El 8 de marzo diecisiete muertos ya seguía alentando manifestaciones masivas, y hoy España es el país europeo con más exceso de muerte, más sanitarios infectados, el confinamiento más severo y el horizonte económico más negro. Por eso le pregunto: ¿Qué hizo usted, como responsable, en aquel febrero decisivo para frenar la pandemia?</seg>
+            </u>
+            <u xml:id="ParlaMint-ES_2020-05-13-CD200513.u30" ana="#chair topic:other">
+               <seg xml:id="ParlaMint-ES_2020-05-13-CD200513.u30.p1">Señora vicepresidenta primera del Gobierno.</seg>
+            </u>
+            </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head4">INTERPELACIONES URGENTES - DEL GRUPO PARLAMENTARIO POPULAR EN EL CONGRESO, A LA VICEPRESIDENTA CUARTA DEL GOBIERNO Y MINISTRA PARA LA TRANSICIÓN ECOLÓGICA Y EL RETO DEMOGRÁFICO PARA QUE EXPONGA CUÁLES SON SUS RESPONSABILIDADES COMO COORDINADORA DEL PROCESO DE 'DESESCALADA', ASÍ COMO LAS LÍNEAS GENERALES SOBRE LAS QUE VA A PIVOTAR ESTA NUEVA FASE.</head>
+            </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head5">CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES - REAL DECRETO-LEY 15/2020, DE 21 DE ABRIL, DE MEDIDAS URGENTES COMPLEMENTARIAS PARA APOYAR LA ECONOMÍA Y EL EMPLEO.</head>
+            </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head6">DECLARACIÓN INSTITUCIONAL - DECLARACIÓN INSTITUCIONAL CON MOTIVO DEL DÍA MUNDIAL DE LA FIBROMIALGIA Y EL SÍNDROME DE LA FATIGA CRÓNICA.</head>
+            </div>
+         <div type="debateSection">
+            <head xml:id="ParlaMint-ES_2020-05-13-CD200513.head7">CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES (VOTACIÓN - REAL DECRETO-LEY 15/2020, DE 21 DE ABRIL, DE MEDIDAS URGENTES COMPLEMENTARIAS PARA APOYAR LA ECONOMÍA Y EL EMPLEO.</head>
+            </div>
+      </body>
+   </text>
+</TEI>

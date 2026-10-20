@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/scse/release_manifest.schema.json",
+  "title": "SCSE release manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_slug",
+    "project_version",
+    "status",
+    "git_commit",
+    "source_corpus_version",
+    "source_checksums",
+    "pool_sha256",
+    "sampling_seed",
+    "codebook_version",
+    "codebook_sha256",
+    "annotation_packet_hashes",
+    "analysis_version",
+    "release_files",
+    "release_checksums"
+  ],
+  "properties": {
+    "project_slug": { "type": "string" },
+    "project_version": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["scaffold", "draft", "frozen", "released"]
+    },
+    "git_commit": { "type": ["string", "null"] },
+    "source_corpus_version": { "type": ["string", "null"] },
+    "source_checksums": {
+      "type": ["object", "null"],
+      "additionalProperties": { "type": "string" }
+    },
+    "pool_sha256": { "type": ["string", "null"] },
+    "sampling_seed": {
+      "type": ["object", "null"],
+      "additionalProperties": { "type": ["integer", "null"] }
+    },
+    "codebook_version": { "type": ["string", "null"] },
+    "codebook_sha256": { "type": ["string", "null"] },
+    "annotation_packet_hashes": {
+      "type": ["object", "null"],
+      "additionalProperties": { "type": "string" }
+    },
+    "analysis_version": { "type": ["string", "null"] },
+    "release_files": {
+      "type": ["array", "null"],
+      "items": { "type": "string" }
+    },
+    "release_checksums": {
+      "type": ["object", "null"],
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

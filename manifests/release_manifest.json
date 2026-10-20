@@ -1,0 +1,16 @@
+{
+  "project_slug": "spanish_control_session_equivocation",
+  "project_version": null,
+  "status": "scaffold",
+  "git_commit": null,
+  "source_corpus_version": null,
+  "source_checksums": null,
+  "pool_sha256": null,
+  "sampling_seed": null,
+  "codebook_version": null,
+  "codebook_sha256": null,
+  "annotation_packet_hashes": null,
+  "analysis_version": null,
+  "release_files": null,
+  "release_checksums": null
+}

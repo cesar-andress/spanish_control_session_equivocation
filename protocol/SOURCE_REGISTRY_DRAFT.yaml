@@ -1,0 +1,80 @@
+# SOURCE_REGISTRY_DRAFT.yaml
+# DRAFT — Phase 2 acquisition pins. Not a preregistration freeze.
+
+version: 1
+status: draft_not_frozen
+updated: "2026-09-29"
+
+sources:
+  - name: ParlaMint 5.0 (ParlaMint-ES)
+    authority: CLARIN ERIC / CLARIN.SI
+    URL: "http://hdl.handle.net/11356/2004"
+    source_page: "https://www.clarin.si/repository/xmlui/handle/11356/2004"
+    access_date: "2026-09-29"
+    version_or_date: "5.0"
+    archive_filename: "ParlaMint-ES.tgz"
+    md5: "2ba1216f3fcf1300ee74f50efe42ec6a"
+    sha256: "b101c066a7770c80fcd835cc39282f29acd32883887306017cbd454c4d6eef68"
+    coverage_observed: "Congreso plenary TEI; XIV window used 2019-12-03 to 2023-02-23"
+    format: "TEI XML"
+    identifier_scheme: "ParlaMint utterance and session IDs"
+    licence: "CC BY 4.0"
+    redistribution_status: "allowed_with_attribution"
+    citation: "Erjavec et al.; CLARIN.SI handle 11356/2004"
+    cache: "_internal/source_cache/parlamint/ (private; not committed)"
+    notes: "SHA-256 verified against local archive matching published MD5."
+
+  - name: Congreso iniciativas — Pregunta oral en Pleno
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/busqueda-de-iniciativas"
+    access_date: "2026-09-29"
+    version_or_date: "XIV legislature initiative detail pages"
+    coverage: "Oral questions in Pleno; expediente series 180/######"
+    format: "HTML initiative records (cached)"
+    identifier_scheme: "Número de expediente 180/###### + legislature"
+    access_method: "HTTP GET detail URLs with research User-Agent; disk cache; retry/backoff"
+    terms_url: "https://www.congreso.es/es/cem/aviso-legal"
+    licence: "Reuse with conditions (aviso legal); not a CC identifier"
+    redistribution_status: "identifier_based_public_projection; full_text_private_until_packaging_review"
+    citation: "Congreso de los Diputados initiative record"
+    cache: "_internal/source_cache/congreso/iniciativas/"
+    notes: "Registered question wording in initiative title / entradilla."
+
+  - name: Congreso Diario de Sesiones (Pleno)
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/public_oficiales/"
+    access_date: "2026-09-29"
+    version_or_date: null
+    coverage: "Referenced via initiative DS links (DSCD-14-PL-N)"
+    format: "PDF / portal HTML"
+    identifier_scheme: "DSCD-{leg}-PL-{n}"
+    licence: "Same aviso-legal reuse conditions"
+    redistribution_status: "identifier_based_until_packaging_review"
+    citation: "Diario de Sesiones del Congreso de los Diputados"
+    notes: "Used for linkage evidence fields; not bulk-scraped in Phase 2."
+
+  - name: Congreso open data portal
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/datos-abiertos"
+    access_date: "2026-09-29"
+    version_or_date: null
+    coverage: "Legislative open dumps inspected; oral questions not in those dumps"
+    format: "CSV / JSON / XML for selected collections"
+    licence: null
+    redistribution_status: "not_used_as_primary_180_source"
+    citation: "Congreso de los Diputados — Datos abiertos"
+    notes: "Phase 2 primary path is initiative HTML detail pages."
+
+  - name: Congreso investiture roll-call (XIV)
+    authority: Congreso de los Diputados
+    URL: "https://www.congreso.es/es/cem/sesiones-de-investidura"
+    access_date: "2026-10-01"
+    version_or_date: "XIV second investiture vote 2020-01-07 (DSCD-14-PL-4)"
+    coverage: "Named sí/no/abstención roll-call for formation_vote_alignment draft"
+    format: "Diario de Sesiones PDF"
+    identifier_scheme: "expediente 080/000001; DSCD-14-PL-4"
+    licence: "Reuse with conditions (aviso legal)"
+    redistribution_status: "identifier_based_until_packaging_review"
+    citation: "DSCD-14-PL-4; Sesiones de investidura"
+    primary_pdf: "https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-4.PDF"
+    notes: "Phase-3 draft alignment uses individual MP named votes from this PDF."

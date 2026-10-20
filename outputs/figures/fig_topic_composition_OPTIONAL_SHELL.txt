@@ -1,0 +1,3 @@
+OPTIONAL — question-topic composition
+STATUS: PLACEHOLDER_AWAITING_OUTCOMES
+Do not invent values. Populate only after main annotation.

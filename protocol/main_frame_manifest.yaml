@@ -1,0 +1,187 @@
+phase: 6A
+status: pre_outcome_main_frame_frozen
+created_at: '2026-10-13T14:05:11.239944+00:00'
+n: 100
+phase0_probes_excluded_n: 0
+phase0_probes_restored_n: 3
+phase0_probe_expedientes_restored:
+- 180/000041
+- 180/000047
+- 180/000128
+linkage_qa_restored_n: 30
+linkage_qa_exchange_ids:
+- ex_801e4afeec0f65f4
+- ex_2314f9102e3487f3
+- ex_96a6c2a80ecb4d0a
+- ex_733822a74ad21660
+- ex_20e99c6549b635bb
+- ex_cbf51d52f1bc46b2
+- ex_39627f4af5e43f49
+- ex_454fec04d48d4b0f
+- ex_9e9ea03382cdd5cf
+- ex_3298fcbde011419e
+- ex_e83b601d1cd302af
+- ex_8542a7ffada9ad10
+- ex_6b6e4c2367219021
+- ex_a8edb65808c95f58
+- ex_c6bc6c165ee2eace
+- ex_b979a02ef0ff3630
+- ex_82b076e141041094
+- ex_fe281569120551aa
+- ex_f902d62c615b2ed7
+- ex_f59e9994f6b1536a
+- ex_402b766c3e7aced0
+- ex_6c3c799eff600ca8
+- ex_84d2d973294afebb
+- ex_39be486651b8be29
+- ex_a61d471a7d1dfa6d
+- ex_376144e531e2cfc8
+- ex_e97dab5497cd0bd4
+- ex_286362bb638aa2e2
+- ex_1070e956c49e764a
+- ex_3635d5872c53c4c6
+completeness:
+  n_total: 100
+  n_complete: 100
+  n_missing_registered: 0
+  n_missing_oral: 0
+  n_missing_r1: 0
+duplicates:
+  exchange_id: 0
+  expediente_date_questioner: 0
+volume_plan:
+  scheme: fixed_order_contiguous
+  rationale: Split by fixed case_no order only (date/expediente/exchange_id). No outcome-based
+    splitting. Target ~24–25 cases per volume for human burden (~one sitting of coding).
+  recommended: 4 volumes (25+24+24+24)
+  volumes:
+  - volume: 1
+    n: 25
+    case_nos:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    case_no_first: 1
+    case_no_last: 25
+  - volume: 2
+    n: 25
+    case_nos:
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    case_no_first: 26
+    case_no_last: 50
+  - volume: 3
+    n: 25
+    case_nos:
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - 71
+    - 72
+    - 73
+    - 74
+    - 75
+    case_no_first: 51
+    case_no_last: 75
+  - volume: 4
+    n: 25
+    case_nos:
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+    - 81
+    - 82
+    - 83
+    - 84
+    - 85
+    - 86
+    - 87
+    - 88
+    - 89
+    - 90
+    - 91
+    - 92
+    - 93
+    - 94
+    - 95
+    - 96
+    - 97
+    - 98
+    - 99
+    - 100
+    case_no_first: 76
+    case_no_last: 100
+corpus_private_parquet: _internal/data_private/main/MAIN_FRAME_CORPUS_FULL.parquet
+corpus_private_csv: _internal/data_private/main/MAIN_FRAME_CORPUS_FULL.csv
+public_metadata_csv: zenodo/data/derived/main_frame_metadata_preannotation.csv
+corpus_sha256: fc70b774adf0b5e6c5808427696b7a454235fbdea56e793fbc6d2070d7689b01
+public_sha256: 3643a96fe8e39ac807260db0b74cae3b90a629b85c7134ce10760f73673706ba
+reply_status_present: false
+human_packets_issued: false
+notes: Census of all 100 linked eligible XIV exchanges. Linkage-QA (30) and Phase-0
+  probes (3) restored after Phase 6B contamination audit (same reply-status exposure
+  rule). No reply_status labels.

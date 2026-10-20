@@ -1,0 +1,17 @@
+version: 0
+status: binary_validation_seed_locked_phase7a
+seeds:
+  development: null
+  link_audit: null
+  calibration: 2071684612
+  main_sample: null
+  bootstrap: null
+  calibration_round2: 322720977
+  main_packet_order_daniel: 201430816
+  main_packet_order_jose_jaime: 1832968836
+  binary_validation_v1: 731954444
+notes: calibration = Round 1 seed 2071684612; calibration_round2 = 322720977 from
+  'spanish_control_session_equivocation|calibration_round2|fresh_diversity_draw'.
+  main_sample and bootstrap remain null. main_packet_order_daniel/jose_jaime = Phase
+  6B distinct presentation orders for future packets (not a sample draw). binary_validation_v1
+  = 731954444 from 'spanish_control_session_equivocation|binary_validation_v1|fresh_oop_n12'.

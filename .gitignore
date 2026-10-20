@@ -1,0 +1,52 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.uv/
+
+# Secrets / local env
+.env
+.env.*
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+~$*
+*.tmp
+*.swp
+
+# LaTeX scratch (if any local builds)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Never allow private-area leakage
+_internal/
+.cursor/
+.claude/
+.agents/
+.agent/
+ai_prompts/
+
+# Bulk corpora: keep pin metadata only
+data/raw_pinned/**
+!data/raw_pinned/.gitkeep
+!data/raw_pinned/README.md
+!data/raw_pinned/*.json
+
+# Local scratch
+outputs/**/*.tmp
